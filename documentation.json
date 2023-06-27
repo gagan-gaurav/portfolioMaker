@@ -208,7 +208,7 @@
         },
         {
             "name": "BlogsComponent",
-            "id": "component-BlogsComponent-c7de468e837304f43d6379524660941eea47da268451b1fb4cfe77ca3c1ef1f4ce4f9f21d38d8eb03028772e71cc5cb6fffaab0e847cea95616d2ff3c8743686",
+            "id": "component-BlogsComponent-bb8e912b66a3c97768c5756490b1dd7ef3a21df5293af9cf590199b345c705e2280c7be4abdd5acd6e1f67755ed48509c36868a9d017e3d910fe4a2d0e87b617",
             "file": "src/lib/blogs/blogs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -228,6 +228,18 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "blogs",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
                     "name": "config",
                     "defaultValue": "{\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Arial',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  }",
                     "deprecated": false,
@@ -235,7 +247,7 @@
                     "type": "AngularEditorConfig",
                     "optional": false,
                     "description": "",
-                    "line": 45
+                    "line": 62
                 },
                 {
                     "name": "htmlContent",
@@ -245,11 +257,11 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 43
+                    "line": 60
                 },
                 {
                     "name": "showAddBlogs",
-                    "defaultValue": "true",
+                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "boolean",
@@ -275,7 +287,7 @@
                 },
                 {
                     "name": "showTrending",
-                    "defaultValue": "false",
+                    "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "boolean",
@@ -294,7 +306,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 42
+                    "line": 59
                 }
             ],
             "methodsClass": [
@@ -304,7 +316,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -314,7 +326,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 30,
+                    "line": 47,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -324,7 +336,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -334,7 +346,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 74,
+                    "line": 91,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -344,7 +356,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24,
+                    "line": 41,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -356,11 +368,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { NgModel } from '@angular/forms';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public showTrending: boolean = false;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = true;\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Arial',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    // const jwtToken = this.cookieService.get('boonjwtToken');\n    // const username = this.cookieService.get('boonCurrentUser');\n    // const body = {\n    //   username: username,\n    //   title: this.title,\n    //   content: this.htmlContent\n    // };\n\n    // const headers = new HttpHeaders({\n    //   'Content-Type': 'application/json',\n    //   'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    // });\n\n    // this.http.post<any>('http://localhost:8080/api/v1/blogs', body, { headers })\n    // .subscribe({\n    //   next: response => {\n    //     const message = response.message;\n    //     const status = response.status;\n    //     console.log(message, status);\n    //   },\n    //   error: error => {\n    //     console.error('API Error', error);\n    //   }  \n      \n    // });\n\n    const token = this.cookieService.get('boonjwtToken');\n\n    console.log('token :', token);\n    const headers = new HttpHeaders({ 'Authorization': `Bearer ${token}`})\n    console.log('header :', headers);\n    this.http.get('http://localhost:8080/api/v1/demo-controller', {headers}).subscribe({\n        next: (response) => {\n          // Handle the successful response\n          console.log(response);\n        },\n        error: (error) => {\n          // Handle the error\n          console.error(error);\n        }\n    });\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { NgModel } from '@angular/forms';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public showTrending: boolean = true;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = false;\n  public blogs: any;\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const headers = new HttpHeaders({\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.blogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Arial',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const body = {\n      username: username,\n      title: this.title,\n      content: this.htmlContent\n    };\n\n    const headers = new HttpHeaders({\n      'Content-Type': 'application/json',\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })\n    .subscribe({\n      next: response => {\n        console.log(response);\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\r\n.blogs-window{\r\n\twidth: 90%;\r\n\t// background-color: red;\r\n\tborder-radius: 8px;\r\n\tborder: solid black;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: align-self;\r\n\t\talign-items: center;\r\n\t\tborder-bottom: solid black;\r\n\r\n\t\t.heading{\r\n\t\t\tmargin-left: auto;\r\n\t\t}\r\n\t\t.close{\r\n\t\t\tbackground-color: red;\r\n\t\t\theight: 12px;\r\n\t\t\twidth: 12px;\r\n\t\t\tborder: solid black;\r\n\t\t\tborder-radius: 12px;\r\n\t\t\tmargin-left: auto;\r\n\t\t\tmargin-right: 4px;\r\n\t\t}\r\n\t}\r\n\t.search{\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\t\tmargin-top: 8px;\r\n\t\t// background-color: grey;\r\n\r\n\t\tinput{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 320px;\r\n\t\t\tpadding: 0px 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\tborder: solid 2px black;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 24px;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\t// border: solid 2px black;\r\n\t\t\tbackground-color: lightgreen;\r\n\t\t\tbox-shadow: 4px 4px;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn:active{\r\n\t\t\tbackground-color: rgb(78, 151, 78);\r\n\t\t\tbox-shadow: 2px 2px;\r\n\t\t}\r\n\t}\r\n\r\n\t.blogs-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\r\n\t\t.nav-menu{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\t// background-color: lightblue;\r\n\t\t\t// height: 100%;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\r\n\t\t\tbutton{\r\n\t\t\t\theight: 32px;\r\n\t\t\t\twidth: 128px;\r\n\t\t\t\tmargin: 4px;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\t.blogs{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\t\r\n\r\n\t\t\t.trending-container{\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t}\r\n\t\r\n\t\t\t.myblogs-container{\r\n\t\t\t\tbackground-color: lightseagreen;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t}\r\n\t\r\n\t\t\t.addblogs-container{\r\n\t\t\t\tbackground-color: lightcyan;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\tjustify-content: space-evenly;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tpadding: 8px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\r\n\t\t\t\tinput{\r\n\t\t\t\t\theight: 36px ;\r\n\t\t\t\t\tfont-size: 32px;\r\n\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\tborder: solid 2px black;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn{\r\n\t\t\t\t\tbackground-color: lightgreen;\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 84px;\r\n\t\t\t\t\tborder: 0px;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t\t\tborder-radius: 24px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn:active{\r\n\t\t\t\t\tbackground-color: #38a338;\r\n\t\t\t\t\tbox-shadow: 2px 2px;\r\n\t\t\t\t}\r\n\r\n\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
+                    "data": "@import './../../styles/config.scss';\r\n\r\n.blogs-window{\r\n\twidth: 90%;\r\n\t// background-color: red;\r\n\tborder-radius: 8px;\r\n\tborder: solid black;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: align-self;\r\n\t\talign-items: center;\r\n\t\tborder-bottom: solid black;\r\n\r\n\t\t.heading{\r\n\t\t\tmargin-left: auto;\r\n\t\t}\r\n\t\t.close{\r\n\t\t\tbackground-color: red;\r\n\t\t\theight: 12px;\r\n\t\t\twidth: 12px;\r\n\t\t\tborder: solid black;\r\n\t\t\tborder-radius: 12px;\r\n\t\t\tmargin-left: auto;\r\n\t\t\tmargin-right: 4px;\r\n\t\t}\r\n\t}\r\n\t.search{\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\t\tmargin-top: 8px;\r\n\t\t// background-color: grey;\r\n\r\n\t\tinput{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 320px;\r\n\t\t\tpadding: 0px 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\tborder: solid 2px black;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 24px;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\t// border: solid 2px black;\r\n\t\t\tbackground-color: lightgreen;\r\n\t\t\tbox-shadow: 4px 4px;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn:active{\r\n\t\t\tbackground-color: rgb(78, 151, 78);\r\n\t\t\tbox-shadow: 2px 2px;\r\n\t\t}\r\n\t}\r\n\r\n\t.blogs-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\r\n\t\t.nav-menu{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\t// background-color: lightblue;\r\n\t\t\t// height: 100%;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\r\n\t\t\tbutton{\r\n\t\t\t\theight: 32px;\r\n\t\t\t\twidth: 128px;\r\n\t\t\t\tmargin: 4px;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\t.blogs{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\t\r\n\r\n\t\t\t.trending-container{\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\toverflow-y: scroll;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\r\n\t\t\t\t.blog{\r\n\t\t\t\t\twidth: 90%;\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tmargin-top: 32px;\r\n\t\t\t\t\tfont-family: $primary-font;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 4px;\r\n\r\n\t\t\t\t\t.heading{\r\n\t\t\t\t\t\tfont-size: 24px;\r\n\t\t\t\t\t\tfont-weight: bold;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.date{\r\n\t\t\t\t\t\tfont-size: 16px;\r\n\t\t\t\t\t\tfont-style: italic;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\r\n\t\t\t.myblogs-container{\r\n\t\t\t\tbackground-color: lightseagreen;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t}\r\n\t\r\n\t\t\t.addblogs-container{\r\n\t\t\t\tbackground-color: lightcyan;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\tjustify-content: space-evenly;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tpadding: 8px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\r\n\t\t\t\tinput{\r\n\t\t\t\t\theight: 36px ;\r\n\t\t\t\t\tfont-size: 32px;\r\n\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\tborder: solid 2px black;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn{\r\n\t\t\t\t\tbackground-color: lightgreen;\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 84px;\r\n\t\t\t\t\tborder: 0px;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t\t\tborder-radius: 24px;\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn:active{\r\n\t\t\t\t\tbackground-color: #38a338;\r\n\t\t\t\t\tbox-shadow: 2px 2px;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
                     "styleUrl": "./blogs.component.scss"
                 }
             ],
@@ -384,7 +396,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 16,
+                "line": 17,
                 "jsdoctags": [
                     {
                         "name": "http",
@@ -409,7 +421,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"blogs-window\">\n\t<div class=\"menu-bar\">\n\t\t<div class=\"heading\">Blogs</div>\n\t\t<div class=\"close\"></div>\n\t</div>\n\t<div class=\"search\">\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<div class=\"search-btn\"></div>\n\t</div>\n\t<div class=\"blogs-container\">\n\t\t<div class=\"nav-menu\">\n\t\t\t<button class=\"trending\" (click)=\"trending()\">\n\t\t\t\tTrending\n\t\t\t</button>\n\t\t\t<button class=\"myblogs\" (click)=\"myblogs()\">\n\t\t\t\tMy Blogs\n\t\t\t</button>\n\t\t\t<button class=\"addblogs\" (click)=\"addblogs()\">\n\t\t\t\tAdd Blog\n\t\t\t</button>\n\t\t</div>\n\t\t<div class=\"blogs\">\n\t\t\t<div class=\"trending-container\" *ngIf=\"showTrending\">\n\n\t\t\t</div>\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showMyBlogs\">\n\t\n\t\t\t</div>\n\t\t\t<div class=\"addblogs-container\" *ngIf=\"showAddBlogs\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter blog title...\" [(ngModel)]=\"title\">\n\t\t\t\t<angular-editor [(ngModel)]=\"htmlContent\" class=\"editor\" [config]=\"config\"></angular-editor>\n\t\t\t\t<div class=\"btn\" (click)=\"post()\">Post</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t\n</div>\n"
+            "templateData": "<div class=\"blogs-window\">\n\t<div class=\"menu-bar\">\n\t\t<div class=\"heading\">Blogs</div>\n\t\t<div class=\"close\"></div>\n\t</div>\n\t<div class=\"search\">\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<div class=\"search-btn\"></div>\n\t</div>\n\t<div class=\"blogs-container\">\n\t\t<div class=\"nav-menu\">\n\t\t\t<button class=\"trending\" (click)=\"trending()\">\n\t\t\t\tTrending\n\t\t\t</button>\n\t\t\t<button class=\"myblogs\" (click)=\"myblogs()\">\n\t\t\t\tMy Blogs\n\t\t\t</button>\n\t\t\t<button class=\"addblogs\" (click)=\"addblogs()\">\n\t\t\t\tAdd Blog\n\t\t\t</button>\n\t\t</div>\n\t\t<div class=\"blogs\">\n\t\t\t<div class=\"trending-container\" *ngIf=\"showTrending\">\n\t\t\t\t<ng-container *ngFor=\"let b of blogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\">{{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showMyBlogs\">\n\t\n\t\t\t</div>\n\t\t\t<div class=\"addblogs-container\" *ngIf=\"showAddBlogs\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter blog title...\" [(ngModel)]=\"title\">\n\t\t\t\t<angular-editor [(ngModel)]=\"htmlContent\" class=\"editor\" [config]=\"config\"></angular-editor>\n\t\t\t\t<div class=\"btn\" (click)=\"post()\">Post</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t\n</div>\n"
         },
         {
             "name": "ButtonComponent",
@@ -672,7 +684,7 @@
         },
         {
             "name": "LoginComponent",
-            "id": "component-LoginComponent-83ea4670d4340779cbb61391048ab91247af800dbb3f237ce13cf3cd17585766dd479f14239312d2f86017353e88e65a916f6af07e81a52192975e6e119e3d35",
+            "id": "component-LoginComponent-489a08a05645aa027f51c1c672758bace8eb792df8b1fa574c81298a27af2252a9ae556cb654d2930b41f78e02eef5323276ba4ada8d5c77113c62ca9fe4d525",
             "file": "src/lib/auth/login/login.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -731,7 +743,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    email: '',\n    password: '',\n  };\n\n  submitForm() {\n    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)\n    .subscribe({\n      next: response => {\n        const jwtToken = response.token;\n        const username = response.username;\n        this.cookieService.set('boonjwtToken', jwtToken);\n        this.cookieService.set('boonCurrentUser', username);\n        console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n        // Handle the JWT token as needed\n      },\n      error: error => {\n        console.error('API Error:', error);\n        // Handle the error response\n      }\n    });\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    email: '',\n    password: '',\n  };\n\n  submitForm() {\n    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)\n    .subscribe({\n      next: response => {\n        const jwtToken = response.token;\n        const username = response.username;\n        this.cookieService.set('boonJwtToken', jwtToken);\n        this.cookieService.set('boonCurrentUser', username);\n        console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n        // Handle the JWT token as needed\n      },\n      error: error => {\n        console.error('API Error:', error);\n        // Handle the error response\n      }\n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1848,7 +1860,7 @@
         },
         {
             "name": "SignupComponent",
-            "id": "component-SignupComponent-b2f85e2776807b923d33cdf29e838220fcfa4e006acb9a9df8a67bb6ab007e56a743f44e84cdb5a438afaf7ce3eb602e771591dcf318ffc559c6f8361a74b9f1",
+            "id": "component-SignupComponent-0506fd36740f080728f68bfeb1316e65872e519bdb1c785a5a3d054b0bc793d413b0ae0cfb62312bf02ba9ccb4ef89f88206302e098b5193973677babdd95221",
             "file": "src/lib/auth/signup/signup.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1907,7 +1919,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-signup',\n  templateUrl: './signup.component.html',\n  styleUrls: ['./signup.component.scss']\n})\nexport class SignupComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService){}\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    firstname: '',\n    lastname: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  };\n\n  submitForm() {\n    if (this.formData.password === this.formData.confirmPassword) {\n      this.http.post<any>('http://localhost:8080/api/v1/auth/register', this.formData)\n      .subscribe({\n        next: response => {\n          const jwtToken = response.token;\n          const username = response.username;\n          this.cookieService.set('boonjwtToken', jwtToken);\n          this.cookieService.set('boonCurrentUser', username);\n          console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n          // Handle the JWT token as needed\n        },\n        error: error => {\n          console.error('API Error:', error);\n          // Handle the error response\n        }\n      });\n    } else {\n      console.error('Passwords do not match');\n    }\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-signup',\n  templateUrl: './signup.component.html',\n  styleUrls: ['./signup.component.scss']\n})\nexport class SignupComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService){}\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    firstname: '',\n    lastname: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  };\n\n  submitForm() {\n    if (this.formData.password === this.formData.confirmPassword) {\n      this.http.post<any>('http://localhost:8080/api/v1/auth/register', this.formData)\n      .subscribe({\n        next: response => {\n          const jwtToken = response.token;\n          const username = response.username;\n          this.cookieService.set('boonJwtToken', jwtToken);\n          this.cookieService.set('boonCurrentUser', username);\n          console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n          // Handle the JWT token as needed\n        },\n        error: error => {\n          console.error('API Error:', error);\n          // Handle the error response\n        }\n      });\n    } else {\n      console.error('Passwords do not match');\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3166,21 +3178,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Large",
@@ -3356,21 +3368,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/signup.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: SignupComponent) => ({\r\n\tcomponet: SignupComponent,\r\n\tprops: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/projects.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: ProjectsComponent) => ({\r\n\tcomponent: ProjectsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/signup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: SignupComponent) => ({\r\n\tcomponet: SignupComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -3453,18 +3465,6 @@
                     "defaultValue": "(args: BlogsComponent) => ({\r\n\tcomponet: BlogsComponent,\r\n\tprops: args\r\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -3475,6 +3475,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -3849,7 +3861,7 @@
                 "linktype": "component",
                 "name": "BlogsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/13",
+                "coverageCount": "0/14",
                 "status": "low"
             },
             {

@@ -11,32 +11,59 @@ import { NgModel } from '@angular/forms';
 })
 export class BlogsComponent implements OnInit {
 
-  public showTrending: boolean = false;
+  public showTrending: boolean = true;
   public showMyBlogs: boolean = false;
-  public showAddBlogs: boolean = true;
+  public showAddBlogs: boolean = false;
+  public blogs: any;
+
+  //current blog status
+  public showBlog: boolean = false;
+  public heading: any;
+  public author: any;
+  public content: any;
+  public date: any;
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    const jwtToken = this.cookieService.get('boonJwtToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
+    });
 
+    console.log(headers);
+
+    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})
+    .subscribe({
+      next: response => {
+        console.log(response);
+        this.blogs = response;
+      },
+      error: error => {
+        console.error('API Error', error);
+      }   
+    });
   }
 
   trending(){
     this.showTrending = true;
     this.showAddBlogs = false;
     this.showMyBlogs = false;
+    this.showBlog = false;
   }
 
   myblogs(){
     this.showTrending = false;
     this.showAddBlogs = false;
     this.showMyBlogs = true;
+    this.showBlog = false;
   }
 
   addblogs(){
     this.showTrending = false;
     this.showAddBlogs = true;
     this.showMyBlogs = false;
+    this.showBlog = false;
   }
 
   title = '';
@@ -50,7 +77,7 @@ export class BlogsComponent implements OnInit {
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
-    defaultFontName: 'Arial',
+    defaultFontName: 'Comic Sans MS',
     toolbarHiddenButtons: [
       ['bold']
       ],
@@ -72,7 +99,7 @@ export class BlogsComponent implements OnInit {
   };
 
   post(){
-    const jwtToken = this.cookieService.get('boonjwtToken');
+    const jwtToken = this.cookieService.get('boonJwtToken');
     const username = this.cookieService.get('boonCurrentUser');
     const body = {
       username: username,
@@ -94,8 +121,19 @@ export class BlogsComponent implements OnInit {
       },
       error: error => {
         console.error('API Error', error);
-      }  
-      
+      }   
     });
+  }
+
+  readMore(blog: any){
+    this.heading = blog.title;
+    this.author = blog.firstname + ' ' + blog.lastname;
+    this.content = blog.content;
+    this.date = blog.createdAt;
+    this.showBlog = true;
+  }
+
+  back(){
+    this.showBlog = false;
   }
 }
