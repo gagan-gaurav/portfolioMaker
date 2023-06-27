@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
         next: response => {
           const jwtToken = response.token;
           const username = response.username;
-          this.cookieService.set('boonjwtToken', jwtToken);
+          this.cookieService.set('boonJwtToken', jwtToken);
           this.cookieService.set('boonCurrentUser', username);
           console.log('JWT Token:', jwtToken, '\nUsername:', username);
           // Handle the JWT token as needed
