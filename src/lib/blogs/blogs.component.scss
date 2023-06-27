@@ -76,16 +76,17 @@
 			flex-direction: column;
 			// background-color: lightblue;
 			// height: 100%;
-			width: 8%;
+			width: 120px;
+			height: 100%;
 			align-items: center;
-			justify-content: center;
+			// justify-content: center;
 
 			.btn{
 				cursor: pointer;
 				color: white;
 				background-color: cornflowerblue;
 				height: 24px;
-				padding: 4px 12px;
+				padding: 0px 12px;
 				margin: 8px;
 				border-radius: 24px;
 				box-shadow: black 4px 4px;
@@ -107,7 +108,7 @@
 			margin-left: 8px;
 			
 
-			.trending-container{
+			.myblogs-container{
 				background-color: cornflowerblue;
 				height: 100%;
 				width: 100%;
@@ -177,20 +178,6 @@
 						box-shadow: black 2px 2px;
 					}
 				}
-
-				// .blog:hover{
-				// 	box-shadow: 1px 1px;
-				// }
-			}
-	
-			.myblogs-container{
-				background-color: lightseagreen;
-				height: 100%;
-				width: 100%;
-				border-radius: 8px;
-				position: absolute;
-				top: 0;
-				left: 0;
 			}
 	
 			.addblogs-container{

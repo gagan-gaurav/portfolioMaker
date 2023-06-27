@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="blogs">
-			<div class="trending-container" *ngIf="showTrending">
+			<div class="myblogs-container" *ngIf="showTrending">
 				<ng-container *ngFor="let b of blogs">
 					<div class="blog">
 						<div class="heading">{{b.title}}</div>
@@ -31,7 +31,14 @@
 				</ng-container>
 			</div>
 			<div class="myblogs-container" *ngIf="showMyBlogs">
-	
+				<ng-container *ngFor="let b of userblogs">
+					<div class="blog">
+						<div class="heading">{{b.title}}</div>
+						<div class="date"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>
+						<div class="content" [innerHTML]="b.content"></div>
+						<div class="read-more" (click)="readMore(b)">Read More</div>
+					</div>
+				</ng-container>
 			</div>
 			<div class="addblogs-container" *ngIf="showAddBlogs">
 				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">

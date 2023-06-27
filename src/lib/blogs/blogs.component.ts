@@ -15,6 +15,7 @@ export class BlogsComponent implements OnInit {
   public showMyBlogs: boolean = false;
   public showAddBlogs: boolean = false;
   public blogs: any;
+  public userblogs: any;
 
   //current blog status
   public showBlog: boolean = false;
@@ -27,6 +28,7 @@ export class BlogsComponent implements OnInit {
 
   ngOnInit(): void {
     const jwtToken = this.cookieService.get('boonJwtToken');
+    const username = this.cookieService.get('boonCurrentUser');
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
@@ -38,6 +40,17 @@ export class BlogsComponent implements OnInit {
       next: response => {
         console.log(response);
         this.blogs = response;
+      },
+      error: error => {
+        console.error('API Error', error);
+      }   
+    });
+
+    this.http.get(`http://localhost:8080/api/v1/blogs/${username}`, {headers})
+    .subscribe({
+      next: response => {
+        console.log(response);
+        this.userblogs = response;
       },
       error: error => {
         console.error('API Error', error);
