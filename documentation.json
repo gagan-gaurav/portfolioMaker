@@ -208,7 +208,7 @@
         },
         {
             "name": "BlogsComponent",
-            "id": "component-BlogsComponent-bb8e912b66a3c97768c5756490b1dd7ef3a21df5293af9cf590199b345c705e2280c7be4abdd5acd6e1f67755ed48509c36868a9d017e3d910fe4a2d0e87b617",
+            "id": "component-BlogsComponent-4068508f1fc8c57a02069ab0a14cf4b4721775b4fe6d4f30b3fbb81111754dbd5f65d98a680a114ce2b4ac9405fdd2acf3ca991808ef71e0f0f2d7aee74e8e36",
             "file": "src/lib/blogs/blogs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -228,6 +228,18 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
                     "name": "blogs",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -241,13 +253,49 @@
                 },
                 {
                     "name": "config",
-                    "defaultValue": "{\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Arial',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  }",
+                    "defaultValue": "{\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Comic Sans MS',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "AngularEditorConfig",
                     "optional": false,
                     "description": "",
-                    "line": 62
+                    "line": 85
+                },
+                {
+                    "name": "content",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "date",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 25,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "heading",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        123
+                    ]
                 },
                 {
                     "name": "htmlContent",
@@ -257,7 +305,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 60
+                    "line": 83
                 },
                 {
                     "name": "showAddBlogs",
@@ -268,6 +316,19 @@
                     "optional": false,
                     "description": "",
                     "line": 16,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "showBlog",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
                     "modifierKind": [
                         123
                     ]
@@ -306,7 +367,19 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 59
+                    "line": 82
+                },
+                {
+                    "name": "userblogs",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
                 }
             ],
             "methodsClass": [
@@ -316,7 +389,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 53,
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "back",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 149,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -326,7 +409,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 47,
+                    "line": 68,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -336,7 +419,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 29,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -346,9 +429,37 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 91,
+                    "line": 114,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "readMore",
+                    "args": [
+                        {
+                            "name": "blog",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 141,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "blog",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "trending",
@@ -356,7 +467,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 61,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -368,11 +479,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { NgModel } from '@angular/forms';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public showTrending: boolean = true;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = false;\n  public blogs: any;\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const headers = new HttpHeaders({\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.blogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Arial',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const body = {\n      username: username,\n      title: this.title,\n      content: this.htmlContent\n    };\n\n    const headers = new HttpHeaders({\n      'Content-Type': 'application/json',\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })\n    .subscribe({\n      next: response => {\n        console.log(response);\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { NgModel } from '@angular/forms';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public showTrending: boolean = true;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = false;\n  public blogs: any;\n  public userblogs: any;\n\n  //current blog status\n  public showBlog: boolean = false;\n  public heading: any;\n  public author: any;\n  public content: any;\n  public date: any;\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const headers = new HttpHeaders({\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.blogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n\n    this.http.get(`http://localhost:8080/api/v1/blogs/${username}`, {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.userblogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n    this.showBlog = false;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Comic Sans MS',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const body = {\n      username: username,\n      title: this.title,\n      content: this.htmlContent\n    };\n\n    const headers = new HttpHeaders({\n      'Content-Type': 'application/json',\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })\n    .subscribe({\n      next: response => {\n        console.log(response);\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  readMore(blog: any){\n    this.heading = blog.title;\n    this.author = blog.firstname + ' ' + blog.lastname;\n    this.content = blog.content;\n    this.date = blog.createdAt;\n    this.showBlog = true;\n  }\n\n  back(){\n    this.showBlog = false;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import './../../styles/config.scss';\r\n\r\n.blogs-window{\r\n\twidth: 90%;\r\n\t// background-color: red;\r\n\tborder-radius: 8px;\r\n\tborder: solid black;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: align-self;\r\n\t\talign-items: center;\r\n\t\tborder-bottom: solid black;\r\n\r\n\t\t.heading{\r\n\t\t\tmargin-left: auto;\r\n\t\t}\r\n\t\t.close{\r\n\t\t\tbackground-color: red;\r\n\t\t\theight: 12px;\r\n\t\t\twidth: 12px;\r\n\t\t\tborder: solid black;\r\n\t\t\tborder-radius: 12px;\r\n\t\t\tmargin-left: auto;\r\n\t\t\tmargin-right: 4px;\r\n\t\t}\r\n\t}\r\n\t.search{\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\t\tmargin-top: 8px;\r\n\t\t// background-color: grey;\r\n\r\n\t\tinput{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 320px;\r\n\t\t\tpadding: 0px 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\tborder: solid 2px black;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 24px;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\t// border: solid 2px black;\r\n\t\t\tbackground-color: lightgreen;\r\n\t\t\tbox-shadow: 4px 4px;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn:active{\r\n\t\t\tbackground-color: rgb(78, 151, 78);\r\n\t\t\tbox-shadow: 2px 2px;\r\n\t\t}\r\n\t}\r\n\r\n\t.blogs-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\r\n\t\t.nav-menu{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\t// background-color: lightblue;\r\n\t\t\t// height: 100%;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\r\n\t\t\tbutton{\r\n\t\t\t\theight: 32px;\r\n\t\t\t\twidth: 128px;\r\n\t\t\t\tmargin: 4px;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\t.blogs{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\t\r\n\r\n\t\t\t.trending-container{\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\toverflow-y: scroll;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\r\n\t\t\t\t.blog{\r\n\t\t\t\t\twidth: 90%;\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tmargin-top: 32px;\r\n\t\t\t\t\tfont-family: $primary-font;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 4px;\r\n\r\n\t\t\t\t\t.heading{\r\n\t\t\t\t\t\tfont-size: 24px;\r\n\t\t\t\t\t\tfont-weight: bold;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.date{\r\n\t\t\t\t\t\tfont-size: 16px;\r\n\t\t\t\t\t\tfont-style: italic;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\r\n\t\t\t.myblogs-container{\r\n\t\t\t\tbackground-color: lightseagreen;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t}\r\n\t\r\n\t\t\t.addblogs-container{\r\n\t\t\t\tbackground-color: lightcyan;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\tjustify-content: space-evenly;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tpadding: 8px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\r\n\t\t\t\tinput{\r\n\t\t\t\t\theight: 36px ;\r\n\t\t\t\t\tfont-size: 32px;\r\n\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\tborder: solid 2px black;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn{\r\n\t\t\t\t\tbackground-color: lightgreen;\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 84px;\r\n\t\t\t\t\tborder: 0px;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t\t\tborder-radius: 24px;\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.btn:active{\r\n\t\t\t\t\tbackground-color: #38a338;\r\n\t\t\t\t\tbox-shadow: 2px 2px;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
+                    "data": "@import './../../styles/config.scss';\r\n\r\n.blogs-window{\r\n\tfont-family: $primary-font;\r\n\twidth: 80vw;\r\n\tbackground-color: #d8e4fa;\r\n\tborder-radius: 8px;\r\n\tborder: solid black;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t.menu-bar{\r\n\t\tbackground-color: #6495ed;\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: align-self;\r\n\t\talign-items: center;\r\n\t\tborder-bottom: solid black;\r\n\r\n\t\t.heading{\r\n\t\t\tmargin-left: auto;\r\n\t\t}\r\n\t\t.close{\r\n\t\t\tbackground-color: coral;\r\n\t\t\theight: 12px;\r\n\t\t\twidth: 12px;\r\n\t\t\tborder: solid black;\r\n\t\t\tborder-radius: 12px;\r\n\t\t\tmargin-left: auto;\r\n\t\t\tmargin-right: 4px;\r\n\t\t}\r\n\t}\r\n\t.search{\r\n\t\theight: 24px;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\t\tmargin-top: 8px;\r\n\t\t// background-color: grey;\r\n\r\n\t\tinput{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 320px;\r\n\t\t\tpadding: 0px 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\tborder: solid 2px black;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn{\r\n\t\t\theight: 24px;\r\n\t\t\twidth: 24px;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\tborder-radius: 24px;\r\n\t\t\t// border: solid 2px black;\r\n\t\t\tbackground-color: cornflowerblue;\r\n\t\t\tbox-shadow: 4px 4px;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\t\t\r\n\t\t.search-btn:hover{\r\n\t\t\tbackground-color: rgb(36, 93, 199);\r\n\t\t}\r\n\t\t.search-btn:active{\r\n\t\t\tbox-shadow: 2px 2px;\r\n\t\t}\r\n\t}\r\n\r\n\t.blogs-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\r\n\t\t.nav-menu{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\t// background-color: lightblue;\r\n\t\t\t// height: 100%;\r\n\t\t\twidth: 120px;\r\n\t\t\theight: 100%;\r\n\t\t\talign-items: center;\r\n\t\t\t// justify-content: center;\r\n\r\n\t\t\t.btn{\r\n\t\t\t\tcursor: pointer;\r\n\t\t\t\tcolor: white;\r\n\t\t\t\tbackground-color: cornflowerblue;\r\n\t\t\t\theight: 24px;\r\n\t\t\t\tpadding: 0px 12px;\r\n\t\t\t\tmargin: 8px;\r\n\t\t\t\tborder-radius: 24px;\r\n\t\t\t\tbox-shadow: black 4px 4px;\r\n\t\t\t}\r\n\r\n\t\t\t.btn:hover{\r\n\t\t\t\tbackground-color: rgb(36, 93, 199);\r\n\t\t\t}\r\n\r\n\t\t\t.btn:active{\r\n\t\t\t\tbox-shadow: black 2px 2px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\t.blogs{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tmargin-left: 8px;\r\n\t\t\t\r\n\r\n\t\t\t.myblogs-container{\r\n\t\t\t\tbackground-color: cornflowerblue;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\toverflow-y: scroll;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\r\n\t\t\t\t.blog{\r\n\t\t\t\t\twidth: 90%;\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tmargin: 16px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t\t\tpadding: 16px;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\r\n\t\t\t\t\t.heading{\r\n\t\t\t\t\t\tfont-size: 24px;\r\n\t\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\t\ttext-overflow: ellipsis;\r\n\t\t\t\t\t\twhite-space: nowrap;\r\n\t\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\t\tfont-weight: bold;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.date{\r\n\t\t\t\t\t\tfont-size: 14px;\r\n\t\t\t\t\t\tfont-style: italic;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.content{\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\t\ttext-overflow: ellipsis;\r\n\t\t\t\t\t\twhite-space: nowrap;\r\n\t\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\t\tmargin-bottom: 8px;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.read-more{\r\n\t\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\t\talign-items: center;\r\n\t\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\t\tcolor: white;\r\n\t\t\t\t\t\tbackground-color: cornflowerblue;\r\n\t\t\t\t\t\tmargin-left: auto;\r\n\t\t\t\t\t\tborder-radius: 24px;\r\n\t\t\t\t\t\tbox-shadow: black 4px 4px;\r\n\t\t\t\t\t\theight: 24px;\r\n\t\t\t\t\t\twidth: 128px;\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.read-more:hover{\r\n\t\t\t\t\t\tbackground-color: rgb(36, 93, 199);\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.read-more:active{\r\n\t\t\t\t\t\tbox-shadow: black 2px 2px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\r\n\t\t\t.addblogs-container{\r\n\t\t\t\tbackground-color: cornflowerblue;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\tjustify-content: space-evenly;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tpadding: 8px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\r\n\t\t\t\tinput{\r\n\t\t\t\t\theight: 36px ;\r\n\t\t\t\t\tfont-size: 32px;\r\n\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\tborder: solid 1px black;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.innerclass{\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tpadding: 16px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\r\n\t\t\t\t\t.btn{\r\n\t\t\t\t\t\tbackground-color: cornflowerblue;\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 84px;\r\n\t\t\t\t\t\tborder: 0px;\r\n\t\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\t\talign-items: center;\r\n\t\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t\t\t\tborder-radius: 24px;\r\n\t\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\t\tmargin-top: 4px;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t\t.btn:hover{\r\n\t\t\t\t\t\tbackground-color: rgb(36, 93, 199);\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\t.btn:active{\r\n\t\t\t\t\t\tbox-shadow: 2px 2px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\t\t\t::-webkit-scrollbar {\r\n\t\t\t\twidth: 12px;\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\t// /* Track */\r\n\t\t\t// ::-webkit-scrollbar-track {\r\n\t\t\t// \t// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); \r\n\t\t\t// \t-webkit-border-radius: 8px;\r\n\t\t\t// \tborder-radius: 8px;\r\n\t\t\t// }\r\n\t\t\t\r\n\t\t\t/* Handle */\r\n\t\t\t::-webkit-scrollbar-thumb {\r\n\t\t\t\t-webkit-border-radius: 8px;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tbackground: rgb(36, 93, 199); \r\n\t\t\t\t// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); \r\n\t\t\t}\r\n\r\n\t\t\t.readmore-container{\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\theight: 100%;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tborder-radius: 8px;\r\n\t\t\t\tpadding: 8px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\toverflow-y: scroll;\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\ttop: 0;\r\n\t\t\t\tleft: 0;\r\n\r\n\t\t\t\t.back{\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\tpadding: 4px;\r\n\t\t\t\t\t// background-color: red;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.blog-heading{\r\n\t\t\t\t\tfont-size: 32px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.blog-metadata{\r\n\t\t\t\t\tfont-style: italic;\r\n\t\t\t\t\tfont-size: 14px;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
                     "styleUrl": "./blogs.component.scss"
                 }
             ],
@@ -396,7 +507,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 17,
+                "line": 25,
                 "jsdoctags": [
                     {
                         "name": "http",
@@ -421,7 +532,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"blogs-window\">\n\t<div class=\"menu-bar\">\n\t\t<div class=\"heading\">Blogs</div>\n\t\t<div class=\"close\"></div>\n\t</div>\n\t<div class=\"search\">\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<div class=\"search-btn\"></div>\n\t</div>\n\t<div class=\"blogs-container\">\n\t\t<div class=\"nav-menu\">\n\t\t\t<button class=\"trending\" (click)=\"trending()\">\n\t\t\t\tTrending\n\t\t\t</button>\n\t\t\t<button class=\"myblogs\" (click)=\"myblogs()\">\n\t\t\t\tMy Blogs\n\t\t\t</button>\n\t\t\t<button class=\"addblogs\" (click)=\"addblogs()\">\n\t\t\t\tAdd Blog\n\t\t\t</button>\n\t\t</div>\n\t\t<div class=\"blogs\">\n\t\t\t<div class=\"trending-container\" *ngIf=\"showTrending\">\n\t\t\t\t<ng-container *ngFor=\"let b of blogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\">{{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showMyBlogs\">\n\t\n\t\t\t</div>\n\t\t\t<div class=\"addblogs-container\" *ngIf=\"showAddBlogs\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter blog title...\" [(ngModel)]=\"title\">\n\t\t\t\t<angular-editor [(ngModel)]=\"htmlContent\" class=\"editor\" [config]=\"config\"></angular-editor>\n\t\t\t\t<div class=\"btn\" (click)=\"post()\">Post</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t\n</div>\n"
+            "templateData": "<div class=\"blogs-window\">\n\t<div class=\"menu-bar\">\n\t\t<div class=\"heading\">Blogs</div>\n\t\t<div class=\"close\"></div>\n\t</div>\n\t<div class=\"search\">\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<div class=\"search-btn\"></div>\n\t</div>\n\t<div class=\"blogs-container\">\n\t\t<div class=\"nav-menu\">\n\t\t\t<div class=\"btn\" (click)=\"trending()\">\n\t\t\t\tTrending\n\t\t\t</div>\n\t\t\t<div class=\"btn\" (click)=\"myblogs()\">\n\t\t\t\tMy Blogs\n\t\t\t</div>\n\t\t\t<div class=\"btn\" (click)=\"addblogs()\">\n\t\t\t\tAdd Blog\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"blogs\">\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showTrending\">\n\t\t\t\t<ng-container *ngFor=\"let b of blogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\" (click)=\"readMore(b)\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showMyBlogs\">\n\t\t\t\t<ng-container *ngFor=\"let b of userblogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\" (click)=\"readMore(b)\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"addblogs-container\" *ngIf=\"showAddBlogs\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter blog title...\" [(ngModel)]=\"title\">\n\t\t\t\t<div class=\"innerclass\">\n\t\t\t\t\t<angular-editor [(ngModel)]=\"htmlContent\" class=\"editor\" [config]=\"config\"></angular-editor>\n\t\t\t\t\t<div class=\"btn\" (click)=\"post()\">Post</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"readmore-container\" *ngIf=\"showBlog\">\n\t\t\t\t<img src=\"assets/images/buttons/return.png\" class=\"back\" (click)=\"back()\">\n\t\t\t\t<div class=\"blog-heading\">\n\t\t\t\t\t{{ this.heading }}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"blog-metadata\">\n\t\t\t\t\tAuthored by <b>{{ this.author }}</b> on {{ this.date | slice:0:10 }}\n\t\t\t\t</div>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"blog-content\" [innerHTML]=\"this.content\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t\n</div>\n"
         },
         {
             "name": "ButtonComponent",
@@ -2038,7 +2149,7 @@
         },
         {
             "name": "WallComponent",
-            "id": "component-WallComponent-daabb83371af3fbb4e16f58efc471c472fac23ed4d5d6dce0ab0165e2325e3a6f8425426f3c97afe39b924d4949dc8a69a0e87040895f031da1562d2f249f702",
+            "id": "component-WallComponent-5ac451a3b24d6be13efaf7388c3dcfa7d3f7d0a9c5adcc8b33d0d63f9b0afae9cf02271049f85cb07a055c1cdf42c7688f71455f59e303e45d7b27a9962cbeab",
             "file": "src/lib/wall/wall.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2084,6 +2195,19 @@
                     ]
                 },
                 {
+                    "name": "blogX1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 64,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
                     "name": "blogX2",
                     "defaultValue": "0",
                     "deprecated": false,
@@ -2091,7 +2215,20 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 46,
+                    "line": 66,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "blogY1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 65,
                     "modifierKind": [
                         123
                     ]
@@ -2104,7 +2241,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 47,
+                    "line": 67,
                     "modifierKind": [
                         123
                     ]
@@ -2130,7 +2267,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 57,
+                    "line": 53,
                     "modifierKind": [
                         123
                     ]
@@ -2143,7 +2280,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 58,
+                    "line": 54,
                     "modifierKind": [
                         123
                     ]
@@ -2156,7 +2293,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 60,
+                    "line": 56,
                     "modifierKind": [
                         123
                     ]
@@ -2169,7 +2306,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 59,
+                    "line": 55,
                     "modifierKind": [
                         123
                     ]
@@ -2182,7 +2319,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 61,
+                    "line": 57,
                     "modifierKind": [
                         123
                     ]
@@ -2194,7 +2331,7 @@
                     "type": "AppConfig",
                     "optional": false,
                     "description": "",
-                    "line": 68,
+                    "line": 71,
                     "modifierKind": [
                         123
                     ]
@@ -2207,7 +2344,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 65,
+                    "line": 61,
                     "modifierKind": [
                         123
                     ]
@@ -2246,7 +2383,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 54,
+                    "line": 50,
                     "modifierKind": [
                         123
                     ]
@@ -2259,7 +2396,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 55,
+                    "line": 51,
                     "modifierKind": [
                         123
                     ]
@@ -2324,7 +2461,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 62,
+                    "line": 58,
                     "modifierKind": [
                         123
                     ]
@@ -2350,7 +2487,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 45,
+                    "line": 68,
                     "modifierKind": [
                         123
                     ]
@@ -2363,7 +2500,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 53,
+                    "line": 49,
                     "modifierKind": [
                         123
                     ]
@@ -2389,7 +2526,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 63,
+                    "line": 59,
                     "modifierKind": [
                         123
                     ]
@@ -2415,7 +2552,20 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 49,
+                    "line": 45,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "loadBlogsComponent",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 63,
                     "modifierKind": [
                         123
                     ]
@@ -2557,7 +2707,7 @@
                     "type": "Router",
                     "optional": false,
                     "description": "",
-                    "line": 68,
+                    "line": 71,
                     "modifierKind": [
                         123
                     ]
@@ -2596,7 +2746,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 50,
+                    "line": 46,
                     "modifierKind": [
                         123
                     ]
@@ -2609,7 +2759,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 51,
+                    "line": 47,
                     "modifierKind": [
                         123
                     ]
@@ -2622,7 +2772,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 64,
+                    "line": 60,
                     "modifierKind": [
                         123
                     ]
@@ -2642,7 +2792,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 233,
+                    "line": 236,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2670,7 +2820,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 223,
+                    "line": 226,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2698,7 +2848,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 213,
+                    "line": 216,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2719,7 +2869,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 90,
+                    "line": 93,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -2736,7 +2886,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 107,
+                    "line": 110,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2770,7 +2920,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 166,
+                    "line": 169,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2804,7 +2954,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 151,
+                    "line": 154,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2838,7 +2988,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 95,
+                    "line": 98,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2879,7 +3029,7 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 107
+                    "line": 110
                 },
                 {
                     "name": "document:mousemove",
@@ -2896,7 +3046,7 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 166
+                    "line": 169
                 },
                 {
                     "name": "document:mouseup",
@@ -2913,7 +3063,7 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 151
+                    "line": 154
                 },
                 {
                     "name": "window:resize",
@@ -2930,17 +3080,17 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 95
+                    "line": 98
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ThisReceiver } from '@angular/compiler';\nimport { Component, OnInit, HostListener} from '@angular/core';\nimport { Router } from '@angular/router';\nimport { AppConfig} from 'src/config/app.config';\n\n@Component({\n  selector: 'app-wall',\n  templateUrl: './wall.component.html',\n  styleUrls: ['./wall.component.scss']\n})\n\nexport class WallComponent implements OnInit {\n\n  public HOME: string = \"home\";\n  public PROJECT: string = \"project\";\n  public BLOG: string = \"blog\";\n  public SKILL: string = \"skill\";\n  public FLAW: string = \"flaw\";\n  public CARD: string = \"card\";\n\n  public homeFolderUrl : string = \"/assets/images/buttons/home/ggn111.png\";\n  public projectFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public blogFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public skillFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public flawFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n\n\n  public mouseHoldHome: boolean = false; // for button\n  public mouseHoldProject: boolean = false; // for project\n  public mouseHoldBlog: boolean = false; // for blogs\n  public mouseHoldSkill: boolean = false; // for skills\n  public mouseHoldFlaw: boolean = false; // for flaws\n  public mouseHoldCard: boolean = false; // for card\n\n  public initialWidth = 0; // initial size of window\n\n  public insideHome: boolean = false;\n  public homeX2: number = 0;\n  public homeY2: number = 0;\n\n  public insideProject: boolean = false;\n  public projectX2: number = 0;\n  public projectY2: number = 0;\n\n  public insideBlog: boolean = false;\n  public blogX2: number = 0;\n  public blogY2: number = 0;\n\n  public insideSkill: boolean = false;\n  public skillX2: number = 0;\n  public skillY2: number = 0;\n\n  public insideFlaw: boolean = false;\n  public flawX2: number = 0;\n  public flawY2: number = 0;\n\n  public cardVisible: boolean = true;\n  public cardX1: number = 0;\n  public cardY1: number = 0;\n  public cardX2: number = 0;\n  public cardY2: number = 0;\n  public initialCardHeight = 0;\n  public insideMenubar: boolean = false;\n  public startTime: number = 0;\n  public endTime: number = 0;\n\n  \n  constructor(public router: Router, public config: AppConfig) { \n    this.initialWidth = window.innerWidth;\n    console.log(config.homeX1, config.homeY1);\n    if(config.homeX1 == undefined) config.homeX1 = window.innerWidth - 100;\n    if(config.homeY1 == undefined) config.homeY1 = 50;\n\n    if(config.projectX1 == undefined) config.projectX1 = window.innerWidth - 100;\n    if(config.projectY1 == undefined) config.projectY1 = 140;  // 50 + 90\n\n    if(config.blogX1 == undefined) config.blogX1 = window.innerWidth - 100;\n    if(config.blogY1 == undefined) config.blogY1 = 230; // 140 + 90\n\n    if(config.skillX1 == undefined) config.skillX1 = window.innerWidth - 100;\n    if(config.skillY1 == undefined) config.skillY1 = 320;\n\n    if(config.flawX1 == undefined) config.flawX1 = window.innerWidth - 100;\n    if(config.flawY1 == undefined) config.flawY1 = 410;\n\n    this.cardY1= 150;\n    this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2\n  }\n\n  ngOnInit(): void {\n  }\n\n  // this maintains the position of button with respect to right side, when window size is changing.\n  @HostListener('window:resize', ['$event'])\n  onResize(event: any) {\n    this.config.homeX1 -= this.initialWidth - window.innerWidth;\n    this.config.projectX1 -= this.initialWidth - window.innerWidth;\n    this.config.blogX1 -= this.initialWidth - window.innerWidth;\n    this.config.skillX1 -= this.initialWidth - window.innerWidth;\n    this.config.flawX1 -= this.initialWidth - window.innerWidth;\n    this.initialWidth = window.innerWidth;\n  }\n\n\n  // listen to the mouseclick is pressed.\n  @HostListener('document:mousedown', ['$event'])\n  onMouseDown(event: MouseEvent) {\n    event.preventDefault();\n    this.startTime = Date.now();\n    // console.log(event.clientX);\n\n    if(this.insideHome){\n      this.mouseHoldHome = true;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.insideProject){\n      this.mouseHoldProject = true;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.insideBlog){\n      this.mouseHoldBlog = true;\n      this.blogX2 = event.clientX;\n      this.blogY2 = event.clientY;\n    }\n\n    if(this.insideSkill){\n      this.mouseHoldSkill = true;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.insideFlaw){\n      this.mouseHoldFlaw = true;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.insideMenubar){\n      this.mouseHoldCard = true;\n      this.cardX2 = event.clientX;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse click is released.\n  @HostListener('document:mouseup', ['$event'])\n  onMouseUp(event: MouseEvent) {\n    // console.log(event);\n    event.preventDefault();\n    this.endTime = Date.now();\n    // this.mouseHold = true;\n    this.mouseHoldBlog = false;\n    this.mouseHoldHome = false;\n    this.mouseHoldProject = false;\n    this.mouseHoldCard = false;\n    this.mouseHoldFlaw = false;\n    this.mouseHoldSkill = false;\n  }\n\n  // when mouse is moving.\n  @HostListener('document:mousemove', ['$event'])\n  onMouseMove(event: MouseEvent) {\n    event.preventDefault();\n\n    if(this.mouseHoldHome && this.insideHome){\n      this.config.homeX1 += event.clientX - this.homeX2;\n      this.config.homeY1 += event.clientY - this.homeY2;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.mouseHoldProject && this.insideProject){\n      this.config.projectX1 += event.clientX - this.projectX2;\n      this.config.projectY1 += event.clientY - this.projectY2;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.mouseHoldBlog && this.insideBlog){\n      this.config.blogX1 += event.clientX - this.blogX2;\n      this.config.blogY1 += event.clientY - this.blogY2;\n      this.blogX2 = event.clientX;\n      this.blogY2 = event.clientY;\n    }\n\n    if(this.mouseHoldSkill && this.insideSkill){\n      this.config.skillX1 += event.clientX - this.skillX2;\n      this.config.skillY1 += event.clientY - this.skillY2;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.mouseHoldFlaw && this.insideFlaw){\n      this.config.flawX1 += event.clientX - this.flawX2;\n      this.config.flawY1 += event.clientY - this.flawY2;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.mouseHoldCard && this.insideMenubar){\n      this.cardX1 += event.clientX - this.cardX2;\n      this.cardX2 = event.clientX;\n      this.cardY1 += event.clientY - this.cardY2;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse is inside the div.\n  mouseOver(value: any){\n    if(value == \"home\")this.insideHome = true;\n    else if(value == \"project\") this.insideProject = true;\n    else if(value == \"blog\") this.insideBlog = true;\n    else if(value == \"card\") this.insideMenubar = true;\n    else if(value == \"skill\") this.insideSkill = true;\n    else if(value == \"flaw\") this.insideFlaw = true;\n  }\n\n  // when mouse is outsider the div.\n  mouseOut(value: any){\n    if(value == \"home\" && this.mouseHoldHome == false) this.insideHome = false;\n    else if(value == \"project\" && this.mouseHoldProject == false) this.insideProject = false;\n    else if(value == \"blog\" && this.mouseHoldBlog == false) this.insideBlog = false;\n    else if(value == \"card\" && this.mouseHoldCard == false) this.insideMenubar = false;\n    else if(value == \"skill\" && this.mouseHoldSkill == false) this.insideSkill = false;\n    else if(value == \"flaw\" && this.mouseHoldFlaw == false) this.insideFlaw = false;\n  }\n\n  \n  flipCard(value: string) {\n    var time = this.endTime - this.startTime;\n    if(time < 150 && value == \"project\") {\n      console.log(this.config.homeX1, this.config.homeY1);\n      this.router.navigate([\"projects\"]);\n    }else if(time < 150 && value == \"blog\"){\n      this.router.navigate([\"blogs\"]);\n    }else if(time < 150 && value == \"skill\"){\n      this.router.navigate([\"skills\"]);\n    }else if(time < 150 && value == \"flaw\"){\n      this.router.navigate([\"flaws\"]);\n    }else if(time < 150) {\n      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.\n    // console.log(this.cardVisible);\n    }\n  }\n}\n",
+            "sourceCode": "import { ThisReceiver } from '@angular/compiler';\nimport { Component, OnInit, HostListener} from '@angular/core';\nimport { Router } from '@angular/router';\nimport { AppConfig} from 'src/config/app.config';\n\n@Component({\n  selector: 'app-wall',\n  templateUrl: './wall.component.html',\n  styleUrls: ['./wall.component.scss']\n})\n\nexport class WallComponent implements OnInit {\n\n  public HOME: string = \"home\";\n  public PROJECT: string = \"project\";\n  public BLOG: string = \"blog\";\n  public SKILL: string = \"skill\";\n  public FLAW: string = \"flaw\";\n  public CARD: string = \"card\";\n\n  public homeFolderUrl : string = \"/assets/images/buttons/home/ggn111.png\";\n  public projectFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public blogFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public skillFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public flawFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n\n\n  public mouseHoldHome: boolean = false; // for button\n  public mouseHoldProject: boolean = false; // for project\n  public mouseHoldBlog: boolean = false; // for blogs\n  public mouseHoldSkill: boolean = false; // for skills\n  public mouseHoldFlaw: boolean = false; // for flaws\n  public mouseHoldCard: boolean = false; // for card\n\n  public initialWidth = 0; // initial size of window\n\n  public insideHome: boolean = false;\n  public homeX2: number = 0;\n  public homeY2: number = 0;\n\n  public insideProject: boolean = false;\n  public projectX2: number = 0;\n  public projectY2: number = 0;\n\n  public insideSkill: boolean = false;\n  public skillX2: number = 0;\n  public skillY2: number = 0;\n\n  public insideFlaw: boolean = false;\n  public flawX2: number = 0;\n  public flawY2: number = 0;\n\n  public cardVisible: boolean = true;\n  public cardX1: number = 0;\n  public cardY1: number = 0;\n  public cardX2: number = 0;\n  public cardY2: number = 0;\n  public initialCardHeight = 0;\n  public insideMenubar: boolean = false;\n  public startTime: number = 0;\n  public endTime: number = 0;\n\n  public loadBlogsComponent: boolean =  false;\n  public blogX1: number = 0;\n  public blogY1: number = 0;\n  public blogX2: number = 0;\n  public blogY2: number = 0;\n  public insideBlog: boolean = false;\n\n  \n  constructor(public router: Router, public config: AppConfig) { \n    this.initialWidth = window.innerWidth;\n    console.log(config.homeX1, config.homeY1);\n    if(config.homeX1 == undefined) config.homeX1 = window.innerWidth - 100;\n    if(config.homeY1 == undefined) config.homeY1 = 50;\n\n    if(config.projectX1 == undefined) config.projectX1 = window.innerWidth - 100;\n    if(config.projectY1 == undefined) config.projectY1 = 140;  // 50 + 90\n\n    if(config.blogX1 == undefined) config.blogX1 = window.innerWidth - 100;\n    if(config.blogY1 == undefined) config.blogY1 = 230; // 140 + 90\n\n    if(config.skillX1 == undefined) config.skillX1 = window.innerWidth - 100;\n    if(config.skillY1 == undefined) config.skillY1 = 320;\n\n    if(config.flawX1 == undefined) config.flawX1 = window.innerWidth - 100;\n    if(config.flawY1 == undefined) config.flawY1 = 410;\n\n    this.cardY1= 150;\n    this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2\n  }\n\n  ngOnInit(): void {\n  }\n\n  // this maintains the position of button with respect to right side, when window size is changing.\n  @HostListener('window:resize', ['$event'])\n  onResize(event: any) {\n    this.config.homeX1 -= this.initialWidth - window.innerWidth;\n    this.config.projectX1 -= this.initialWidth - window.innerWidth;\n    this.config.blogX1 -= this.initialWidth - window.innerWidth;\n    this.config.skillX1 -= this.initialWidth - window.innerWidth;\n    this.config.flawX1 -= this.initialWidth - window.innerWidth;\n    this.initialWidth = window.innerWidth;\n  }\n\n\n  // listen to the mouseclick is pressed.\n  @HostListener('document:mousedown', ['$event'])\n  onMouseDown(event: MouseEvent) {\n    event.preventDefault();\n    this.startTime = Date.now();\n    // console.log(event.clientX);\n\n    if(this.insideHome){\n      this.mouseHoldHome = true;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.insideProject){\n      this.mouseHoldProject = true;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.insideBlog){\n      this.mouseHoldBlog = true;\n      this.blogX2 = event.clientX;\n      this.blogY2 = event.clientY;\n    }\n\n    if(this.insideSkill){\n      this.mouseHoldSkill = true;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.insideFlaw){\n      this.mouseHoldFlaw = true;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.insideMenubar){\n      this.mouseHoldCard = true;\n      this.cardX2 = event.clientX;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse click is released.\n  @HostListener('document:mouseup', ['$event'])\n  onMouseUp(event: MouseEvent) {\n    // console.log(event);\n    event.preventDefault();\n    this.endTime = Date.now();\n    // this.mouseHold = true;\n    this.mouseHoldBlog = false;\n    this.mouseHoldHome = false;\n    this.mouseHoldProject = false;\n    this.mouseHoldCard = false;\n    this.mouseHoldFlaw = false;\n    this.mouseHoldSkill = false;\n  }\n\n  // when mouse is moving.\n  @HostListener('document:mousemove', ['$event'])\n  onMouseMove(event: MouseEvent) {\n    event.preventDefault();\n\n    if(this.mouseHoldHome && this.insideHome){\n      this.config.homeX1 += event.clientX - this.homeX2;\n      this.config.homeY1 += event.clientY - this.homeY2;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.mouseHoldProject && this.insideProject){\n      this.config.projectX1 += event.clientX - this.projectX2;\n      this.config.projectY1 += event.clientY - this.projectY2;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.mouseHoldBlog && this.insideBlog){\n      this.config.blogX1 += event.clientX - this.blogX2;\n      this.config.blogY1 += event.clientY - this.blogY2;\n      this.blogX2 = event.clientX;\n      this.blogY2 = event.clientY;\n    }\n\n    if(this.mouseHoldSkill && this.insideSkill){\n      this.config.skillX1 += event.clientX - this.skillX2;\n      this.config.skillY1 += event.clientY - this.skillY2;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.mouseHoldFlaw && this.insideFlaw){\n      this.config.flawX1 += event.clientX - this.flawX2;\n      this.config.flawY1 += event.clientY - this.flawY2;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.mouseHoldCard && this.insideMenubar){\n      this.cardX1 += event.clientX - this.cardX2;\n      this.cardX2 = event.clientX;\n      this.cardY1 += event.clientY - this.cardY2;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse is inside the div.\n  mouseOver(value: any){\n    if(value == \"home\")this.insideHome = true;\n    else if(value == \"project\") this.insideProject = true;\n    else if(value == \"blog\") this.insideBlog = true;\n    else if(value == \"card\") this.insideMenubar = true;\n    else if(value == \"skill\") this.insideSkill = true;\n    else if(value == \"flaw\") this.insideFlaw = true;\n  }\n\n  // when mouse is outsider the div.\n  mouseOut(value: any){\n    if(value == \"home\" && this.mouseHoldHome == false) this.insideHome = false;\n    else if(value == \"project\" && this.mouseHoldProject == false) this.insideProject = false;\n    else if(value == \"blog\" && this.mouseHoldBlog == false) this.insideBlog = false;\n    else if(value == \"card\" && this.mouseHoldCard == false) this.insideMenubar = false;\n    else if(value == \"skill\" && this.mouseHoldSkill == false) this.insideSkill = false;\n    else if(value == \"flaw\" && this.mouseHoldFlaw == false) this.insideFlaw = false;\n  }\n\n  \n  flipCard(value: string) {\n    this.loadBlogsComponent = !this.loadBlogsComponent;\n    // var time = this.endTime - this.startTime;\n    // if(time < 150 && value == \"project\") {\n    //   console.log(this.config.homeX1, this.config.homeY1);\n    //   this.router.navigate([\"projects\"]);\n    // }else if(time < 150 && value == \"blog\"){\n    //   this.router.navigate([\"blogs\"]);\n    // }else if(time < 150 && value == \"skill\"){\n    //   this.router.navigate([\"skills\"]);\n    // }else if(time < 150 && value == \"flaw\"){\n    //   this.router.navigate([\"flaws\"]);\n    // }else if(time < 150) {\n    //   this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.\n    // // console.log(this.cardVisible);\n    // }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".back{\r\n\toverflow: hidden;\r\n\theight: 100vh;\r\n\twidth: 100vw;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tz-index: 0;\r\n\t// background-image: url(\"/assets/images/wall/wall1.jpg\");\r\n\tbackground-color: #c7ede6;\r\n\t\r\n\r\n\t.homebtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.logo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 5px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 20px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 16px;\r\n\t\t\tfont-weight: bolder;\r\n\t\t\tfont-family: 'Courier New', Courier, monospace;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.folderbtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.homelogo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.logo{\r\n\t\t\theight: 50px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 15px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 12px;\r\n\t\t\t// font-weight: bold;\r\n\t\t\tcolor: black;\r\n\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.card-container{\r\n\t\tz-index: 3;\r\n\t\theight: 300px;\r\n\t\twidth: 700px;\r\n\t\tposition: absolute;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: aquamarine;\r\n\t\tborder-radius: 20px;\r\n\t\tbox-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);\r\n\t\tvisibility: hidden;\r\n\t\t// padding: 15px;\r\n\t\t// box-sizing: border-box;\r\n\t\t// transform: translateY(10px);\r\n\t\t// transition: all 100ms ease-out;\r\n\r\n\t\t&.show-card{\r\n\t\t\tvisibility: visible;\r\n\t\t\t// transform: translateY(0);\r\n\t\t}\r\n\r\n\t\t.menu-bar{\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 32px;\r\n\t\t\tcursor: pointer;\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\tborder-radius: 20px 20px 0px 0px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\tborder-bottom: 0px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: row;\r\n\t\t\talign-items: center;\r\n\r\n\t\t\t.first{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.second{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.third{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t.content-box{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tborder-radius: 0px 0px 20px 20px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\t// font-family: 'Courier New', Courier, monospace;\r\n\t\t\t// font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t// font-family: Jost,sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-around;\r\n\t\t\t// font-weight: bold;\r\n\t\t\t// padding: 15px;\r\n\t\t\t// box-sizing: border-box;\r\n\r\n\t\t\th1{\r\n\t\t\t\tpadding: 12px 24px;\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t}\r\n\r\n\t\t\tp{\r\n\t\t\t\tpadding: 12px 24px;\t\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t\tfont-size: 15px;\r\n\t\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t}\r\n\r\n\t\t\t.find{\r\n\t\t\t\tpadding: 0px 24px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t// background-color: blue;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\theight: 60px;\r\n\r\n\t\t\t\tp{\r\n\t\t\t\t\tpadding: 12px 0px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.logo{\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t.res{\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\twidth: 60%;\r\n\t\t\t\t\t// background-color: red;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\tjustify-content: flex-end;\r\n\r\n\t\t\t\t\t.logo{\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n\r\n\r\n}\r\n\r\n",
+                    "data": ".wall{\r\n\toverflow: hidden;\r\n\theight: 100vh;\r\n\twidth: 100vw;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tz-index: 0;\r\n\tposition: relative;\r\n\t// background-image: url(\"/assets/images/wall/wall1.jpg\");\r\n\tbackground-color: #c7ede6;\r\n\t\r\n\tapp-blogs{\r\n\t\tposition: fixed;\r\n\t\ttop: 100px;\r\n\t\tleft: 100px;\r\n\t\tz-index: 100;\r\n\t\tdisplay: block;\r\n\t}\r\n\t.homebtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.logo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 5px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 20px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 16px;\r\n\t\t\tfont-weight: bolder;\r\n\t\t\tfont-family: 'Courier New', Courier, monospace;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.folderbtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.homelogo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.logo{\r\n\t\t\theight: 50px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 15px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 12px;\r\n\t\t\t// font-weight: bold;\r\n\t\t\tcolor: black;\r\n\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.card-container{\r\n\t\tz-index: 3;\r\n\t\theight: 300px;\r\n\t\twidth: 700px;\r\n\t\tposition: absolute;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: aquamarine;\r\n\t\tborder-radius: 20px;\r\n\t\tbox-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);\r\n\t\tvisibility: hidden;\r\n\t\t// padding: 15px;\r\n\t\t// box-sizing: border-box;\r\n\t\t// transform: translateY(10px);\r\n\t\t// transition: all 100ms ease-out;\r\n\r\n\t\t&.show-card{\r\n\t\t\tvisibility: visible;\r\n\t\t\t// transform: translateY(0);\r\n\t\t}\r\n\r\n\t\t.menu-bar{\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 32px;\r\n\t\t\tcursor: pointer;\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\tborder-radius: 20px 20px 0px 0px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\tborder-bottom: 0px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: row;\r\n\t\t\talign-items: center;\r\n\r\n\t\t\t.first{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.second{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.third{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t.content-box{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tborder-radius: 0px 0px 20px 20px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\t// font-family: 'Courier New', Courier, monospace;\r\n\t\t\t// font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t// font-family: Jost,sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-around;\r\n\t\t\t// font-weight: bold;\r\n\t\t\t// padding: 15px;\r\n\t\t\t// box-sizing: border-box;\r\n\r\n\t\t\th1{\r\n\t\t\t\tpadding: 12px 24px;\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t}\r\n\r\n\t\t\tp{\r\n\t\t\t\tpadding: 12px 24px;\t\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t\tfont-size: 15px;\r\n\t\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t}\r\n\r\n\t\t\t.find{\r\n\t\t\t\tpadding: 0px 24px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t// background-color: blue;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\theight: 60px;\r\n\r\n\t\t\t\tp{\r\n\t\t\t\t\tpadding: 12px 0px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.logo{\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t.res{\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\twidth: 60%;\r\n\t\t\t\t\t// background-color: red;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\tjustify-content: flex-end;\r\n\r\n\t\t\t\t\t.logo{\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n\r\n\r\n}\r\n\r\n",
                     "styleUrl": "./wall.component.scss"
                 }
             ],
@@ -2964,7 +3114,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 65,
+                "line": 68,
                 "jsdoctags": [
                     {
                         "name": "router",
@@ -2989,7 +3139,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "\n<div class=\"back\">\n\t<div class=\"folderbtn\" (click)=\"flipCard(HOME)\" (mouseover)=\"mouseOver(HOME)\" (mouseout)=\"mouseOut(HOME)\" style = \"top: {{config.homeY1}}px; left: {{config.homeX1}}px\">\n\t\t<img src=\"{{this.homeFolderUrl}}\" class=\"homelogo\">\n\t\t<p class=\"foldername\"> Home </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(PROJECT)\" (mouseover)=\"mouseOver(PROJECT)\" (mouseout)=\"mouseOut(PROJECT)\" style = \"top: {{config.projectY1}}px; left: {{config.projectX1}}px\">\n\t\t<img src=\"{{this.projectFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Projects </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(BLOG)\" (mouseover)=\"mouseOver(BLOG)\" (mouseout)=\"mouseOut(BLOG)\" style = \"top: {{config.blogY1}}px; left: {{config.blogX1}}px\">\n\t\t<img src=\"{{this.blogFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Blogs </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(SKILL)\" (mouseover)=\"mouseOver(SKILL)\" (mouseout)=\"mouseOut(SKILL)\" style = \"top: {{config.skillY1}}px; left: {{config.skillX1}}px\">\n\t\t<img src=\"{{this.skillFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Skills </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(FLAW)\" (mouseover)=\"mouseOver(FLAW)\" (mouseout)=\"mouseOut(FLAW)\" style = \"top: {{config.flawY1}}px; left: {{config.flawX1}}px\">\n\t\t<img src=\"{{this.flawFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Flaws </p>\n\t</div>\n\t\n\t\n\t\n\t<div class = \"card-container\" [class.show-card] = \"cardVisible\" style = \"top: {{cardY1}}px; left: {{cardX1}}px\">\n\t\t<div class=\"menu-bar\" (mouseover)=\"mouseOver(CARD)\" (mouseout)=\"mouseOut(CARD)\">\n\t\t\t<div class=\"first\" (click)=\"flipCard(HOME)\" ></div>\n\t\t\t<div class=\"second\" (click)=\"flipCard(HOME)\"></div>\n\t\t\t<div class=\"third\"></div>\n\t\t</div>\t\n\t\t<div class=\"content-box\">\n\t\t\t<h1>Hey, I'm Gagan!</h1>\n\t\t\t<p> I am a full-stack software developer and a hobbyist competitive programmer who loves to tackle challenging problems. I am currently pursuing an undergrad degree at the National Institute of Technology Raipur.</p>\n\t\t\t<div class=\"find\">\n\t\t\t\t<p> Find me on : </p> \n\t\t\t\t<a href=\"https://linkedin.com/in/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudLinkedin.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mail.google.com/mail/?view=cm&fs=1&to=iamgagangaurav@gmail.com\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGmail.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://github.com/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGit.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<div class=\"res\">\n\t\t\t\t\t<p> Resume : </p>\n\t\t\t\t\t<a href=\"https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing\">\n\t\t\t\t\t\t<img src=\"assets/images/buttons/cloudDoc.png\" class = \"logo\">\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n"
+            "templateData": "\n<div class=\"wall\">\n\t<!-- <div class=\"folderbtn\" (click)=\"flipCard(HOME)\" (mouseover)=\"mouseOver(HOME)\" (mouseout)=\"mouseOut(HOME)\" style = \"top: {{config.homeY1}}px; left: {{config.homeX1}}px\">\n\t\t<img src=\"{{this.homeFolderUrl}}\" class=\"homelogo\">\n\t\t<p class=\"foldername\"> Home </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(PROJECT)\" (mouseover)=\"mouseOver(PROJECT)\" (mouseout)=\"mouseOut(PROJECT)\" style = \"top: {{config.projectY1}}px; left: {{config.projectX1}}px\">\n\t\t<img src=\"{{this.projectFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Projects </p>\n\t</div> -->\n\t<div class=\"folderbtn\" (click)=\"flipCard(BLOG)\" (mouseover)=\"mouseOver(BLOG)\" (mouseout)=\"mouseOut(BLOG)\" style = \"top: {{config.blogY1}}px; left: {{config.blogX1}}px\">\n\t\t<img src=\"{{this.blogFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Blogs </p>\n\t</div>\n\t\n\t<!-- <div class=\"folderbtn\" (click)=\"flipCard(SKILL)\" (mouseover)=\"mouseOver(SKILL)\" (mouseout)=\"mouseOut(SKILL)\" style = \"top: {{config.skillY1}}px; left: {{config.skillX1}}px\">\n\t\t<img src=\"{{this.skillFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Skills </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(FLAW)\" (mouseover)=\"mouseOver(FLAW)\" (mouseout)=\"mouseOut(FLAW)\" style = \"top: {{config.flawY1}}px; left: {{config.flawX1}}px\">\n\t\t<img src=\"{{this.flawFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Flaws </p>\n\t</div> -->\n\t<app-blogs class=\"blogs\" *ngIf=\"loadBlogsComponent\"> </app-blogs>\n\t\n\t\n\t\n\t<!-- <div class = \"card-container\" [class.show-card] = \"cardVisible\" style = \"top: {{cardY1}}px; left: {{cardX1}}px\">\n\t\t<div class=\"menu-bar\" (mouseover)=\"mouseOver(CARD)\" (mouseout)=\"mouseOut(CARD)\">\n\t\t\t<div class=\"first\" (click)=\"flipCard(HOME)\" ></div>\n\t\t\t<div class=\"second\" (click)=\"flipCard(HOME)\"></div>\n\t\t\t<div class=\"third\"></div>\n\t\t</div>\t\n\t\t<div class=\"content-box\">\n\t\t\t<h1>Hey, I'm Gagan!</h1>\n\t\t\t<p> I am a full-stack software developer and a hobbyist competitive programmer who loves to tackle challenging problems. I am currently pursuing an undergrad degree at the National Institute of Technology Raipur.</p>\n\t\t\t<div class=\"find\">\n\t\t\t\t<p> Find me on : </p> \n\t\t\t\t<a href=\"https://linkedin.com/in/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudLinkedin.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mail.google.com/mail/?view=cm&fs=1&to=iamgagangaurav@gmail.com\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGmail.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://github.com/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGit.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<div class=\"res\">\n\t\t\t\t\t<p> Resume : </p>\n\t\t\t\t\t<a href=\"https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing\">\n\t\t\t\t\t\t<img src=\"assets/images/buttons/cloudDoc.png\" class = \"logo\">\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div> -->\n</div>\n\n"
         }
     ],
     "modules": [
@@ -3861,7 +4011,7 @@
                 "linktype": "component",
                 "name": "BlogsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/14",
+                "coverageCount": "0/22",
                 "status": "low"
             },
             {
@@ -3897,7 +4047,7 @@
                 "linktype": "component",
                 "name": "WallComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/58",
+                "coverageCount": "0/61",
                 "status": "low"
             },
             {
