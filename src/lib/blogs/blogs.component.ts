@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { NgModel } from '@angular/forms';
+import { AppConfig} from 'src/config/app.config';
 
 @Component({
   selector: 'app-blogs',
@@ -10,6 +10,11 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./blogs.component.scss']
 })
 export class BlogsComponent implements OnInit {
+
+  @Input() public X1: number = 0;
+  @Input() public Y1: number = 0;
+  @Output() public Xemitter = new EventEmitter<any>();
+  @Output() public Yemitter = new EventEmitter<any>();
 
   public showTrending: boolean = true;
   public showMyBlogs: boolean = false;
@@ -24,7 +29,8 @@ export class BlogsComponent implements OnInit {
   public content: any;
   public date: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { }
+  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {
+  }
 
   ngOnInit(): void {
     const jwtToken = this.cookieService.get('boonJwtToken');
@@ -148,5 +154,13 @@ export class BlogsComponent implements OnInit {
 
   back(){
     this.showBlog = false;
+  }
+
+  emitX(value:any){
+    this.Xemitter.emit(value);
+  }
+  
+  emitY(value:any){
+    this.Yemitter.emit(value);
   }
 }

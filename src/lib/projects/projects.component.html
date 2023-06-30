@@ -1,51 +1,14 @@
-<div class = "back">
-	<div class="folderbtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px">
-		<img src="{{this.homeFolderUrl}}" class="homelogo">
-		<p class="foldername"> Home </p>
+<app-window [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)">
+	<div class="search">
+		<input type="text" placeholder="Search">
+		<div class="search-btn"></div>
 	</div>
-	<div class="folderbtn" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
-		<img src="{{this.projectFolderUrl}}" class="logo">
-		<p class="foldername"> Projects </p>
-	</div>
-	<div class="folderbtn" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
-		<img src="{{this.blogFolderUrl}}" class="logo">
-		<p class="foldername"> Blogs </p>
-	</div>
-	<div class="folderbtn" (click)="flipCard(SKILL)" (mouseover)="mouseOver(SKILL)" (mouseout)="mouseOut(SKILL)" style = "top: {{config.skillY1}}px; left: {{config.skillX1}}px">
-		<img src="{{this.skillFolderUrl}}" class="logo">
-		<p class="foldername"> Skills </p>
-	</div>
-	<div class="folderbtn" (click)="flipCard(FLAW)" (mouseover)="mouseOver(FLAW)" (mouseout)="mouseOut(FLAW)" style = "top: {{config.flawY1}}px; left: {{config.flawX1}}px">
-		<img src="{{this.flawFolderUrl}}" class="logo">
-		<p class="foldername"> Flaws </p>
-	</div>
-	
-	<div class = "card-container" [class.show-card] = "cardVisible" style = "top: {{cardY1}}px; left: {{cardX1}}px">
-		<div class="menu-bar" (mouseover)="mouseOver(CARD)" (mouseout)="mouseOut(CARD)">
-			<div class="first" (click)="flipCard(PROJECT)" ></div>
-			<div class="second" (click)="flipCard(PROJECT)"></div>
-			<div class="third"></div>
-		</div>	
-		<div class="content-box">
-			<div class="heading"> 
-				<h1> Projects </h1>
-			</div>
-			<div class="box" *ngFor="let info of data">
-				<div class="time">
-					<p> {{info.date}} </p>
-				</div>
-				<div class="topic">
-					<p> [+] {{info.description}} </p>
-				</div>
-				<div class="body">
-					<b [innerHTML]="info.body"> </b>
-				</div>
-			</div>
+	<div class="projects-container">
+		<div class="nav-menu">
+			
 		</div>
-		<div class="footer">
-
+		<div class="projects">
+			
 		</div>
-	</div>
-</div>
-
-
+	</div>	
+</app-window>

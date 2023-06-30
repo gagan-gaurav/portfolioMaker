@@ -27,7 +27,7 @@ export class WallComponent implements OnInit {
 
   public mouseHoldHome: boolean = false; // for button
   public mouseHoldProject: boolean = false; // for project
-  public mouseHoldBlog: boolean = false; // for blogs
+  public mouseHoldBlogsButton: boolean = false; // for blogs
   public mouseHoldSkill: boolean = false; // for skills
   public mouseHoldFlaw: boolean = false; // for flaws
   public mouseHoldCard: boolean = false; // for card
@@ -41,10 +41,6 @@ export class WallComponent implements OnInit {
   public insideProject: boolean = false;
   public projectX2: number = 0;
   public projectY2: number = 0;
-
-  public insideBlog: boolean = false;
-  public blogX2: number = 0;
-  public blogY2: number = 0;
 
   public insideSkill: boolean = false;
   public skillX2: number = 0;
@@ -64,6 +60,16 @@ export class WallComponent implements OnInit {
   public startTime: number = 0;
   public endTime: number = 0;
 
+  public blogsButtonX1: number = 0;
+  public blogsButtonY1: number = 0;
+  public blogsButtonX2: number = 0;
+  public blogsButtonY2: number = 0;
+  public insideBlogsButton: boolean = false;
+
+  // Component booleans
+  public loadBlogsComponent: boolean =  false;
+  public loadProjectsComponent: boolean = false;
+
   
   constructor(public router: Router, public config: AppConfig) { 
     this.initialWidth = window.innerWidth;
@@ -74,8 +80,8 @@ export class WallComponent implements OnInit {
     if(config.projectX1 == undefined) config.projectX1 = window.innerWidth - 100;
     if(config.projectY1 == undefined) config.projectY1 = 140;  // 50 + 90
 
-    if(config.blogX1 == undefined) config.blogX1 = window.innerWidth - 100;
-    if(config.blogY1 == undefined) config.blogY1 = 230; // 140 + 90
+    if(config.blogsButtonX1 == undefined) config.blogsButtonX1 = window.innerWidth - 100;
+    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 230; // 140 + 90
 
     if(config.skillX1 == undefined) config.skillX1 = window.innerWidth - 100;
     if(config.skillY1 == undefined) config.skillY1 = 320;
@@ -85,6 +91,12 @@ export class WallComponent implements OnInit {
 
     this.cardY1= 150;
     this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2
+
+    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = (window.innerWidth - 1500) / 2;
+    if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 150;
+
+    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = (window.innerWidth - 1500) / 2;
+    if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 150;
   }
 
   ngOnInit(): void {
@@ -95,7 +107,7 @@ export class WallComponent implements OnInit {
   onResize(event: any) {
     this.config.homeX1 -= this.initialWidth - window.innerWidth;
     this.config.projectX1 -= this.initialWidth - window.innerWidth;
-    this.config.blogX1 -= this.initialWidth - window.innerWidth;
+    this.config.blogsButtonX1 -= this.initialWidth - window.innerWidth;
     this.config.skillX1 -= this.initialWidth - window.innerWidth;
     this.config.flawX1 -= this.initialWidth - window.innerWidth;
     this.initialWidth = window.innerWidth;
@@ -121,10 +133,10 @@ export class WallComponent implements OnInit {
       this.projectY2 = event.clientY;
     }
 
-    if(this.insideBlog){
-      this.mouseHoldBlog = true;
-      this.blogX2 = event.clientX;
-      this.blogY2 = event.clientY;
+    if(this.insideBlogsButton){
+      this.mouseHoldBlogsButton = true;
+      this.blogsButtonX2 = event.clientX;
+      this.blogsButtonY2 = event.clientY;
     }
 
     if(this.insideSkill){
@@ -153,7 +165,7 @@ export class WallComponent implements OnInit {
     event.preventDefault();
     this.endTime = Date.now();
     // this.mouseHold = true;
-    this.mouseHoldBlog = false;
+    this.mouseHoldBlogsButton = false;
     this.mouseHoldHome = false;
     this.mouseHoldProject = false;
     this.mouseHoldCard = false;
@@ -180,11 +192,11 @@ export class WallComponent implements OnInit {
       this.projectY2 = event.clientY;
     }
 
-    if(this.mouseHoldBlog && this.insideBlog){
-      this.config.blogX1 += event.clientX - this.blogX2;
-      this.config.blogY1 += event.clientY - this.blogY2;
-      this.blogX2 = event.clientX;
-      this.blogY2 = event.clientY;
+    if(this.mouseHoldBlogsButton && this.insideBlogsButton){
+      this.config.blogsButtonX1 += event.clientX - this.blogsButtonX2;
+      this.config.blogsButtonY1 += event.clientY - this.blogsButtonY2;
+      this.blogsButtonX2 = event.clientX;
+      this.blogsButtonY2 = event.clientY;
     }
 
     if(this.mouseHoldSkill && this.insideSkill){
@@ -213,7 +225,7 @@ export class WallComponent implements OnInit {
   mouseOver(value: any){
     if(value == "home")this.insideHome = true;
     else if(value == "project") this.insideProject = true;
-    else if(value == "blog") this.insideBlog = true;
+    else if(value == "blog") this.insideBlogsButton = true;
     else if(value == "card") this.insideMenubar = true;
     else if(value == "skill") this.insideSkill = true;
     else if(value == "flaw") this.insideFlaw = true;
@@ -223,27 +235,41 @@ export class WallComponent implements OnInit {
   mouseOut(value: any){
     if(value == "home" && this.mouseHoldHome == false) this.insideHome = false;
     else if(value == "project" && this.mouseHoldProject == false) this.insideProject = false;
-    else if(value == "blog" && this.mouseHoldBlog == false) this.insideBlog = false;
+    else if(value == "blog" && this.mouseHoldBlogsButton == false) this.insideBlogsButton = false;
     else if(value == "card" && this.mouseHoldCard == false) this.insideMenubar = false;
     else if(value == "skill" && this.mouseHoldSkill == false) this.insideSkill = false;
     else if(value == "flaw" && this.mouseHoldFlaw == false) this.insideFlaw = false;
   }
 
   
-  flipCard(value: string) {
+  flipWindow(value: string) {
     var time = this.endTime - this.startTime;
     if(time < 150 && value == "project") {
-      console.log(this.config.homeX1, this.config.homeY1);
-      this.router.navigate(["projects"]);
+      this.loadProjectsComponent = !this.loadProjectsComponent
     }else if(time < 150 && value == "blog"){
-      this.router.navigate(["blogs"]);
+      this.loadBlogsComponent = !this.loadBlogsComponent;
     }else if(time < 150 && value == "skill"){
-      this.router.navigate(["skills"]);
     }else if(time < 150 && value == "flaw"){
-      this.router.navigate(["flaws"]);
     }else if(time < 150) {
-      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
-    // console.log(this.cardVisible);
+      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip, its just a temperory solution.
     }
+  }
+
+  setBlogsWindowX(value: any){
+    console.log("x", value);
+    this.config.blogsComponentX1 = value;
+  }
+
+  setBlogsWindowY(value: any){
+    console.log("y", value);
+    this.config.blogsComponentY1 = value;
+  }
+
+  setProjectsWindowX(value: any){
+    this.config.projectsComponentX1 = value;
+  }
+
+  setProjectsWindowY(value: any){
+    this.config.projectsComponentY1 = value;
   }
 }

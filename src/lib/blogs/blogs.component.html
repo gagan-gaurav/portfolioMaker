@@ -1,8 +1,4 @@
-<div class="blogs-window">
-	<div class="menu-bar">
-		<div class="heading">Blogs</div>
-		<div class="close"></div>
-	</div>
+<app-window [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)">
 	<div class="search">
 		<input type="text" placeholder="Search">
 		<div class="search-btn"></div>
@@ -59,6 +55,5 @@
 				<div class="blog-content" [innerHTML]="this.content"></div>
 			</div>
 		</div>
-	</div>
-	
-</div>
+	</div>	
+</app-window>

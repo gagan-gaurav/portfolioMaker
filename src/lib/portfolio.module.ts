@@ -14,17 +14,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { WindowComponent } from './window/window.component';
 
 
 @NgModule({
   declarations: [
-    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, FlawsComponent, LoginComponent, SignupComponent
+    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, FlawsComponent, LoginComponent, SignupComponent, WindowComponent, WindowComponent
   ],
   imports: [
     HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule
   ],
   providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],
-  exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent],
+  exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent, WindowComponent],
   bootstrap: []
 })
 export class PortfolioModule { }
