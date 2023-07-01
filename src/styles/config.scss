@@ -1,10 +1,23 @@
 $primary-font: cursive;
 
 //themes
+.theme-profile{
+	background-color: #faedf1;
+	.menu-bar{
+		background-color: #ebb7c9;
+	}
+}
 .theme-projects{
 	background-color: #e5fee5;
 	.menu-bar{
 		background-color: #98fb98;
+	}
+}
+
+.theme-skills{
+	background-color: #fffbf4;
+	.menu-bar{
+		background-color: #ffefd5;
 	}
 }
 
@@ -14,3 +27,4 @@ $primary-font: cursive;
 		background-color: cornflowerblue;
 	}
 }
+
