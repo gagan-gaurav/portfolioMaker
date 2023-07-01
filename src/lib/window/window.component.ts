@@ -3,10 +3,12 @@ import { Component, HostListener, Input, Output, EventEmitter, OnInit } from '@a
 @Component({
   selector: 'app-window',
   templateUrl: './window.component.html',
-  styleUrls: ['./window.component.scss']
+  styleUrls: ['./window.component.scss', './../../styles/config.scss']
 })
 export class WindowComponent implements OnInit{
-  public heading: any;
+  //Window configs
+  @Input() public windowConfig: any;
+  // @Input() public windowTheme: any;
 
   public insideMenubar: boolean = false;
   public mouseHoldsComponent: boolean = false;

@@ -11,6 +11,11 @@ import { AppConfig} from 'src/config/app.config';
 })
 export class BlogsComponent implements OnInit {
 
+  public blogsConfig: Object = {
+    theme: "theme-blogs",
+    heading: "Blogs"
+  }
+
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();

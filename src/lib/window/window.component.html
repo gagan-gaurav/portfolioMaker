@@ -1,6 +1,6 @@
-<div class="window">
+<div class="window" [class]="windowConfig.theme">
 	<div class="menu-bar" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
-		<div class="heading">{{this.heading}}</div>
+		<div class="heading">{{this.windowConfig.heading}}</div>
 		<div class="close"></div>
 	</div>
 	<ng-content></ng-content>
