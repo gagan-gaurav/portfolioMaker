@@ -44,8 +44,7 @@ export class WallComponent implements OnInit {
 
 
   public initialWidth = 0; // initial size of window
-  public startTime: number = 0;
-  public endTime: number = 0;
+  public validClick: boolean = false;
 
   // Component booleans
   public loadProfileComponent: boolean = false;
@@ -88,39 +87,36 @@ export class WallComponent implements OnInit {
   ngOnInit(): void {
   }
 
- 
-  // listen to the mouseclick is pressed.
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
-    this.startTime = Date.now();
+    this.validClick = true;
   }
 
-  // when mouse click is released.
-  @HostListener('document:mouseup', ['$event'])
-  onMouseUp(event: MouseEvent) {
-    event.preventDefault();
-    this.endTime = Date.now();
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.validClick = false;
   }
   
   flipWindow(value: any) {
-    var time = this.endTime - this.startTime;
-    if(time < 150 && value == Comp.PROJECTS) {
-      this.loadProjectsComponent = !this.loadProjectsComponent;
-      this.projectsButton.state = !this.projectsButton.state;
-      if(this.projectsButton.state) this.projectsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-      else this.projectsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-    }else if(time < 150 && value == Comp.BLOGS){
-      this.loadBlogsComponent = !this.loadBlogsComponent;
-      this.blogsButton.state = !this.blogsButton.state;
-      if(this.blogsButton.state) this.blogsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-      else this.blogsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-    }else if(time < 150 && value == Comp.SKILLS){
-      this.loadSkillsComponent = !this.loadSkillsComponent;
-      this.skillsButton.state = !this.skillsButton.state;
-      if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-      else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-    }else if(time < 150) {
-      this.loadProfileComponent = !this.loadProfileComponent; // if the click is fast then only perform the flip, its just a temperory solution.
+    if(this.validClick){
+      if(value == Comp.PROJECTS) {
+        this.loadProjectsComponent = !this.loadProjectsComponent;
+        this.projectsButton.state = !this.projectsButton.state;
+        if(this.projectsButton.state) this.projectsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+        else this.projectsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+      }else if(value == Comp.BLOGS){
+        this.loadBlogsComponent = !this.loadBlogsComponent;
+        this.blogsButton.state = !this.blogsButton.state;
+        if(this.blogsButton.state) this.blogsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+        else this.blogsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+      }else if(value == Comp.SKILLS){
+        this.loadSkillsComponent = !this.loadSkillsComponent;
+        this.skillsButton.state = !this.skillsButton.state;
+        if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+        else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+      }else{
+        this.loadProfileComponent = !this.loadProfileComponent; // if the click is fast then only perform the flip, its just a temperory solution.
+      }
     }
   }
 
