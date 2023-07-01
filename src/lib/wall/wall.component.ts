@@ -10,7 +10,6 @@ import { AppConfig} from 'src/config/app.config';
 })
 
 export class WallComponent implements OnInit {
-
   public HOME: string = "home";
   public PROJECT: string = "project";
   public BLOG: string = "blog";
@@ -92,10 +91,10 @@ export class WallComponent implements OnInit {
     this.cardY1= 150;
     this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2
 
-    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = (window.innerWidth - 1500) / 2;
+    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%
     if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 150;
 
-    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = (window.innerWidth - 1500) / 2;
+    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%
     if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 150;
   }
 
@@ -117,9 +116,7 @@ export class WallComponent implements OnInit {
   // listen to the mouseclick is pressed.
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
-    event.preventDefault();
     this.startTime = Date.now();
-    // console.log(event.clientX);
 
     if(this.insideHome){
       this.mouseHoldHome = true;
@@ -253,6 +250,11 @@ export class WallComponent implements OnInit {
     }else if(time < 150) {
       this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip, its just a temperory solution.
     }
+  }
+
+  closeWindow(value: any){
+    if(value == "project") this.loadProjectsComponent = false;
+    if(value == "blog") this.loadBlogsComponent = false; 
   }
 
   setBlogsWindowX(value: any){

@@ -17,5 +17,4 @@ export class AppConfig {
 	public blogsComponentY1: any;
 	public projectsComponentX1: any;
 	public projectsComponentY1: any;
-	public windowY1: any;
 }

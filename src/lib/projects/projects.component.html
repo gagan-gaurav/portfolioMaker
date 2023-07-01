@@ -1,4 +1,4 @@
-<app-window [windowConfig]="projectsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)">
+<app-window [windowConfig]="projectsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)" (close)="closeWindow()">
 	<div class="search" >
 		<input type="text" placeholder="Search">
 		<div class="search-btn"></div>

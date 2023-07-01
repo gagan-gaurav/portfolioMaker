@@ -1,5 +1,5 @@
-
 <div class="wall">
+	
 	<!-- <div class="folderbtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px">
 		<img src="{{this.homeFolderUrl}}" class="homelogo">
 		<p class="foldername"> Home </p>
@@ -22,8 +22,8 @@
 		<p class="foldername"> Flaws </p>
 	</div> -->
 
-	<app-projects [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setProjectsWindowX($event)" (Yemitter)="setProjectsWindowY($event)" *ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
-	<app-blogs [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setBlogsWindowX($event)" (Yemitter)="setBlogsWindowY($event)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs> 
+	<app-projects [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setProjectsWindowX($event)" (Yemitter)="setProjectsWindowY($event)" (close)="closeWindow(PROJECT)"*ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
+	<app-blogs [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setBlogsWindowX($event)" (Yemitter)="setBlogsWindowY($event)" (close)="closeWindow(BLOG)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs> 
 	
 	
 	

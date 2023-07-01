@@ -6,9 +6,8 @@ import { Component, HostListener, Input, Output, EventEmitter, OnInit } from '@a
   styleUrls: ['./window.component.scss', './../../styles/config.scss']
 })
 export class WindowComponent implements OnInit{
-  //Window configs
+  //Window config
   @Input() public windowConfig: any;
-  // @Input() public windowTheme: any;
 
   public insideMenubar: boolean = false;
   public mouseHoldsComponent: boolean = false;
@@ -16,14 +15,11 @@ export class WindowComponent implements OnInit{
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();
   @Output() public Yemitter = new EventEmitter<any>();
+  @Output() public close = new EventEmitter<any>();
   public X2: number = 0;
   public Y2: number = 0;
 
-  public initialWidth = 0; // initial size of window
-
   constructor() {
-    this.initialWidth = window.innerWidth;
-
   }
 
   ngOnInit(): void {
@@ -42,7 +38,7 @@ export class WindowComponent implements OnInit{
 
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
-    event.preventDefault();
+    // event.preventDefault();
     if(this.insideMenubar) {
       this.mouseHoldsComponent = true;
       this.X2 = event.clientX;
@@ -53,14 +49,14 @@ export class WindowComponent implements OnInit{
 
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
-    event.preventDefault();
+    // event.preventDefault();
     this.mouseHoldsComponent = false;
     console.log("DonstHoldBlogs");
   }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    event.preventDefault();
+    // event.preventDefault();
     if(this.mouseHoldsComponent && this.insideMenubar){
       this.X1 += event.clientX - this.X2;
       this.Xemitter.emit(this.X1);
@@ -71,8 +67,7 @@ export class WindowComponent implements OnInit{
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.initialWidth = window.innerWidth;
+  closeWindow(){
+    this.close.emit();
   }
 }

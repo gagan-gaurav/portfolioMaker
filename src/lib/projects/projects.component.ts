@@ -10,6 +10,7 @@ export class ProjectsComponent implements OnInit {
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();
   @Output() public Yemitter = new EventEmitter<any>();
+  @Output() public close = new EventEmitter<any> ();
 
   public projectsTheme: string = "theme-projects";
   public projectsHeading: string = "Projects";
@@ -31,6 +32,10 @@ export class ProjectsComponent implements OnInit {
   
   emitY(value:any){
     this.Yemitter.emit(value);
+  }
+
+  closeWindow(){
+    this.close.emit();
   }
   
 }

@@ -20,6 +20,7 @@ export class BlogsComponent implements OnInit {
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();
   @Output() public Yemitter = new EventEmitter<any>();
+  @Output() public close = new EventEmitter<any>();
 
   public showTrending: boolean = true;
   public showMyBlogs: boolean = false;
@@ -167,5 +168,9 @@ export class BlogsComponent implements OnInit {
   
   emitY(value:any){
     this.Yemitter.emit(value);
+  }
+
+  closeWindow(){
+    this.close.emit();
   }
 }
