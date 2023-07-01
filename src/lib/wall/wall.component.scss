@@ -9,14 +9,32 @@
 	position: relative;
 	// background-image: url("/assets/images/wall/wall1.jpg");
 	// background-color: #c7ede6;
-	background-color: paleturquoise;
+	background-color: #afeeee;
+	background-image:
+      repeating-linear-gradient(#ebfbfb 0 2px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #ebfbfb 0 2px, transparent 1px 100%);
+    background-size: 32px 32px;
+
+	app-button{
+		position: fixed;
+	}
 	
-	app-blogs{
+	app-profile{
 		position: fixed;
 		z-index: 100;
 	}
 
 	app-projects{
+		position: fixed;
+		z-index: 100;
+	}
+
+	app-skills{
+		position: fixed;
+		z-index: 100;
+	}
+
+	app-blogs{
 		position: fixed;
 		z-index: 100;
 	}

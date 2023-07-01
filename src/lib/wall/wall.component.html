@@ -1,29 +1,16 @@
 <div class="wall">
 	
-	<!-- <div class="folderbtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px">
-		<img src="{{this.homeFolderUrl}}" class="homelogo">
-		<p class="foldername"> Home </p>
-	</div> -->
-	<div class="folderbtn" (click)="flipWindow(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)"style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
-		<img src="{{this.projectFolderUrl}}" class="logo">
-		<p class="foldername"> Projects </p>
-	</div>
-	<div class="folderbtn" (click)="flipWindow(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)"style = "top: {{config.blogsButtonY1}}px; left: {{config.blogsButtonX1}}px">
-		<img src="{{this.blogFolderUrl}}" class="logo">
-		<p class="foldername"> Blogs </p>
-	</div>
+	<app-button (click)="flipWindow(PROFILE)" [buttonConfig]="profileButton" [ButtonX1]="this.config.profileButtonX1" [ButtonY1]="this.config.profileButtonY1" (Xemitter)="setButtonX1($event, PROFILE)" (Yemitter)="setButtonY1($event, PROFILE)"style = "top: {{this.config.profileButtonY1}}px; left: {{this.config.profileButtonX1}}px"></app-button>
+	<app-button (click)="flipWindow(PROJECTS)" [buttonConfig]="projectsButton" [ButtonX1]="this.config.projectsButtonX1" [ButtonY1]="this.config.projectsButtonY1" (Xemitter)="setButtonX1($event, PROJECTS)" (Yemitter)="setButtonY1($event, PROJECTS)"style = "top: {{this.config.projectsButtonY1}}px; left: {{this.config.projectsButtonX1}}px"></app-button>
+	<app-button (click)="flipWindow(SKILLS)" [buttonConfig]="skillsButton" [ButtonX1]="this.config.skillsButtonX1" [ButtonY1]="this.config.skillsButtonY1" (Xemitter)="setButtonX1($event, SKILLS)" (Yemitter)="setButtonY1($event, SKILLS)"style = "top: {{this.config.skillsButtonY1}}px; left: {{this.config.skillsButtonX1}}px"></app-button>	
+	<app-button (click)="flipWindow(BLOGS)" [buttonConfig]="blogsButton" [ButtonX1]="this.config.blogsButtonX1" [ButtonY1]="this.config.blogsButtonY1" (Xemitter)="setButtonX1($event, BLOGS)" (Yemitter)="setButtonY1($event, BLOGS)"style = "top: {{this.config.blogsButtonY1}}px; left: {{this.config.blogsButtonX1}}px"></app-button>
 	
-	<!-- <div class="folderbtn" (click)="flipCard(SKILL)" (mouseover)="mouseOver(SKILL)" (mouseout)="mouseOut(SKILL)" style = "top: {{config.skillY1}}px; left: {{config.skillX1}}px">
-		<img src="{{this.skillFolderUrl}}" class="logo">
-		<p class="foldername"> Skills </p>
-	</div>
-	<div class="folderbtn" (click)="flipCard(FLAW)" (mouseover)="mouseOver(FLAW)" (mouseout)="mouseOut(FLAW)" style = "top: {{config.flawY1}}px; left: {{config.flawX1}}px">
-		<img src="{{this.flawFolderUrl}}" class="logo">
-		<p class="foldername"> Flaws </p>
-	</div> -->
 
-	<app-projects [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setProjectsWindowX($event)" (Yemitter)="setProjectsWindowY($event)" (close)="closeWindow(PROJECT)"*ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
-	<app-blogs [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setBlogsWindowX($event)" (Yemitter)="setBlogsWindowY($event)" (close)="closeWindow(BLOG)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs> 
+	<app-profile [X1] = "this.config.profileComponentX1" [Y1] = "this.config.profileComponentY1" (Xemitter)="setWindowX1($event, PROFILE)" (Yemitter)="setWindowY1($event, PROFILE)" (close)="closeWindow(PROFILE)" *ngIf="loadProfileComponent"style="top : {{this.config.profileComponentY1}}px; left: {{this.config.profileComponentX1}}px"> </app-profile>
+	<app-projects [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setWindowX1($event, PROJECTS)" (Yemitter)="setWindowY1($event, PROJECTS)" (close)="closeWindow(PROJECTS)"*ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
+	<app-skills [X1] = "this.config.skillsComponentX1" [Y1] = "this.config.skillsComponentY1" (Xemitter)="setWindowX1($event, SKILLS)" (Yemitter)="setWindowY1($event, SKILLS)" (close)="closeWindow(SKILLS)" *ngIf="loadSkillsComponent"style="top : {{this.config.skillsComponentY1}}px; left: {{this.config.skillsComponentX1}}px"> </app-skills> 
+	<app-blogs [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setWindowX1($event, BLOGS)" (Yemitter)="setWindowY1($event, BLOGS)" (close)="closeWindow(BLOGS)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs>
+	
 	
 	
 	
