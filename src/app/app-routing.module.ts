@@ -4,7 +4,6 @@ import { BlogsComponent } from 'src/lib/blogs/blogs.component';
 import { ProjectsComponent } from 'src/lib/projects/projects.component';
 import { WallComponent } from 'src/lib/wall/wall.component';
 import { SkillsComponent } from 'src/lib/skills/skills.component';
-import { FlawsComponent } from 'src/lib/flaws/flaws.component';
 import { PortfolioModule } from 'src/lib/portfolio.module';
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: "projects", component: ProjectsComponent},
   { path: "blogs", component: BlogsComponent},
   { path: "skills", component: SkillsComponent},
-  { path: "flaws", component: FlawsComponent},
 ];
 
 @NgModule({

@@ -6,7 +6,6 @@ import { WallComponent } from 'src/lib/wall/wall.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
-import { FlawsComponent } from './flaws/flaws.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { RouterModule } from '@angular/router';
@@ -21,7 +20,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
-    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, FlawsComponent, LoginComponent, SignupComponent, WindowComponent, ButtonComponent, ProfileComponent
+    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, LoginComponent, SignupComponent, WindowComponent, ButtonComponent, ProfileComponent
   ],
   imports: [
     HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule

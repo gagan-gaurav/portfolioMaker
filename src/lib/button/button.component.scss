@@ -1,14 +1,11 @@
 @import './../../styles/config.scss';
 
 .btn-container{
+	cursor: pointer;
+
 	.btn{
 		height: 40px;
 		width: 48px;
-	}
-	
-	.btn:hover{
-		height: 42px;
-		width: 50px;
 	}
 
 	p{
@@ -18,5 +15,10 @@
 		font-size: 12px;
 		margin-left: 4px;
 	}
+}
+
+.btn-container:hover .btn{
+		height: 42px;
+		width: 50px;
 }
 

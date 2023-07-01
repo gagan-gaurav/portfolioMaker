@@ -22,21 +22,24 @@ export class WallComponent implements OnInit {
   public SKILLS: any = Comp.SKILLS;
   public BLOGS: any = Comp.BLOGS;
 
-  public profileButton: Object = {
+  public profileButton = {
     name: "Profile",
     image: "/assets/images/buttons/home/ggn111.png"
   }
-  public projectsButton: Object = {
+  public projectsButton = {
     name: "Projects",
-    image: "/assets/images/buttons/cloudClosedFolder.png"
+    image: "/assets/images/buttons/cloudClosedFolder.png",
+    state: false
   }
-  public skillsButton: Object = {
+  public skillsButton = {
     name: "Skills",
-    image: "/assets/images/buttons/cloudClosedFolder.png"
+    image: "/assets/images/buttons/cloudClosedFolder.png",
+    state: false
   }
-  public blogsButton: Object = {
+  public blogsButton = {
     name: "Blogs",
-    image: "/assets/images/buttons/cloudClosedFolder.png"
+    image: "/assets/images/buttons/cloudClosedFolder.png",
+    state: false
   }
 
 
@@ -102,11 +105,20 @@ export class WallComponent implements OnInit {
   flipWindow(value: any) {
     var time = this.endTime - this.startTime;
     if(time < 150 && value == Comp.PROJECTS) {
-      this.loadProjectsComponent = !this.loadProjectsComponent
+      this.loadProjectsComponent = !this.loadProjectsComponent;
+      this.projectsButton.state = !this.projectsButton.state;
+      if(this.projectsButton.state) this.projectsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.projectsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
     }else if(time < 150 && value == Comp.BLOGS){
       this.loadBlogsComponent = !this.loadBlogsComponent;
+      this.blogsButton.state = !this.blogsButton.state;
+      if(this.blogsButton.state) this.blogsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.blogsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
     }else if(time < 150 && value == Comp.SKILLS){
       this.loadSkillsComponent = !this.loadSkillsComponent;
+      this.skillsButton.state = !this.skillsButton.state;
+      if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
     }else if(time < 150) {
       this.loadProfileComponent = !this.loadProfileComponent; // if the click is fast then only perform the flip, its just a temperory solution.
     }
