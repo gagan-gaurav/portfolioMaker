@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@an
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { AppConfig} from 'src/config/app.config';
+import { AppConfig} from 'src/service/app.config';
 
 @Component({
   selector: 'app-blogs',

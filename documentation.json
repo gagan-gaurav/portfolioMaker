@@ -4,155 +4,11 @@
     "injectables": [
         {
             "name": "AppConfig",
-            "id": "injectable-AppConfig-e44af59ec426890e5422317ce6ce9569be0cf88a323c07ce6f5f0171e30d88a348cca40fffbcb6aa20c248e114fe9ba7a67d59cf8c4836af26c13c6222f0c11c",
-            "file": "src/config/app.config.ts",
+            "id": "injectable-AppConfig-0020433498259f006467ba7f75d274b2a08ddfbbd8e81c93f6ae1a3bb9dfd1a238dfcb9ad52f805878880d4d00a8fa429915386230680a1a283b0c5accecffda",
+            "file": "src/service/app.config.ts",
             "properties": [
                 {
                     "name": "blogsButtonX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 10,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsButtonY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 11,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsComponentX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 16,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsComponentY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 17,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "flawX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 14,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "flawY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 15,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "homeX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 6,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "homeY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 7,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectsComponentX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 18,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectsComponentY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 19,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectX1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 8,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectY1",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 9,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "skillX1",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "any",
@@ -164,13 +20,181 @@
                     ]
                 },
                 {
-                    "name": "skillY1",
+                    "name": "blogsButtonY1",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "any",
                     "optional": false,
                     "description": "",
                     "line": 13,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "blogsComponentX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "blogsComponentY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "profileButtonX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 8,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "profileButtonY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "profileComponentX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "profileComponentY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "projectsButtonX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "projectsButtonY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "projectsComponentX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "projectsComponentY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "skillsButtonX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "skillsButtonY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 15,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "skillsComponentX1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "skillsComponentY1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 25,
                     "modifierKind": [
                         123
                     ]
@@ -181,7 +205,39 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\r\n@Injectable({\r\n  providedIn: 'root',\r\n})\r\nexport class AppConfig {\r\n\tpublic homeX1: any;\r\n\tpublic homeY1: any;\r\n\tpublic projectX1: any;\r\n\tpublic projectY1: any;\r\n\tpublic blogsButtonX1: any;\r\n\tpublic blogsButtonY1: any;\r\n\tpublic skillX1: any;\r\n\tpublic skillY1: any;\r\n\tpublic flawX1: any;\r\n\tpublic flawY1: any;\r\n\tpublic blogsComponentX1: any;\r\n\tpublic blogsComponentY1: any;\r\n\tpublic projectsComponentX1: any;\r\n\tpublic projectsComponentY1: any;\r\n}",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\n@Injectable({\r\n  providedIn: 'root',\r\n})\r\nexport class AppConfig {\r\n\t\r\n\t//Button coordinates.\r\n\tpublic profileButtonX1: any;\r\n\tpublic profileButtonY1: any;\r\n\tpublic projectsButtonX1: any;\r\n\tpublic projectsButtonY1: any;\r\n\tpublic blogsButtonX1: any;\r\n\tpublic blogsButtonY1: any;\r\n\tpublic skillsButtonX1: any;\r\n\tpublic skillsButtonY1: any;\r\n\r\n\t//Window coordinates.\r\n\tpublic profileComponentX1: any;\r\n\tpublic profileComponentY1: any;\r\n\tpublic projectsComponentX1: any;\r\n\tpublic projectsComponentY1: any;\r\n\tpublic blogsComponentX1: any;\r\n\tpublic blogsComponentY1: any;\r\n\tpublic skillsComponentX1: any;\r\n\tpublic skillsComponentY1: any;\r\n}",
+            "type": "injectable"
+        },
+        {
+            "name": "MyService",
+            "id": "injectable-MyService-356cba2ddb9c937793cf440b35613e6d76308d2671ebcc6164c448b44496c24232c6eb315167541b3e469965a289dfc7244a3fbe59739240d8d97780a3336b26",
+            "file": "src/service/app.user.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "myMethod",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root' // or specify a specific module where you want to provide the service\r\n})\r\nexport class MyService {\r\n  constructor() {\r\n    // Constructor logic, if any\r\n  }\r\n\r\n  // Service methods\r\n  myMethod() {\r\n    // Implementation of your service method\r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
             "type": "injectable"
         }
     ],
@@ -239,11 +295,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<app-wall> </app-wall> \n\n"
+            "templateData": "<router-outlet></router-outlet>\n\n"
         },
         {
             "name": "BlogsComponent",
-            "id": "component-BlogsComponent-5cdc7a7e007264252c26201e94946a50768a5059b95d3e5c126cfbb07d37e49e180366a8349036b09a967194c95f883242452a25ed1d0c6b8a9561bb64d810ae",
+            "id": "component-BlogsComponent-9a48de3c7b0a73d96628bd342e5834e0cb07cb4a10a0b29d3888d58ea56adc33f3bc36f8e126320edd4f9e0daca189a2c186caf2054e1abe8c196230f199bbdb",
             "file": "src/lib/blogs/blogs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -649,7 +705,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { AppConfig} from 'src/config/app.config';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public blogsConfig: Object = {\n    theme: \"theme-blogs\",\n    heading: \"Blogs\"\n  }\n\n  @Input() public X1: number = 0;\n  @Input() public Y1: number = 0;\n  @Output() public Xemitter = new EventEmitter<any>();\n  @Output() public Yemitter = new EventEmitter<any>();\n  @Output() public close = new EventEmitter<any>();\n\n  public showTrending: boolean = true;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = false;\n  public blogs: any;\n  public userblogs: any;\n\n  //current blog status\n  public showBlog: boolean = false;\n  public heading: any;\n  public author: any;\n  public content: any;\n  public date: any;\n\n  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {\n  }\n\n  ngOnInit(): void {\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const headers = new HttpHeaders({\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.blogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n\n    this.http.get(`http://localhost:8080/api/v1/blogs/${username}`, {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.userblogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n    this.showBlog = false;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Comic Sans MS',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const body = {\n      username: username,\n      title: this.title,\n      content: this.htmlContent\n    };\n\n    const headers = new HttpHeaders({\n      'Content-Type': 'application/json',\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })\n    .subscribe({\n      next: response => {\n        console.log(response);\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  readMore(blog: any){\n    this.heading = blog.title;\n    this.author = blog.firstname + ' ' + blog.lastname;\n    this.content = blog.content;\n    this.date = blog.createdAt;\n    this.showBlog = true;\n  }\n\n  back(){\n    this.showBlog = false;\n  }\n\n  emitX(value:any){\n    this.Xemitter.emit(value);\n  }\n  \n  emitY(value:any){\n    this.Yemitter.emit(value);\n  }\n\n  closeWindow(){\n    this.close.emit();\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@angular/core';\nimport { HttpClient, HttpHeaders } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\nimport { AppConfig} from 'src/service/app.config';\n\n@Component({\n  selector: 'app-blogs',\n  templateUrl: './blogs.component.html',\n  styleUrls: ['./blogs.component.scss']\n})\nexport class BlogsComponent implements OnInit {\n\n  public blogsConfig: Object = {\n    theme: \"theme-blogs\",\n    heading: \"Blogs\"\n  }\n\n  @Input() public X1: number = 0;\n  @Input() public Y1: number = 0;\n  @Output() public Xemitter = new EventEmitter<any>();\n  @Output() public Yemitter = new EventEmitter<any>();\n  @Output() public close = new EventEmitter<any>();\n\n  public showTrending: boolean = true;\n  public showMyBlogs: boolean = false;\n  public showAddBlogs: boolean = false;\n  public blogs: any;\n  public userblogs: any;\n\n  //current blog status\n  public showBlog: boolean = false;\n  public heading: any;\n  public author: any;\n  public content: any;\n  public date: any;\n\n  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {\n  }\n\n  ngOnInit(): void {\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const headers = new HttpHeaders({\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.blogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n\n    this.http.get(`http://localhost:8080/api/v1/blogs/${username}`, {headers})\n    .subscribe({\n      next: response => {\n        console.log(response);\n        this.userblogs = response;\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  trending(){\n    this.showTrending = true;\n    this.showAddBlogs = false;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  myblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = false;\n    this.showMyBlogs = true;\n    this.showBlog = false;\n  }\n\n  addblogs(){\n    this.showTrending = false;\n    this.showAddBlogs = true;\n    this.showMyBlogs = false;\n    this.showBlog = false;\n  }\n\n  title = '';\n  htmlContent = '';\n\n  config: AngularEditorConfig = {\n    editable: true,\n    spellcheck: true,\n    height: '24rem',\n    minHeight: '8rem',\n    placeholder: 'Enter text here...',\n    translate: 'no',\n    defaultParagraphSeparator: 'p',\n    defaultFontName: 'Comic Sans MS',\n    toolbarHiddenButtons: [\n      ['bold']\n      ],\n    customClasses: [\n      {\n        name: \"quote\",\n        class: \"quote\",\n      },\n      {\n        name: 'redText',\n        class: 'redText'\n      },\n      {\n        name: \"titleText\",\n        class: \"titleText\",\n        tag: \"h1\",\n      },\n    ]\n  };\n\n  post(){\n    const jwtToken = this.cookieService.get('boonJwtToken');\n    const username = this.cookieService.get('boonCurrentUser');\n    const body = {\n      username: username,\n      title: this.title,\n      content: this.htmlContent\n    };\n\n    const headers = new HttpHeaders({\n      'Content-Type': 'application/json',\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\n    });\n\n    console.log(headers);\n\n    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })\n    .subscribe({\n      next: response => {\n        console.log(response);\n      },\n      error: error => {\n        console.error('API Error', error);\n      }   \n    });\n  }\n\n  readMore(blog: any){\n    this.heading = blog.title;\n    this.author = blog.firstname + ' ' + blog.lastname;\n    this.content = blog.content;\n    this.date = blog.createdAt;\n    this.showBlog = true;\n  }\n\n  back(){\n    this.showBlog = false;\n  }\n\n  emitX(value:any){\n    this.Xemitter.emit(value);\n  }\n  \n  emitY(value:any){\n    this.Yemitter.emit(value);\n  }\n\n  closeWindow(){\n    this.close.emit();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -720,51 +776,402 @@
             "templateData": "<app-window [windowConfig]=\"blogsConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\n\t<div class=\"search\">\n\t\t<input type=\"text\" placeholder=\"Search\">\n\t\t<div class=\"search-btn\"></div>\n\t</div>\n\t<div class=\"blogs-container\">\n\t\t<div class=\"nav-menu\">\n\t\t\t<div class=\"btn\" (click)=\"trending()\">\n\t\t\t\tTrending\n\t\t\t</div>\n\t\t\t<div class=\"btn\" (click)=\"myblogs()\">\n\t\t\t\tMy Blogs\n\t\t\t</div>\n\t\t\t<div class=\"btn\" (click)=\"addblogs()\">\n\t\t\t\tAdd Blog\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"blogs\">\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showTrending\">\n\t\t\t\t<ng-container *ngFor=\"let b of blogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\" (click)=\"readMore(b)\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"myblogs-container\" *ngIf=\"showMyBlogs\">\n\t\t\t\t<ng-container *ngFor=\"let b of userblogs\">\n\t\t\t\t\t<div class=\"blog\">\n\t\t\t\t\t\t<div class=\"heading\">{{b.title}}</div>\n\t\t\t\t\t\t<div class=\"date\"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>\n\t\t\t\t\t\t<div class=\"content\" [innerHTML]=\"b.content\"></div>\n\t\t\t\t\t\t<div class=\"read-more\" (click)=\"readMore(b)\">Read More</div>\n\t\t\t\t\t</div>\n\t\t\t\t</ng-container>\n\t\t\t</div>\n\t\t\t<div class=\"addblogs-container\" *ngIf=\"showAddBlogs\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter blog title...\" [(ngModel)]=\"title\">\n\t\t\t\t<div class=\"innerclass\">\n\t\t\t\t\t<angular-editor [(ngModel)]=\"htmlContent\" class=\"editor\" [config]=\"config\"></angular-editor>\n\t\t\t\t\t<div class=\"btn\" (click)=\"post()\">Post</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"readmore-container\" *ngIf=\"showBlog\">\n\t\t\t\t<img src=\"assets/images/buttons/return.png\" class=\"back\" (click)=\"back()\">\n\t\t\t\t<div class=\"blog-heading\">\n\t\t\t\t\t{{ this.heading }}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"blog-metadata\">\n\t\t\t\t\tAuthored by <b>{{ this.author }}</b> on {{ this.date | slice:0:10 }}\n\t\t\t\t</div>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"blog-content\" [innerHTML]=\"this.content\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t\n</app-window>\n"
         },
         {
-            "name": "FlawsComponent",
-            "id": "component-FlawsComponent-8df1e665c40d1bc112f43bf65c90502777a13388f83a404fa1380b143ea3a630b90e82e0491d82ef0d065428b6a3356f1af435ad9b464dc113e9b54e278e57c1",
-            "file": "src/lib/flaws/flaws.component.ts",
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-6e4dd7e8694088feb5378e85418fac76a3f9327615d80a7d57e316d10b58b28049b52f7922943ecf04f3ccd0e0ae28e8233796d7ed21edcc727ea696e7a9840e",
+            "file": "src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-flaws",
+            "selector": "app-button",
             "styleUrls": [
-                "./flaws.component.scss"
+                "./button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./flaws.component.html"
+                "./button.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
+            "inputsClass": [
+                {
+                    "name": "buttonConfig",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "ButtonX1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "ButtonY1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "Xemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "Yemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "ButtonX2",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "ButtonY2",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "endTime",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "initialWidth",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "insideButton",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "mouseHoldsButton",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "startTime",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
+                    "name": "mouseOut",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 76,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "mouseOver",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onMouseDown",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'document:mousedown', ['$event']"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onMouseMove",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'document:mousemove', ['$event']"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onMouseUp",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'document:mouseup', ['$event']"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onResize",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'window:resize', ['$event']"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
-            "hostListeners": [],
+            "hostListeners": [
+                {
+                    "name": "document:mousedown",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39
+                },
+                {
+                    "name": "document:mousemove",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 57
+                },
+                {
+                    "name": "document:mouseup",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 49
+                },
+                {
+                    "name": "window:resize",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-flaws',\n  templateUrl: './flaws.component.html',\n  styleUrls: ['./flaws.component.scss']\n})\nexport class FlawsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, HostListener, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n  public initialWidth = 0; // initial size of window\n  @Input() public buttonConfig: any;\n\n  // Button coordinates.\n  @Input() public ButtonX1: number = 0;\n  @Input() public ButtonY1: number = 0;\n  @Output() Xemitter = new EventEmitter<any>();\n  @Output() Yemitter = new EventEmitter<any>();\n  public ButtonX2: number = 0;\n  public ButtonY2: number = 0;\n  public insideButton: boolean = false;\n  public mouseHoldsButton: boolean = false;\n  public startTime: number = 0;\n  public endTime: number = 0;\n\n  constructor(){\n    this.initialWidth = window.innerWidth;\n  }\n\n  // this maintains the position of button with respect to right side, when window size is changing.\n  @HostListener('window:resize', ['$event'])\n  onResize(event: any) {\n    this.ButtonX1 -= this.initialWidth - window.innerWidth;\n    this.Xemitter.emit(this.ButtonX1);\n    this.initialWidth = window.innerWidth;\n  }\n\n  // listen to the mouseclick is pressed.\n  @HostListener('document:mousedown', ['$event'])\n  onMouseDown(event: MouseEvent) {\n    if(this.insideButton){\n      this.mouseHoldsButton = true;\n      this.ButtonX2 = event.clientX;\n      this.ButtonY2 = event.clientY;\n    }\n  }\n\n  // when mouse click is released.\n  @HostListener('document:mouseup', ['$event'])\n  onMouseUp(event: MouseEvent) {\n    event.preventDefault();\n    this.endTime = Date.now();\n    this.mouseHoldsButton = false;\n  }\n\n   // when mouse is moving.\n   @HostListener('document:mousemove', ['$event'])\n   onMouseMove(event: MouseEvent) {\n     event.preventDefault();\n     if(this.mouseHoldsButton && this.insideButton){\n       this.ButtonX1 += event.clientX - this.ButtonX2;\n       this.Xemitter.emit(this.ButtonX1);\n       this.ButtonY1 += event.clientY - this.ButtonY2;\n       this.Yemitter.emit(this.ButtonY1);\n       this.ButtonX2 = event.clientX;\n       this.ButtonY2 = event.clientY;\n     }\n   }\n\n     // when mouse is inside the div.\n  mouseOver(){\n    console.log(\"insideButton\");\n    this.insideButton = true;\n  }\n\n  // when mouse is outsider the div.\n  mouseOut(){\n    console.log('outsidemouse')\n    if(this.mouseHoldsButton == false) this.insideButton = false;\n  }\n\n}\n\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
-                    "styleUrl": "./flaws.component.scss"
+                    "data": "@import './../../styles/config.scss';\r\n\r\n.btn-container{\r\n\tcursor: pointer;\r\n\r\n\t.btn{\r\n\t\theight: 40px;\r\n\t\twidth: 48px;\r\n\t}\r\n\r\n\tp{\r\n\t\tmargin:0;\r\n\t\ttext-align: center;\r\n\t\tfont-family: $primary-font;\r\n\t\tfont-size: 12px;\r\n\t\tmargin-left: 4px;\r\n\t}\r\n}\r\n\r\n.btn-container:hover .btn{\r\n\t\theight: 42px;\r\n\t\twidth: 50px;\r\n}\r\n\r\n",
+                    "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
@@ -774,16 +1181,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 23
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>LMAO!!! error 404!!</p>\n"
+            "templateData": "<div class=\"btn-container\" (mouseover)=\"mouseOver()\" (mouseout)=\"mouseOut()\">\n\t<img src=\"{{this.buttonConfig.image}}\" class=\"btn\">\n\t<p>{{this.buttonConfig.name}}</p>\n</div>\n"
         },
         {
             "name": "LoginComponent",
-            "id": "component-LoginComponent-489a08a05645aa027f51c1c672758bace8eb792df8b1fa574c81298a27af2252a9ae556cb654d2930b41f78e02eef5323276ba4ada8d5c77113c62ca9fe4d525",
+            "id": "component-LoginComponent-985a0c2d461207af4b89feb4487b0342e2ddd11384894d98cc15cfff0df86dd9fea11820048a8ea68882c477e09d9b339330799fc6ecea84db536f57401979a7",
             "file": "src/lib/auth/login/login.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -810,7 +1214,7 @@
                     "type": "object",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 18
                 }
             ],
             "methodsClass": [
@@ -820,7 +1224,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 14,
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "signUp",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 41,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -830,7 +1244,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -842,11 +1256,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService) { }\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    email: '',\n    password: '',\n  };\n\n  submitForm() {\n    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)\n    .subscribe({\n      next: response => {\n        const jwtToken = response.token;\n        const username = response.username;\n        this.cookieService.set('boonJwtToken', jwtToken);\n        this.cookieService.set('boonCurrentUser', username);\n        console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n        // Handle the JWT token as needed\n      },\n      error: error => {\n        console.error('API Error:', error);\n        // Handle the error response\n      }\n    });\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    email: '',\n    password: '',\n  };\n\n  submitForm() {\n    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)\n    .subscribe({\n      next: response => {\n        const jwtToken = response.token;\n        const username = response.username;\n        this.cookieService.set('boonJwtToken', jwtToken);\n        this.cookieService.set('boonCurrentUser', username);\n        console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n        // Handle the JWT token as needed\n      },\n      error: error => {\n        console.error('API Error:', error);\n        // Handle the error response\n      }\n    });\n  }\n\n  signUp(){\n    this.router.navigate(['/signup']);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(https://fonts.googleapis.com/css?family=Roboto:300);\r\n\r\n.login-page {\r\n  width: 360px;\r\n  padding: 8% 0 0;\r\n  margin: auto;\r\n}\r\n.form {\r\n  position: relative;\r\n  z-index: 1;\r\n  background: #FFFFFF;\r\n  max-width: 360px;\r\n  margin: 0 auto 100px;\r\n  padding: 45px;\r\n  text-align: center;\r\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);\r\n}\r\n.form input {\r\n  font-family: \"Roboto\", sans-serif;\r\n  outline: 0;\r\n  background: #f2f2f2;\r\n  width: 100%;\r\n  border: 0;\r\n  margin: 0 0 15px;\r\n  padding: 15px;\r\n  box-sizing: border-box;\r\n  font-size: 14px;\r\n}\r\n.form button {\r\n  font-family: \"Roboto\", sans-serif;\r\n  text-transform: uppercase;\r\n  outline: 0;\r\n  background: #4CAF50;\r\n  width: 100%;\r\n  border: 0;\r\n  padding: 15px;\r\n  color: #FFFFFF;\r\n  font-size: 14px;\r\n  -webkit-transition: all 0.3 ease;\r\n  transition: all 0.3 ease;\r\n  cursor: pointer;\r\n}\r\n.form button:hover,.form button:active,.form button:focus {\r\n  background: #43A047;\r\n}\r\n.form .message {\r\n  margin: 15px 0 0;\r\n  color: #b3b3b3;\r\n  font-size: 12px;\r\n}\r\n.form .message a {\r\n  color: #4CAF50;\r\n  text-decoration: none;\r\n}\r\n.form .register-form {\r\n  display: none;\r\n}\r\n.container {\r\n  position: relative;\r\n  z-index: 1;\r\n  max-width: 300px;\r\n  margin: 0 auto;\r\n}\r\n.container:before, .container:after {\r\n  content: \"\";\r\n  display: block;\r\n  clear: both;\r\n}\r\n.container .info {\r\n  margin: 50px auto;\r\n  text-align: center;\r\n}\r\n.container .info h1 {\r\n  margin: 0 0 15px;\r\n  padding: 0;\r\n  font-size: 36px;\r\n  font-weight: 300;\r\n  color: #1a1a1a;\r\n}\r\n.container .info span {\r\n  color: #4d4d4d;\r\n  font-size: 12px;\r\n}\r\n.container .info span a {\r\n  color: #000000;\r\n  text-decoration: none;\r\n}\r\n.container .info span .fa {\r\n  color: #EF3B3A;\r\n}\r\nbody {\r\n  background: #76b852; /* fallback for old browsers */\r\n  background: rgb(141,194,111);\r\n  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);\r\n  font-family: \"Roboto\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;      \r\n}",
+                    "data": ".login-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n    .login-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-bottom: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        border: 0px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}",
                     "styleUrl": "./login.component.scss"
                 }
             ],
@@ -868,9 +1282,15 @@
                         "type": "CookieService",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 10,
+                "line": 11,
                 "jsdoctags": [
                     {
                         "name": "http",
@@ -889,13 +1309,213 @@
                         "tagName": {
                             "text": "param"
                         }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
                     }
                 ]
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"login-page\">\n\t<div class=\"form\">\n\t  <form class=\"login-form\" (ngSubmit)=\"submitForm()\" #myForm=\"ngForm\">\n\t\t<input type=\"text\" placeholder=\"email\" name=\"email\" [(ngModel)]=\"formData.email\" required/>\n\t\t<input type=\"password\" placeholder=\"password\" name=\"password\" [(ngModel)]=\"formData.password\" required/>\n\t\t<button type=\"submit\" [disabled]=\"!myForm.form.valid\">Log In</button>\n\t\t<p class=\"message\">Not registered? <a href=\"#\">Create an account</a></p>\n\t  </form>\n\t</div>\n  </div>"
+            "templateData": "<div class=\"login-page\">\n\t  <form class=\"login-form\" (ngSubmit)=\"submitForm()\" #myForm=\"ngForm\">\n\t\t<input type=\"text\" placeholder=\"email\" name=\"email\" [(ngModel)]=\"formData.email\" required/>\n\t\t<input type=\"password\" placeholder=\"password\" name=\"password\" [(ngModel)]=\"formData.password\" required/>\n\t\t<button type=\"submit\" [disabled]=\"!myForm.form.valid\">Log In</button>\n\t\t<!-- <button> Log In </button> -->\n\t\t<p class=\"message\">Not registered? <a routerLink=\"/signup\">Create an account</a></p>\n\t  </form>\n  </div>"
+        },
+        {
+            "name": "ProfileComponent",
+            "id": "component-ProfileComponent-712bf987940cd048b993214e9ad41bb77f9b74dd7ea5354b3f8d5bcb4249859e3d47fe0de5d00a1f8ac6f3718899310e103942faf050694578490c62593e471d",
+            "file": "src/lib/profile/profile.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-profile",
+            "styleUrls": [
+                "./profile.component.scss",
+                "./../../styles/config.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./profile.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "X1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "Y1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "close",
+                    "defaultValue": "new EventEmitter<any> ()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "Xemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "Yemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "profileConfig",
+                    "defaultValue": "{\n    theme : \"theme-profile\",\n    heading : \"Profile\",\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Object",
+                    "optional": false,
+                    "description": "",
+                    "line": 15,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "closeWindow",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "emitX",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "emitY",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-profile',\n  templateUrl: './profile.component.html',\n  styleUrls: ['./profile.component.scss', './../../styles/config.scss']\n})\nexport class ProfileComponent implements OnInit{\n  @Input() public X1: number = 0;\n  @Input() public Y1: number = 0;\n  @Output() public Xemitter = new EventEmitter<any>();\n  @Output() public Yemitter = new EventEmitter<any>();\n  @Output() public close = new EventEmitter<any> ();\n\n  public profileConfig: Object = {\n    theme : \"theme-profile\",\n    heading : \"Profile\",\n  }\n\n  constructor() { \n  }\n\n  ngOnInit(): void {\n  }\n\n  emitX(value:any){\n    this.Xemitter.emit(value);\n  }\n  \n  emitY(value:any){\n    this.Yemitter.emit(value);\n  }\n\n  closeWindow(){\n    this.close.emit();\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "app-window{\r\n\t.profile-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\t\t\r\n\t\t.profile{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tbackground-color: #ebb7c9;\r\n\t\t\tborder-radius: 8px;\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n}\r\n",
+                    "styleUrl": "./profile.component.scss"
+                },
+                {
+                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-profile{\r\n\tbackground-color: #faedf1;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ebb7c9;\r\n\t}\r\n}\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-skills{\r\n\tbackground-color: #fffbf4;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ffefd5;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}\r\n\r\n",
+                    "styleUrl": "./../../styles/config.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 18
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<app-window [windowConfig]=\"profileConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\n\t<div class=\"profile-container\">\n\t\t<div class=\"profile\">\n\t\t\t\n\t\t</div>\n\t</div>\t\n</app-window>"
         },
         {
             "name": "ProjectsComponent",
@@ -1096,7 +1716,7 @@
                     "styleUrl": "./projects.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}",
+                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-profile{\r\n\tbackground-color: #faedf1;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ebb7c9;\r\n\t}\r\n}\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-skills{\r\n\tbackground-color: #fffbf4;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ffefd5;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -1116,7 +1736,7 @@
         },
         {
             "name": "SignupComponent",
-            "id": "component-SignupComponent-0506fd36740f080728f68bfeb1316e65872e519bdb1c785a5a3d054b0bc793d413b0ae0cfb62312bf02ba9ccb4ef89f88206302e098b5193973677babdd95221",
+            "id": "component-SignupComponent-1849f1ef5bed67c538b33290897e09ac84775783d7353d59446f8931d5ffc318ab703b49de2e6075783fbfe356b57cb607ae16ecd6ad3d671c19dc7d89164a2d",
             "file": "src/lib/auth/signup/signup.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1137,7 +1757,7 @@
             "propertiesClass": [
                 {
                     "name": "formData",
-                    "defaultValue": "{\n    firstname: '',\n    lastname: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  }",
+                    "defaultValue": "{\n    username: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
@@ -1163,7 +1783,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1175,11 +1795,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-signup',\n  templateUrl: './signup.component.html',\n  styleUrls: ['./signup.component.scss']\n})\nexport class SignupComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService){}\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    firstname: '',\n    lastname: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  };\n\n  submitForm() {\n    if (this.formData.password === this.formData.confirmPassword) {\n      this.http.post<any>('http://localhost:8080/api/v1/auth/register', this.formData)\n      .subscribe({\n        next: response => {\n          const jwtToken = response.token;\n          const username = response.username;\n          this.cookieService.set('boonJwtToken', jwtToken);\n          this.cookieService.set('boonCurrentUser', username);\n          console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n          // Handle the JWT token as needed\n        },\n        error: error => {\n          console.error('API Error:', error);\n          // Handle the error response\n        }\n      });\n    } else {\n      console.error('Passwords do not match');\n    }\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { CookieService } from 'ngx-cookie-service';\n\n@Component({\n  selector: 'app-signup',\n  templateUrl: './signup.component.html',\n  styleUrls: ['./signup.component.scss']\n})\nexport class SignupComponent implements OnInit {\n\n  constructor(private http: HttpClient, private cookieService: CookieService){}\n\n  ngOnInit(): void {\n  }\n\n  formData = {\n    username: '',\n    email: '',\n    password: '',\n    confirmPassword: ''\n  };\n\n  submitForm() {\n    console.log(this.formData);\n    if (this.formData.password === this.formData.confirmPassword) {\n      // this.http.post<any>('http://localhost:8080/api/v1/auth/register', this.formData)\n      // .subscribe({\n      //   next: response => {\n      //     const jwtToken = response.token;\n      //     const username = response.username;\n      //     this.cookieService.set('boonJwtToken', jwtToken);\n      //     this.cookieService.set('boonCurrentUser', username);\n      //     console.log('JWT Token:', jwtToken, '\\nUsername:', username);\n      //     // Handle the JWT token as needed\n      //   },\n      //   error: error => {\n      //     console.error('API Error:', error);\n      //     // Handle the error response\n      //   }\n      // });\n    } else {\n      console.error('Passwords do not match');\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(https://fonts.googleapis.com/css?family=Roboto:300);\r\n\r\n.signup-page {\r\n  width: 360px;\r\n  padding: 8% 0 0;\r\n  margin: auto;\r\n}\r\n.form {\r\n  position: relative;\r\n  z-index: 1;\r\n  background: #FFFFFF;\r\n  max-width: 360px;\r\n  margin: 0 auto 100px;\r\n  padding: 45px;\r\n  text-align: center;\r\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);\r\n}\r\n.form input {\r\n  font-family: \"Roboto\", sans-serif;\r\n  outline: 0;\r\n  background: #f2f2f2;\r\n  width: 100%;\r\n  border: 0;\r\n  margin: 0 0 15px;\r\n  padding: 15px;\r\n  box-sizing: border-box;\r\n  font-size: 14px;\r\n}\r\n.form button {\r\n  font-family: \"Roboto\", sans-serif;\r\n  text-transform: uppercase;\r\n  outline: 0;\r\n  background: #4CAF50;\r\n  width: 100%;\r\n  border: 0;\r\n  padding: 15px;\r\n  color: #FFFFFF;\r\n  font-size: 14px;\r\n  -webkit-transition: all 0.3 ease;\r\n  transition: all 0.3 ease;\r\n  cursor: pointer;\r\n}\r\n.form button:hover,.form button:active,.form button:focus {\r\n  background: #43A047;\r\n}\r\n.form .message {\r\n  margin: 15px 0 0;\r\n  color: #b3b3b3;\r\n  font-size: 12px;\r\n}\r\n.form .message a {\r\n  color: #4CAF50;\r\n  text-decoration: none;\r\n}\r\n.container {\r\n  position: relative;\r\n  z-index: 1;\r\n  max-width: 300px;\r\n  margin: 0 auto;\r\n}\r\n.container:before, .container:after {\r\n  content: \"\";\r\n  display: block;\r\n  clear: both;\r\n}\r\n.container .info {\r\n  margin: 50px auto;\r\n  text-align: center;\r\n}\r\n.container .info h1 {\r\n  margin: 0 0 15px;\r\n  padding: 0;\r\n  font-size: 36px;\r\n  font-weight: 300;\r\n  color: #1a1a1a;\r\n}\r\n.container .info span {\r\n  color: #4d4d4d;\r\n  font-size: 12px;\r\n}\r\n.container .info span a {\r\n  color: #000000;\r\n  text-decoration: none;\r\n}\r\n.container .info span .fa {\r\n  color: #EF3B3A;\r\n}\r\nbody {\r\n  background: #76b852; /* fallback for old browsers */\r\n  background: rgb(141,194,111);\r\n  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);\r\n  font-family: \"Roboto\", sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;      \r\n}",
+                    "data": ".signup-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n    .register-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-top: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        margin-top: 16px;\r\n        border: 0px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}\r\n\r\n.error{\r\n  color: orangered;\r\n  font-size: 12px;\r\n}",
                     "styleUrl": "./signup.component.scss"
                 }
             ],
@@ -1228,11 +1848,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"signup-page\">\n\t<div class=\"form\">\n\t\t<form class=\"register-form\" (ngSubmit)=\"submitForm()\" #myForm=\"ngForm\">\n\t\t\t<input type=\"text\" placeholder=\"firstname\" name=\"firstname\" [(ngModel)]=\"formData.firstname\" required/>\n\t\t\t<input type=\"text\" placeholder=\"lastname\" name=\"lastname\" [(ngModel)]=\"formData.lastname\" required/>\n\t\t\t<input type=\"text\" placeholder=\"email\" name=\"email\" [(ngModel)]=\"formData.email\" required/>\n\t\t\t<input type=\"password\" placeholder=\"password\" name=\"password\" [(ngModel)]=\"formData.password\" required/>\n\t\t\t<input type=\"password\" placeholder=\"confirm password\" name=\"confirmPassword\" [(ngModel)]=\"formData.confirmPassword\" required/>\n\t\t\t<button type=\"submit\" [disabled]=\"!myForm.form.valid\">Sign Up</button>\n\t\t\t<p class=\"message\">Already registered? <a href=\"#\">Sign In</a></p>\n\t  \t</form>\n\t</div>\n</div>"
+            "templateData": "<div class=\"signup-page\">\n\t\t<form class=\"register-form\" (ngSubmit)=\"submitForm()\" #myForm=\"ngForm\">\n\t\t\t<input type=\"text\" placeholder=\"username\" name=\"username\" [(ngModel)]=\"formData.username\" class=\"form-controle\" required minlength=\"4\" #name=\"ngModel\"/>\n\t\t\t<div *ngIf=\"name.invalid && (name.dirty || name.touched)\"class=\"error\">\n\t\t\t\t<div *ngIf=\"name.errors?.['required']\">\n\t\t\t\t\tusername is required.\n\t\t\t\t</div>\n\t\t\t\t<div *ngIf=\"name.errors?.['minlength']\">\n\t\t\t\t\tusername must be at least 4 characters long.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<input type=\"email\" placeholder=\"email\" name=\"email\" [(ngModel)]=\"formData.email\" required email #email=\"ngModel\"/>\n\t\t\t<div *ngIf=\"email.invalid && (email.dirty || email.touched)\"class=\"error\">\n\t\t\t\t<div *ngIf=\"email.errors?.['required']\">\n\t\t\t\t\temail is required.\n\t\t\t\t</div>\n\t\t\t\t<div *ngIf=\"email.errors?.['email']\">\n\t\t\t\t\tinvalid email format.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<input type=\"password\" placeholder=\"password\" name=\"password\" [(ngModel)]=\"formData.password\" required #password=\"ngModel\"/>\n\t\t\t<div *ngIf=\"password.invalid && (password.dirty || password.touched)\" class=\"error\">\n\t\t\t\t<div *ngIf=\"password.errors?.['required']\">\n\t\t\t\t\tpassword is required.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<input type=\"password\" placeholder=\"confirm password\" name=\"confirmPassword\" [(ngModel)]=\"formData.confirmPassword\" required #confirm=\"ngModel\"/>\n\t\t\t<div *ngIf=\"confirm.invalid && (confirm.dirty || confirm.touched)\" class=\"error\">\n\t\t\t\t<div *ngIf=\"confirm.errors?.['required']\">\n\t\t\t\t\tconfirm password is required.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div *ngIf=\"password.value != confirm.value\" class=\"error\">\n\t\t\t\tPasswords do not match.\n\t\t\t</div>\n\t\t\t<button type=\"submit\" [disabled]=\"!myForm.form.valid\">Sign Up</button>\n\t\t\t<p class=\"message\">Already registered? <a routerLink=\"/login\">Sign In</a></p>\n\t  \t</form>\n</div>"
         },
         {
             "name": "SkillsComponent",
-            "id": "component-SkillsComponent-bfab8383f668215b50b2290d39cd748ca4660dc3b6971a1587079cd7f21f73a90ca622d523f8c9d885c888271d2b9b5fd08f8423b4b71dda992c930e1dd1c6c1",
+            "id": "component-SkillsComponent-bebc3b7ae0a5ac338ff577d7ebf2c072a4b0344be2c9953b745e876c16c1db332ccbba185d8a196a0d9670720b80225c3f2cb0e7cec8bb3fa57d337178c96188",
             "file": "src/lib/skills/skills.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1241,24 +1861,149 @@
             "providers": [],
             "selector": "app-skills",
             "styleUrls": [
-                "./skills.component.scss"
+                "./skills.component.scss",
+                "./../../styles/config.scss"
             ],
             "styles": [],
             "templateUrl": [
                 "./skills.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
+            "inputsClass": [
+                {
+                    "name": "X1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "Y1",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "close",
+                    "defaultValue": "new EventEmitter<any> ()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "Xemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "Yemitter",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "projectsConfig",
+                    "defaultValue": "{\n    theme : \"theme-skills\",\n    heading : \"Skills\",\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Object",
+                    "optional": false,
+                    "description": "",
+                    "line": 15,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
             "methodsClass": [
+                {
+                    "name": "closeWindow",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "emitX",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "emitY",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1270,12 +2015,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-skills',\n  templateUrl: './skills.component.html',\n  styleUrls: ['./skills.component.scss']\n})\nexport class SkillsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n      \n  }\n}\n",
+            "sourceCode": "import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-skills',\n  templateUrl: './skills.component.html',\n  styleUrls: ['./skills.component.scss', './../../styles/config.scss']\n})\nexport class SkillsComponent implements OnInit {\n  @Input() public X1: number = 0;\n  @Input() public Y1: number = 0;\n  @Output() public Xemitter = new EventEmitter<any>();\n  @Output() public Yemitter = new EventEmitter<any>();\n  @Output() public close = new EventEmitter<any> ();\n\n  public projectsConfig: Object = {\n    theme : \"theme-skills\",\n    heading : \"Skills\",\n  }\n\n  constructor() { \n  }\n\n  ngOnInit(): void {\n  }\n\n  emitX(value:any){\n    this.Xemitter.emit(value);\n  }\n  \n  emitY(value:any){\n    this.Yemitter.emit(value);\n  }\n\n  closeWindow(){\n    this.close.emit();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "app-window{\r\n\t.skills-container{\r\n\t\theight: 720px;\r\n\t\tpadding: 8px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\t\t\r\n\t\t.skills{\r\n\t\t\tposition: relative;\r\n\t\t\theight: 100%;\r\n\t\t\twidth: 100%;\r\n\t\t\tbackground-color: #ffefd5;\r\n\t\t\tborder-radius: 8px;\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n}",
                     "styleUrl": "./skills.component.scss"
+                },
+                {
+                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-profile{\r\n\tbackground-color: #faedf1;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ebb7c9;\r\n\t}\r\n}\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-skills{\r\n\tbackground-color: #fffbf4;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ffefd5;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}\r\n\r\n",
+                    "styleUrl": "./../../styles/config.scss"
                 }
             ],
             "stylesData": "",
@@ -1285,16 +2034,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 18
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>Under Construction!</p>\n"
+            "templateData": "<app-window [windowConfig]=\"projectsConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\n\t<div class=\"skills-container\">\n\t\t<div class=\"skills\">\n\t\t\t\n\t\t</div>\n\t</div>\t\n</app-window>"
         },
         {
             "name": "WallComponent",
-            "id": "component-WallComponent-2f69935b17c01e10440da838a3fe567dc58b29f20c5f5f1f77b7f4b3ca8f566cdd9059575b83ce9627437149420b31871124f23b0756f7e2ea8bb3c3bb1076f5",
+            "id": "component-WallComponent-4734a6bf72a15c9d50b125068b82692763aff1f0852da03f0a8005f9a51282610cfe5d775c98bfaef03670a59987ae77cd743104cb908b25dc01b195b7bef20c",
             "file": "src/lib/wall/wall.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1314,19 +2063,6 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "blogFolderUrl",
-                    "defaultValue": "\"/assets/images/buttons/cloudClosedFolder.png\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 31,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
                     "name": "BLOGS",
                     "defaultValue": "Comp.BLOGS",
                     "deprecated": false,
@@ -1334,124 +2070,20 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 24,
+                    "line": 22,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "blogsButtonX1",
-                    "defaultValue": "0",
+                    "name": "blogsButton",
+                    "defaultValue": "{\n    name: \"Blogs\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "number",
+                    "type": "object",
                     "optional": false,
                     "description": "",
-                    "line": 71,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsButtonX2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 73,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsButtonY1",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 72,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "blogsButtonY2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 74,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "cardVisible",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 61,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "cardX1",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 62,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "cardX2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 64,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "cardY1",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 63,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "cardY2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 65,
+                    "line": 38,
                     "modifierKind": [
                         123
                     ]
@@ -1463,111 +2095,7 @@
                     "type": "AppConfig",
                     "optional": false,
                     "description": "",
-                    "line": 82,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "endTime",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 69,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "flawFolderUrl",
-                    "defaultValue": "\"/assets/images/buttons/cloudClosedFolder.png\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 33,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "flawX2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 58,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "flawY2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 59,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "homeFolderUrl",
-                    "defaultValue": "\"/assets/images/buttons/home/ggn111.png\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 29,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "homeX2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 46,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "homeY2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 47,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "initialCardHeight",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 66,
+                    "line": 55,
                     "modifierKind": [
                         123
                     ]
@@ -1580,85 +2108,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 43,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideBlogsButton",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 75,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideFlaw",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 57,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideHome",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
                     "line": 45,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideMenubar",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 67,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideProject",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 49,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "insideSkill",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 53,
                     "modifierKind": [
                         123
                     ]
@@ -1671,7 +2121,20 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 78,
+                    "line": 52,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "loadProfileComponent",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 49,
                     "modifierKind": [
                         123
                     ]
@@ -1684,85 +2147,20 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 79,
+                    "line": 50,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "mouseHoldBlogsButton",
+                    "name": "loadSkillsComponent",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 38,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "mouseHoldCard",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 41,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "mouseHoldFlaw",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 40,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "mouseHoldHome",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 36,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "mouseHoldProject",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 37,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "mouseHoldSkill",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 39,
+                    "line": 51,
                     "modifierKind": [
                         123
                     ]
@@ -1775,59 +2173,46 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 22,
+                    "line": 19,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "PROJECT",
+                    "name": "profileButton",
+                    "defaultValue": "{\n    name: \"Profile\",\n    image: \"/assets/images/buttons/home/ggn111.png\"\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "PROJECTS",
                     "defaultValue": "Comp.PROJECTS",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 23,
+                    "line": 20,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "projectFolderUrl",
-                    "defaultValue": "\"/assets/images/buttons/cloudClosedFolder.png\"",
+                    "name": "projectsButton",
+                    "defaultValue": "{\n    name: \"Projects\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "object",
                     "optional": false,
                     "description": "",
-                    "line": 30,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectX2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 50,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "projectY2",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 51,
+                    "line": 28,
                     "modifierKind": [
                         123
                     ]
@@ -1839,20 +2224,7 @@
                     "type": "Router",
                     "optional": false,
                     "description": "",
-                    "line": 82,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "skillFolderUrl",
-                    "defaultValue": "\"/assets/images/buttons/cloudClosedFolder.png\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 32,
+                    "line": 55,
                     "modifierKind": [
                         123
                     ]
@@ -1865,46 +2237,33 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 25,
+                    "line": 21,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "skillX2",
-                    "defaultValue": "0",
+                    "name": "skillsButton",
+                    "defaultValue": "{\n    name: \"Skills\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "number",
+                    "type": "object",
                     "optional": false,
                     "description": "",
-                    "line": 54,
+                    "line": 33,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "skillY2",
-                    "defaultValue": "0",
+                    "name": "validClick",
+                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "number",
+                    "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 55,
-                    "modifierKind": [
-                        123
-                    ]
-                },
-                {
-                    "name": "startTime",
-                    "defaultValue": "0",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 68,
+                    "line": 46,
                     "modifierKind": [
                         123
                     ]
@@ -1924,7 +2283,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 264,
+                    "line": 122,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1952,63 +2311,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 251,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "mouseOut",
-                    "args": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 241,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "mouseOver",
-                    "args": [
-                        {
-                            "name": "value",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 231,
+                    "line": 99,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2029,7 +2332,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 110,
+                    "line": 86,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -2046,7 +2349,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 127,
+                    "line": 90,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2080,7 +2383,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 184,
+                    "line": 95,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "decorators": [
@@ -2102,87 +2405,25 @@
                     ]
                 },
                 {
-                    "name": "onMouseUp",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "MouseEvent",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 169,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "decorators": [
-                        {
-                            "name": "HostListener",
-                            "stringifiedArguments": "'document:mouseup', ['$event']"
-                        }
-                    ],
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "MouseEvent",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "onResize",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 115,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "decorators": [
-                        {
-                            "name": "HostListener",
-                            "stringifiedArguments": "'window:resize', ['$event']"
-                        }
-                    ],
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "setBlogsWindowX",
+                    "name": "setButtonX1",
                     "args": [
                         {
                             "name": "value",
                             "type": "any",
                             "deprecated": false,
                             "deprecationMessage": ""
+                        },
+                        {
+                            "name": "button",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
                         }
                     ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 269,
+                    "line": 143,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2194,14 +2435,29 @@
                             "tagName": {
                                 "text": "param"
                             }
+                        },
+                        {
+                            "name": "button",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
                         }
                     ]
                 },
                 {
-                    "name": "setBlogsWindowY",
+                    "name": "setButtonY1",
                     "args": [
                         {
                             "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "button",
                             "type": "any",
                             "deprecated": false,
                             "deprecationMessage": ""
@@ -2210,7 +2466,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 274,
+                    "line": 150,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2222,14 +2478,29 @@
                             "tagName": {
                                 "text": "param"
                             }
+                        },
+                        {
+                            "name": "button",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
                         }
                     ]
                 },
                 {
-                    "name": "setProjectsWindowX",
+                    "name": "setWindowX1",
                     "args": [
                         {
                             "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "window",
                             "type": "any",
                             "deprecated": false,
                             "deprecationMessage": ""
@@ -2238,7 +2509,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 279,
+                    "line": 129,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -2250,14 +2521,29 @@
                             "tagName": {
                                 "text": "param"
                             }
+                        },
+                        {
+                            "name": "window",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
                         }
                     ]
                 },
                 {
-                    "name": "setProjectsWindowY",
+                    "name": "setWindowY1",
                     "args": [
                         {
                             "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "window",
                             "type": "any",
                             "deprecated": false,
                             "deprecationMessage": ""
@@ -2266,12 +2552,21 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 283,
+                    "line": 136,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "window",
                             "type": "any",
                             "deprecated": false,
                             "deprecationMessage": "",
@@ -2301,7 +2596,7 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 127
+                    "line": 90
                 },
                 {
                     "name": "document:mousemove",
@@ -2318,51 +2613,17 @@
                     ],
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 184
-                },
-                {
-                    "name": "document:mouseup",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "MouseEvent",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "argsDecorator": [
-                        "$event"
-                    ],
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 169
-                },
-                {
-                    "name": "window:resize",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "argsDecorator": [
-                        "$event"
-                    ],
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 115
+                    "line": 95
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ThisReceiver } from '@angular/compiler';\nimport { Component, OnInit, HostListener} from '@angular/core';\nimport { Router } from '@angular/router';\nimport { AppConfig} from 'src/config/app.config';\n\nenum Comp{\n  PROFILE,\n  BLOGS,\n  PROJECTS,\n  SKILLS,\n  FLAW,\n  CARD\n}\n\n@Component({\n  selector: 'app-wall',\n  templateUrl: './wall.component.html',\n  styleUrls: ['./wall.component.scss']\n})\n\nexport class WallComponent implements OnInit {\n  public PROFILE: any = Comp.PROFILE;\n  public PROJECT: any = Comp.PROJECTS;\n  public BLOGS: any = Comp.BLOGS;\n  public SKILLS: any = Comp.SKILLS;\n  // public FLAW: string = \"flaw\";\n  // public CARD: string = \"card\";\n\n  public homeFolderUrl : string = \"/assets/images/buttons/home/ggn111.png\";\n  public projectFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public blogFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public skillFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n  public flawFolderUrl : string = \"/assets/images/buttons/cloudClosedFolder.png\";\n\n\n  public mouseHoldHome: boolean = false; // for button\n  public mouseHoldProject: boolean = false; // for project\n  public mouseHoldBlogsButton: boolean = false; // for blogs\n  public mouseHoldSkill: boolean = false; // for skills\n  public mouseHoldFlaw: boolean = false; // for flaws\n  public mouseHoldCard: boolean = false; // for card\n\n  public initialWidth = 0; // initial size of window\n\n  public insideHome: boolean = false;\n  public homeX2: number = 0;\n  public homeY2: number = 0;\n\n  public insideProject: boolean = false;\n  public projectX2: number = 0;\n  public projectY2: number = 0;\n\n  public insideSkill: boolean = false;\n  public skillX2: number = 0;\n  public skillY2: number = 0;\n\n  public insideFlaw: boolean = false;\n  public flawX2: number = 0;\n  public flawY2: number = 0;\n\n  public cardVisible: boolean = true;\n  public cardX1: number = 0;\n  public cardY1: number = 0;\n  public cardX2: number = 0;\n  public cardY2: number = 0;\n  public initialCardHeight = 0;\n  public insideMenubar: boolean = false;\n  public startTime: number = 0;\n  public endTime: number = 0;\n\n  public blogsButtonX1: number = 0;\n  public blogsButtonY1: number = 0;\n  public blogsButtonX2: number = 0;\n  public blogsButtonY2: number = 0;\n  public insideBlogsButton: boolean = false;\n\n  // Component booleans\n  public loadBlogsComponent: boolean =  false;\n  public loadProjectsComponent: boolean = false;\n\n  \n  constructor(public router: Router, public config: AppConfig) { \n    this.initialWidth = window.innerWidth;\n    console.log(config.homeX1, config.homeY1);\n    if(config.homeX1 == undefined) config.homeX1 = window.innerWidth - 100;\n    if(config.homeY1 == undefined) config.homeY1 = 50;\n\n    if(config.projectX1 == undefined) config.projectX1 = window.innerWidth - 100;\n    if(config.projectY1 == undefined) config.projectY1 = 140;  // 50 + 90\n\n    if(config.blogsButtonX1 == undefined) config.blogsButtonX1 = window.innerWidth - 100;\n    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 230; // 140 + 90\n\n    if(config.skillX1 == undefined) config.skillX1 = window.innerWidth - 100;\n    if(config.skillY1 == undefined) config.skillY1 = 320;\n\n    if(config.flawX1 == undefined) config.flawX1 = window.innerWidth - 100;\n    if(config.flawY1 == undefined) config.flawY1 = 410;\n\n    this.cardY1= 150;\n    this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2\n\n    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%\n    if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 150;\n\n    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%\n    if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 150;\n  }\n\n  ngOnInit(): void {\n  }\n\n  // this maintains the position of button with respect to right side, when window size is changing.\n  @HostListener('window:resize', ['$event'])\n  onResize(event: any) {\n    this.config.homeX1 -= this.initialWidth - window.innerWidth;\n    this.config.projectX1 -= this.initialWidth - window.innerWidth;\n    this.config.blogsButtonX1 -= this.initialWidth - window.innerWidth;\n    this.config.skillX1 -= this.initialWidth - window.innerWidth;\n    this.config.flawX1 -= this.initialWidth - window.innerWidth;\n    this.initialWidth = window.innerWidth;\n  }\n\n\n  // listen to the mouseclick is pressed.\n  @HostListener('document:mousedown', ['$event'])\n  onMouseDown(event: MouseEvent) {\n    this.startTime = Date.now();\n\n    if(this.insideHome){\n      this.mouseHoldHome = true;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.insideProject){\n      this.mouseHoldProject = true;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.insideBlogsButton){\n      this.mouseHoldBlogsButton = true;\n      this.blogsButtonX2 = event.clientX;\n      this.blogsButtonY2 = event.clientY;\n    }\n\n    if(this.insideSkill){\n      this.mouseHoldSkill = true;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.insideFlaw){\n      this.mouseHoldFlaw = true;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.insideMenubar){\n      this.mouseHoldCard = true;\n      this.cardX2 = event.clientX;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse click is released.\n  @HostListener('document:mouseup', ['$event'])\n  onMouseUp(event: MouseEvent) {\n    // console.log(event);\n    event.preventDefault();\n    this.endTime = Date.now();\n    // this.mouseHold = true;\n    this.mouseHoldBlogsButton = false;\n    this.mouseHoldHome = false;\n    this.mouseHoldProject = false;\n    this.mouseHoldCard = false;\n    this.mouseHoldFlaw = false;\n    this.mouseHoldSkill = false;\n  }\n\n  // when mouse is moving.\n  @HostListener('document:mousemove', ['$event'])\n  onMouseMove(event: MouseEvent) {\n    event.preventDefault();\n\n    if(this.mouseHoldHome && this.insideHome){\n      this.config.homeX1 += event.clientX - this.homeX2;\n      this.config.homeY1 += event.clientY - this.homeY2;\n      this.homeX2 = event.clientX;\n      this.homeY2 = event.clientY;\n    }\n\n    if(this.mouseHoldProject && this.insideProject){\n      this.config.projectX1 += event.clientX - this.projectX2;\n      this.config.projectY1 += event.clientY - this.projectY2;\n      this.projectX2 = event.clientX;\n      this.projectY2 = event.clientY;\n    }\n\n    if(this.mouseHoldBlogsButton && this.insideBlogsButton){\n      this.config.blogsButtonX1 += event.clientX - this.blogsButtonX2;\n      this.config.blogsButtonY1 += event.clientY - this.blogsButtonY2;\n      this.blogsButtonX2 = event.clientX;\n      this.blogsButtonY2 = event.clientY;\n    }\n\n    if(this.mouseHoldSkill && this.insideSkill){\n      this.config.skillX1 += event.clientX - this.skillX2;\n      this.config.skillY1 += event.clientY - this.skillY2;\n      this.skillX2 = event.clientX;\n      this.skillY2 = event.clientY;\n    }\n\n    if(this.mouseHoldFlaw && this.insideFlaw){\n      this.config.flawX1 += event.clientX - this.flawX2;\n      this.config.flawY1 += event.clientY - this.flawY2;\n      this.flawX2 = event.clientX;\n      this.flawY2 = event.clientY;\n    }\n\n    if(this.mouseHoldCard && this.insideMenubar){\n      this.cardX1 += event.clientX - this.cardX2;\n      this.cardX2 = event.clientX;\n      this.cardY1 += event.clientY - this.cardY2;\n      this.cardY2 = event.clientY;\n    }\n  }\n\n  // when mouse is inside the div.\n  mouseOver(value: any){\n    if(value == \"home\")this.insideHome = true;\n    else if(value == Comp.PROJECTS) this.insideProject = true;\n    else if(value == Comp.BLOGS) this.insideBlogsButton = true;\n    else if(value == \"card\") this.insideMenubar = true;\n    else if(value == \"skill\") this.insideSkill = true;\n    else if(value == \"flaw\") this.insideFlaw = true;\n  }\n\n  // when mouse is outsider the div.\n  mouseOut(value: any){\n    if(value == \"home\" && this.mouseHoldHome == false) this.insideHome = false;\n    else if(value == Comp.PROJECTS && this.mouseHoldProject == false) this.insideProject = false;\n    else if(value == Comp.BLOGS && this.mouseHoldBlogsButton == false) this.insideBlogsButton = false;\n    else if(value == \"card\" && this.mouseHoldCard == false) this.insideMenubar = false;\n    else if(value == \"skill\" && this.mouseHoldSkill == false) this.insideSkill = false;\n    else if(value == \"flaw\" && this.mouseHoldFlaw == false) this.insideFlaw = false;\n  }\n\n  \n  flipWindow(value: any) {\n    var time = this.endTime - this.startTime;\n    if(time < 150 && value == Comp.PROJECTS) {\n      this.loadProjectsComponent = !this.loadProjectsComponent\n    }else if(time < 150 && value == Comp.BLOGS){\n      this.loadBlogsComponent = !this.loadBlogsComponent;\n    }else if(time < 150 && value == \"skill\"){\n    }else if(time < 150 && value == \"flaw\"){\n    }else if(time < 150) {\n      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip, its just a temperory solution.\n    }\n  }\n\n  closeWindow(value: any){\n    if(value == Comp.PROJECTS) this.loadProjectsComponent = false;\n    if(value == Comp.BLOGS) this.loadBlogsComponent = false; \n  }\n\n  setBlogsWindowX(value: any){\n    console.log(\"x\", value);\n    this.config.blogsComponentX1 = value;\n  }\n\n  setBlogsWindowY(value: any){\n    console.log(\"y\", value);\n    this.config.blogsComponentY1 = value;\n  }\n\n  setProjectsWindowX(value: any){\n    this.config.projectsComponentX1 = value;\n  }\n\n  setProjectsWindowY(value: any){\n    this.config.projectsComponentY1 = value;\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit, HostListener} from '@angular/core';\nimport { Router } from '@angular/router';\nimport { AppConfig} from 'src/service/app.config';\n\nenum Comp{\n  PROFILE,\n  PROJECTS,\n  SKILLS,\n  BLOGS,\n}\n\n@Component({\n  selector: 'app-wall',\n  templateUrl: './wall.component.html',\n  styleUrls: ['./wall.component.scss']\n})\n\nexport class WallComponent implements OnInit {\n  public PROFILE: any = Comp.PROFILE;\n  public PROJECTS: any = Comp.PROJECTS;\n  public SKILLS: any = Comp.SKILLS;\n  public BLOGS: any = Comp.BLOGS;\n\n  public profileButton = {\n    name: \"Profile\",\n    image: \"/assets/images/buttons/home/ggn111.png\"\n  }\n  public projectsButton = {\n    name: \"Projects\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }\n  public skillsButton = {\n    name: \"Skills\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }\n  public blogsButton = {\n    name: \"Blogs\",\n    image: \"/assets/images/buttons/cloudClosedFolder.png\",\n    state: false\n  }\n\n\n  public initialWidth = 0; // initial size of window\n  public validClick: boolean = false;\n\n  // Component booleans\n  public loadProfileComponent: boolean = false;\n  public loadProjectsComponent: boolean = false;\n  public loadSkillsComponent: boolean = false;\n  public loadBlogsComponent: boolean =  false;\n  \n\n  constructor(public router: Router, public config: AppConfig) { \n    this.initialWidth = window.innerWidth;\n\n    // Initialize all button coordinates.\n    if(config.profileButtonX1 == undefined) config.profileButtonX1 = window.innerWidth - 100;\n    if(config.profileButtonY1 == undefined) config.profileButtonY1 = 50;\n\n    if(config.projectsButtonX1 == undefined) config.projectsButtonX1 = window.innerWidth - 100;\n    if(config.projectsButtonY1 == undefined) config.projectsButtonY1 = 140;  // 50 + 90\n\n    if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;\n    if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 230; // 140 + 90\n\n    if(config.blogsButtonX1 == undefined) config.blogsButtonX1 = window.innerWidth - 100;\n    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 320; // 230 + 90\n\n    \n    // Initialize all window coordinates.\n    if(config.profileComponentX1 == undefined) config.profileComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%\n    if(config.profileComponentY1 == undefined) config.profileComponentY1 = 72;\n\n    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = ((window.innerWidth * 15) / 200) - 24; // for view width 85%\n    if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 72 + 32;\n\n    if(config.skillsComponentX1 == undefined) config.skillsComponentX1 = ((window.innerWidth * 15) / 200) - 48; // for view width 85%\n    if(config.skillsComponentY1 == undefined) config.skillsComponentY1 = 72 + 64;\n\n    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = ((window.innerWidth * 15) / 200) - 72; // for view width 85%\n    if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 72 + 96;\n  }\n\n  ngOnInit(): void {\n  }\n\n  @HostListener('document:mousedown', ['$event'])\n  onMouseDown(event: MouseEvent) {\n    this.validClick = true;\n  }\n\n  @HostListener('document:mousemove', ['$event'])\n  onMouseMove(event: MouseEvent) {\n    this.validClick = false;\n  }\n  \n  flipWindow(value: any) {\n    if(this.validClick){\n      if(value == Comp.PROJECTS) {\n        this.loadProjectsComponent = !this.loadProjectsComponent;\n        this.projectsButton.state = !this.projectsButton.state;\n        if(this.projectsButton.state) this.projectsButton.image = \"/assets/images/buttons/cloudOpenFolder.png\";\n        else this.projectsButton.image = \"/assets/images/buttons/cloudClosedFolder.png\"\n      }else if(value == Comp.BLOGS){\n        this.loadBlogsComponent = !this.loadBlogsComponent;\n        this.blogsButton.state = !this.blogsButton.state;\n        if(this.blogsButton.state) this.blogsButton.image = \"/assets/images/buttons/cloudOpenFolder.png\";\n        else this.blogsButton.image = \"/assets/images/buttons/cloudClosedFolder.png\"\n      }else if(value == Comp.SKILLS){\n        this.loadSkillsComponent = !this.loadSkillsComponent;\n        this.skillsButton.state = !this.skillsButton.state;\n        if(this.skillsButton.state) this.skillsButton.image = \"/assets/images/buttons/cloudOpenFolder.png\";\n        else this.skillsButton.image = \"/assets/images/buttons/cloudClosedFolder.png\"\n      }else{\n        this.loadProfileComponent = !this.loadProfileComponent; // if the click is fast then only perform the flip, its just a temperory solution.\n      }\n    }\n  }\n\n  closeWindow(value: any){\n    if(value == Comp.PROFILE) this.loadProfileComponent = false;\n    if(value == Comp.PROJECTS) this.loadProjectsComponent = false;\n    if(value == Comp.BLOGS) this.loadBlogsComponent = false;\n    if(value == Comp.SKILLS) this.loadSkillsComponent = false;\n  }\n\n  setWindowX1(value: any, window: any){\n    if(window == Comp.PROFILE) this.config.profileComponentX1 = value;\n    else if(window == Comp.PROJECTS) this.config.projectsComponentX1 = value;\n    else if(window == Comp.SKILLS) this.config.skillsComponentX1 = value;\n    else this.config.blogsComponentX1 = value;\n  }\n\n  setWindowY1(value: any, window: any){\n    if(window == Comp.PROFILE) this.config.profileComponentY1 = value;\n    else if(window == Comp.PROJECTS) this.config.projectsComponentY1 = value;\n    else if(window == Comp.SKILLS) this.config.skillsComponentY1 = value;\n    else this.config.blogsComponentY1 = value;\n  }\n\n  setButtonX1(value: any, button: any){\n    if(button == Comp.PROFILE) this.config.profileButtonX1 = value;\n    else if(button == Comp.PROJECTS) this.config.projectsButtonX1 = value;\n    else if(button == Comp.SKILLS) this.config.skillsButtonX1 = value;\n    else this.config.blogsButtonX1 = value;\n  }\n\n  setButtonY1(value: any, button: any){\n    if(button == Comp.PROFILE) this.config.profileButtonY1 = value;\n    else if(button == Comp.PROJECTS) this.config.projectsButtonY1 = value;\n    else if(button == Comp.SKILLS) this.config.skillsButtonY1 = value;\n    else this.config.blogsButtonY1 = value;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".wall{\r\n\toverflow: hidden;\r\n\theight: 100vh;\r\n\twidth: 100vw;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tz-index: 0;\r\n\tposition: relative;\r\n\t// background-image: url(\"/assets/images/wall/wall1.jpg\");\r\n\t// background-color: #c7ede6;\r\n\tbackground-color: paleturquoise;\r\n\t\r\n\tapp-blogs{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\tapp-projects{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\t.homebtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.logo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 5px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 20px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 16px;\r\n\t\t\tfont-weight: bolder;\r\n\t\t\tfont-family: 'Courier New', Courier, monospace;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.folderbtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.homelogo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.logo{\r\n\t\t\theight: 50px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 15px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 12px;\r\n\t\t\t// font-weight: bold;\r\n\t\t\tcolor: black;\r\n\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.card-container{\r\n\t\tz-index: 3;\r\n\t\theight: 300px;\r\n\t\twidth: 700px;\r\n\t\tposition: absolute;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: aquamarine;\r\n\t\tborder-radius: 20px;\r\n\t\tbox-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);\r\n\t\tvisibility: hidden;\r\n\t\t// padding: 15px;\r\n\t\t// box-sizing: border-box;\r\n\t\t// transform: translateY(10px);\r\n\t\t// transition: all 100ms ease-out;\r\n\r\n\t\t&.show-card{\r\n\t\t\tvisibility: visible;\r\n\t\t\t// transform: translateY(0);\r\n\t\t}\r\n\r\n\t\t.menu-bar{\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 32px;\r\n\t\t\tcursor: pointer;\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\tborder-radius: 20px 20px 0px 0px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\tborder-bottom: 0px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: row;\r\n\t\t\talign-items: center;\r\n\r\n\t\t\t.first{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.second{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.third{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t.content-box{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tborder-radius: 0px 0px 20px 20px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\t// font-family: 'Courier New', Courier, monospace;\r\n\t\t\t// font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t// font-family: Jost,sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-around;\r\n\t\t\t// font-weight: bold;\r\n\t\t\t// padding: 15px;\r\n\t\t\t// box-sizing: border-box;\r\n\r\n\t\t\th1{\r\n\t\t\t\tpadding: 12px 24px;\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t}\r\n\r\n\t\t\tp{\r\n\t\t\t\tpadding: 12px 24px;\t\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t\tfont-size: 15px;\r\n\t\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t}\r\n\r\n\t\t\t.find{\r\n\t\t\t\tpadding: 0px 24px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t// background-color: blue;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\theight: 60px;\r\n\r\n\t\t\t\tp{\r\n\t\t\t\t\tpadding: 12px 0px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.logo{\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t.res{\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\twidth: 60%;\r\n\t\t\t\t\t// background-color: red;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\tjustify-content: flex-end;\r\n\r\n\t\t\t\t\t.logo{\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n\r\n\r\n}\r\n\r\n",
+                    "data": ".wall{\r\n\toverflow: hidden;\r\n\theight: 100vh;\r\n\twidth: 100vw;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tz-index: 0;\r\n\tposition: relative;\r\n\t// background-image: url(\"/assets/images/wall/wall1.jpg\");\r\n\t// background-color: #c7ede6;\r\n\tbackground-color: #afeeee;\r\n\tbackground-image:\r\n      repeating-linear-gradient(#ebfbfb 0 2px, transparent 1px 100%),\r\n      repeating-linear-gradient(90deg, #ebfbfb 0 2px, transparent 1px 100%);\r\n    background-size: 32px 32px;\r\n\r\n\tapp-button{\r\n\t\tposition: fixed;\r\n\t}\r\n\t\r\n\tapp-profile{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\tapp-projects{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\tapp-skills{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\tapp-blogs{\r\n\t\tposition: fixed;\r\n\t\tz-index: 100;\r\n\t}\r\n\r\n\t.homebtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.logo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 5px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 20px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 16px;\r\n\t\t\tfont-weight: bolder;\r\n\t\t\tfont-family: 'Courier New', Courier, monospace;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.folderbtn{\r\n\t\tz-index: 1;\r\n\t\tposition: absolute;\r\n\t\tcursor: pointer;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\r\n\t\t.homelogo{\r\n\t\t\theight: 40px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.logo{\r\n\t\t\theight: 50px;\r\n\t\t\twidth: 60px;\r\n\t\t\tmargin-bottom: 2px;\r\n\t\t}\r\n\r\n\t\t.foldername{\r\n\t\t\theight: 15px;\r\n\t\t\twidth: 60px;\r\n\t\t\tfont-size: 12px;\r\n\t\t\t// font-weight: bold;\r\n\t\t\tcolor: black;\r\n\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tjustify-content: center;\r\n\t\t\tmargin: 0px;\r\n\t\t}\r\n\t}\r\n\r\n\t.card-container{\r\n\t\tz-index: 3;\r\n\t\theight: 300px;\r\n\t\twidth: 700px;\r\n\t\tposition: absolute;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: aquamarine;\r\n\t\tborder-radius: 20px;\r\n\t\tbox-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);\r\n\t\tvisibility: hidden;\r\n\t\t// padding: 15px;\r\n\t\t// box-sizing: border-box;\r\n\t\t// transform: translateY(10px);\r\n\t\t// transition: all 100ms ease-out;\r\n\r\n\t\t&.show-card{\r\n\t\t\tvisibility: visible;\r\n\t\t\t// transform: translateY(0);\r\n\t\t}\r\n\r\n\t\t.menu-bar{\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 32px;\r\n\t\t\tcursor: pointer;\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\tborder-radius: 20px 20px 0px 0px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\tborder-bottom: 0px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: row;\r\n\t\t\talign-items: center;\r\n\r\n\t\t\t.first{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.second{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t\t.third{\r\n\t\t\t\theight: 15px;\r\n\t\t\t\twidth: 15px;\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\tborder-radius: 10px 10px 10px 10px;\r\n\t\t\t\tborder: 2px solid black;\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t.content-box{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tborder-radius: 0px 0px 20px 20px;\r\n\t\t\tborder: 2px solid black;\r\n\t\t\t// font-family: 'Courier New', Courier, monospace;\r\n\t\t\t// font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t// font-family: Jost,sans-serif;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-around;\r\n\t\t\t// font-weight: bold;\r\n\t\t\t// padding: 15px;\r\n\t\t\t// box-sizing: border-box;\r\n\r\n\t\t\th1{\r\n\t\t\t\tpadding: 12px 24px;\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t}\r\n\r\n\t\t\tp{\r\n\t\t\t\tpadding: 12px 24px;\t\r\n\t\t\t\tmargin: 0px;\r\n\t\t\t\tfont-size: 15px;\r\n\t\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n\t\t\t}\r\n\r\n\t\t\t.find{\r\n\t\t\t\tpadding: 0px 24px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t// background-color: blue;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\theight: 60px;\r\n\r\n\t\t\t\tp{\r\n\t\t\t\t\tpadding: 12px 0px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.logo{\r\n\t\t\t\t\theight: 32px;\r\n\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t.res{\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\twidth: 60%;\r\n\t\t\t\t\t// background-color: red;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\tjustify-content: flex-end;\r\n\r\n\t\t\t\t\t.logo{\r\n\t\t\t\t\t\theight: 32px;\r\n\t\t\t\t\t\twidth: 32px;\r\n\t\t\t\t\t\tmargin: 8px;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n\r\n\r\n}\r\n\r\n",
                     "styleUrl": "./wall.component.scss"
                 }
             ],
@@ -2386,7 +2647,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 79,
+                "line": 52,
                 "jsdoctags": [
                     {
                         "name": "router",
@@ -2411,7 +2672,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"wall\">\n\t\n\t<!-- <div class=\"folderbtn\" (click)=\"flipCard(HOME)\" (mouseover)=\"mouseOver(HOME)\" (mouseout)=\"mouseOut(HOME)\" style = \"top: {{config.homeY1}}px; left: {{config.homeX1}}px\">\n\t\t<img src=\"{{this.homeFolderUrl}}\" class=\"homelogo\">\n\t\t<p class=\"foldername\"> Home </p>\n\t</div> -->\n\t<div class=\"folderbtn\" (click)=\"flipWindow(PROJECT)\" (mouseover)=\"mouseOver(PROJECT)\" (mouseout)=\"mouseOut(PROJECT)\"style = \"top: {{config.projectY1}}px; left: {{config.projectX1}}px\">\n\t\t<img src=\"{{this.projectFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Projects </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipWindow(BLOGS)\" (mouseover)=\"mouseOver(BLOGS)\" (mouseout)=\"mouseOut(BLOGS)\"style = \"top: {{config.blogsButtonY1}}px; left: {{config.blogsButtonX1}}px\">\n\t\t<img src=\"{{this.blogFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Blogs </p>\n\t</div>\n\t\n\t<!-- <div class=\"folderbtn\" (click)=\"flipCard(SKILL)\" (mouseover)=\"mouseOver(SKILL)\" (mouseout)=\"mouseOut(SKILL)\" style = \"top: {{config.skillY1}}px; left: {{config.skillX1}}px\">\n\t\t<img src=\"{{this.skillFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Skills </p>\n\t</div>\n\t<div class=\"folderbtn\" (click)=\"flipCard(FLAW)\" (mouseover)=\"mouseOver(FLAW)\" (mouseout)=\"mouseOut(FLAW)\" style = \"top: {{config.flawY1}}px; left: {{config.flawX1}}px\">\n\t\t<img src=\"{{this.flawFolderUrl}}\" class=\"logo\">\n\t\t<p class=\"foldername\"> Flaws </p>\n\t</div> -->\n\n\t<app-projects [X1] = \"this.config.projectsComponentX1\" [Y1] = \"this.config.projectsComponentY1\" (Xemitter)=\"setProjectsWindowX($event)\" (Yemitter)=\"setProjectsWindowY($event)\" (close)=\"closeWindow(PROJECT)\"*ngIf=\"loadProjectsComponent\"style=\"top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px\"> </app-projects>\n\t<app-blogs [X1] = \"this.config.blogsComponentX1\" [Y1] = \"this.config.blogsComponentY1\" (Xemitter)=\"setBlogsWindowX($event)\" (Yemitter)=\"setBlogsWindowY($event)\" (close)=\"closeWindow(BLOGS)\" *ngIf=\"loadBlogsComponent\"style=\"top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px\"> </app-blogs> \n\t\n\t\n\t\n\t<!-- <div class = \"card-container\" [class.show-card] = \"cardVisible\" style = \"top: {{cardY1}}px; left: {{cardX1}}px\">\n\t\t<div class=\"menu-bar\" (mouseover)=\"mouseOver(CARD)\" (mouseout)=\"mouseOut(CARD)\">\n\t\t\t<div class=\"first\" (click)=\"flipCard(HOME)\" ></div>\n\t\t\t<div class=\"second\" (click)=\"flipCard(HOME)\"></div>\n\t\t\t<div class=\"third\"></div>\n\t\t</div>\t\n\t\t<div class=\"content-box\">\n\t\t\t<h1>Hey, I'm Gagan!</h1>\n\t\t\t<p> I am a full-stack software developer and a hobbyist competitive programmer who loves to tackle challenging problems. I am currently pursuing an undergrad degree at the National Institute of Technology Raipur.</p>\n\t\t\t<div class=\"find\">\n\t\t\t\t<p> Find me on : </p> \n\t\t\t\t<a href=\"https://linkedin.com/in/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudLinkedin.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mail.google.com/mail/?view=cm&fs=1&to=iamgagangaurav@gmail.com\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGmail.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://github.com/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGit.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<div class=\"res\">\n\t\t\t\t\t<p> Resume : </p>\n\t\t\t\t\t<a href=\"https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing\">\n\t\t\t\t\t\t<img src=\"assets/images/buttons/cloudDoc.png\" class = \"logo\">\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div> -->\n</div>\n\n"
+            "templateData": "<div class=\"wall\">\n\t\n\t<app-button (click)=\"flipWindow(PROFILE)\" [buttonConfig]=\"profileButton\" [ButtonX1]=\"this.config.profileButtonX1\" [ButtonY1]=\"this.config.profileButtonY1\" (Xemitter)=\"setButtonX1($event, PROFILE)\" (Yemitter)=\"setButtonY1($event, PROFILE)\"style = \"top: {{this.config.profileButtonY1}}px; left: {{this.config.profileButtonX1}}px\"></app-button>\n\t<app-button (click)=\"flipWindow(PROJECTS)\" [buttonConfig]=\"projectsButton\" [ButtonX1]=\"this.config.projectsButtonX1\" [ButtonY1]=\"this.config.projectsButtonY1\" (Xemitter)=\"setButtonX1($event, PROJECTS)\" (Yemitter)=\"setButtonY1($event, PROJECTS)\"style = \"top: {{this.config.projectsButtonY1}}px; left: {{this.config.projectsButtonX1}}px\"></app-button>\n\t<app-button (click)=\"flipWindow(SKILLS)\" [buttonConfig]=\"skillsButton\" [ButtonX1]=\"this.config.skillsButtonX1\" [ButtonY1]=\"this.config.skillsButtonY1\" (Xemitter)=\"setButtonX1($event, SKILLS)\" (Yemitter)=\"setButtonY1($event, SKILLS)\"style = \"top: {{this.config.skillsButtonY1}}px; left: {{this.config.skillsButtonX1}}px\"></app-button>\t\n\t<app-button (click)=\"flipWindow(BLOGS)\" [buttonConfig]=\"blogsButton\" [ButtonX1]=\"this.config.blogsButtonX1\" [ButtonY1]=\"this.config.blogsButtonY1\" (Xemitter)=\"setButtonX1($event, BLOGS)\" (Yemitter)=\"setButtonY1($event, BLOGS)\"style = \"top: {{this.config.blogsButtonY1}}px; left: {{this.config.blogsButtonX1}}px\"></app-button>\n\t\n\n\t<app-profile [X1] = \"this.config.profileComponentX1\" [Y1] = \"this.config.profileComponentY1\" (Xemitter)=\"setWindowX1($event, PROFILE)\" (Yemitter)=\"setWindowY1($event, PROFILE)\" (close)=\"closeWindow(PROFILE)\" *ngIf=\"loadProfileComponent\"style=\"top : {{this.config.profileComponentY1}}px; left: {{this.config.profileComponentX1}}px\"> </app-profile>\n\t<app-projects [X1] = \"this.config.projectsComponentX1\" [Y1] = \"this.config.projectsComponentY1\" (Xemitter)=\"setWindowX1($event, PROJECTS)\" (Yemitter)=\"setWindowY1($event, PROJECTS)\" (close)=\"closeWindow(PROJECTS)\"*ngIf=\"loadProjectsComponent\"style=\"top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px\"> </app-projects>\n\t<app-skills [X1] = \"this.config.skillsComponentX1\" [Y1] = \"this.config.skillsComponentY1\" (Xemitter)=\"setWindowX1($event, SKILLS)\" (Yemitter)=\"setWindowY1($event, SKILLS)\" (close)=\"closeWindow(SKILLS)\" *ngIf=\"loadSkillsComponent\"style=\"top : {{this.config.skillsComponentY1}}px; left: {{this.config.skillsComponentX1}}px\"> </app-skills> \n\t<app-blogs [X1] = \"this.config.blogsComponentX1\" [Y1] = \"this.config.blogsComponentY1\" (Xemitter)=\"setWindowX1($event, BLOGS)\" (Yemitter)=\"setWindowY1($event, BLOGS)\" (close)=\"closeWindow(BLOGS)\" *ngIf=\"loadBlogsComponent\"style=\"top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px\"> </app-blogs>\n\t\n\t\n\t\n\t\n\t<!-- <div class = \"card-container\" [class.show-card] = \"cardVisible\" style = \"top: {{cardY1}}px; left: {{cardX1}}px\">\n\t\t<div class=\"menu-bar\" (mouseover)=\"mouseOver(CARD)\" (mouseout)=\"mouseOut(CARD)\">\n\t\t\t<div class=\"first\" (click)=\"flipCard(HOME)\" ></div>\n\t\t\t<div class=\"second\" (click)=\"flipCard(HOME)\"></div>\n\t\t\t<div class=\"third\"></div>\n\t\t</div>\t\n\t\t<div class=\"content-box\">\n\t\t\t<h1>Hey, I'm Gagan!</h1>\n\t\t\t<p> I am a full-stack software developer and a hobbyist competitive programmer who loves to tackle challenging problems. I am currently pursuing an undergrad degree at the National Institute of Technology Raipur.</p>\n\t\t\t<div class=\"find\">\n\t\t\t\t<p> Find me on : </p> \n\t\t\t\t<a href=\"https://linkedin.com/in/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudLinkedin.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mail.google.com/mail/?view=cm&fs=1&to=iamgagangaurav@gmail.com\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGmail.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://github.com/gagan-gaurav\">\n\t\t\t\t\t<img src=\"assets/images/buttons/cloudGit.png\" class = \"logo\">\n\t\t\t\t</a>\n\t\t\t\t<div class=\"res\">\n\t\t\t\t\t<p> Resume : </p>\n\t\t\t\t\t<a href=\"https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing\">\n\t\t\t\t\t\t<img src=\"assets/images/buttons/cloudDoc.png\" class = \"logo\">\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div> -->\n</div>\n\n"
         },
         {
             "name": "WindowComponent",
@@ -2751,7 +3012,7 @@
                     "styleUrl": "./window.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}",
+                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n.theme-profile{\r\n\tbackground-color: #faedf1;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ebb7c9;\r\n\t}\r\n}\r\n.theme-projects{\r\n\tbackground-color: #e5fee5;\r\n\t.menu-bar{\r\n\t\tbackground-color: #98fb98;\r\n\t}\r\n}\r\n\r\n.theme-skills{\r\n\tbackground-color: #fffbf4;\r\n\t.menu-bar{\r\n\t\tbackground-color: #ffefd5;\r\n\t}\r\n}\r\n\r\n.theme-blogs{\r\n\tbackground-color: #d8e4fa;\r\n\t.menu-bar{\r\n\t\tbackground-color: cornflowerblue;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -2824,13 +3085,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-75351bffe0da8d1b7fd0b8f81810c8536d8d7f83a46735c9a7ccf70812170285114697663b9c1be3b947ac5d0cda17f7f27ab9cecd988104972704b0ea1d49af",
+            "id": "module-AppRoutingModule-10619b189737405d1c38449272941afdf75c55d24c3d792e05fdd06a161ecb9d913379d905442be26b3813ca8f7e3a9e218f140effc0d0bdc0f81231d01cdf71",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { BlogsComponent } from 'src/lib/blogs/blogs.component';\nimport { ProjectsComponent } from 'src/lib/projects/projects.component';\nimport { WallComponent } from 'src/lib/wall/wall.component';\nimport { SkillsComponent } from 'src/lib/skills/skills.component';\nimport { FlawsComponent } from 'src/lib/flaws/flaws.component';\nimport { PortfolioModule } from 'src/lib/portfolio.module';\n\nconst routes: Routes = [\n  { path: \"\", component: WallComponent},\n  { path: \"projects\", component: ProjectsComponent},\n  { path: \"blogs\", component: BlogsComponent},\n  { path: \"skills\", component: SkillsComponent},\n  { path: \"flaws\", component: FlawsComponent},\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\n\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { BlogsComponent } from 'src/lib/blogs/blogs.component';\nimport { ProjectsComponent } from 'src/lib/projects/projects.component';\nimport { WallComponent } from 'src/lib/wall/wall.component';\nimport { SkillsComponent } from 'src/lib/skills/skills.component';\nimport { PortfolioModule } from 'src/lib/portfolio.module';\nimport { LoginComponent } from 'src/lib/auth/login/login.component';\nimport { SignupComponent } from 'src/lib/auth/signup/signup.component';\n\nconst routes: Routes = [\n  { path: \"\", component: WallComponent},\n  { path: \"login\", component: LoginComponent},\n  { path: \"signup\", component: SignupComponent},\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\n\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -2860,13 +3121,13 @@
         },
         {
             "name": "PortfolioModule",
-            "id": "module-PortfolioModule-423eb1ecc5ffe88b787ab54e5abd6090145962d72443786f824cbfefa81cc7b451a3beea85aa33e92f7b1f5916441928049c96c8d32dcc846d1ce0e9ac0d2dc9",
+            "id": "module-PortfolioModule-a63d8b3f588b089766b5bc632471fdf4646dbc7c898a8e367fdefe48ddd91d086e94254316af2de45660c3ccef32d479b5ce6a8ceeeded2f2d3bd4f3b35cae0e",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/lib/portfolio.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/config/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { FlawsComponent } from './flaws/flaws.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, FlawsComponent, LoginComponent, SignupComponent, WindowComponent, WindowComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],\r\n  exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent, WindowComponent],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/service/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { RouterTestingModule } from \"@angular/router/testing\";\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, LoginComponent, SignupComponent, WindowComponent, ButtonComponent, ProfileComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule, RouterTestingModule\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],\r\n  exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent, WindowComponent, ButtonComponent, ProfileComponent],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2883,10 +3144,13 @@
                             "name": "BlogsComponent"
                         },
                         {
-                            "name": "FlawsComponent"
+                            "name": "ButtonComponent"
                         },
                         {
                             "name": "LoginComponent"
+                        },
+                        {
+                            "name": "ProfileComponent"
                         },
                         {
                             "name": "ProjectsComponent"
@@ -2899,9 +3163,6 @@
                         },
                         {
                             "name": "WallComponent"
-                        },
-                        {
-                            "name": "WindowComponent"
                         },
                         {
                             "name": "WindowComponent"
@@ -2919,7 +3180,13 @@
                             "name": "BlogsComponent"
                         },
                         {
+                            "name": "ButtonComponent"
+                        },
+                        {
                             "name": "LoginComponent"
+                        },
+                        {
+                            "name": "ProfileComponent"
                         },
                         {
                             "name": "ProjectsComponent"
@@ -3002,6 +3269,16 @@
                 "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
             },
             {
+                "name": "Profile",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/profile.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Projects",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -3022,6 +3299,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Skills",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/skills.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -3030,6 +3317,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: BlogsComponent) => ({\r\n\tcomponet: BlogsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/profile.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: ProfileComponent) => ({\r\n\tcomponent: ProfileComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -3055,6 +3352,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/skills.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: SkillsComponent) => ({\r\n\tcomponent: SkillsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/signup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3065,21 +3372,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/wall.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/window.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: WindowComponent) => ({\r\n\tcomponet: WindowComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/wall.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Wall",
@@ -3114,11 +3421,6 @@
                         "deprecationMessage": ""
                     },
                     {
-                        "name": "BLOGS",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    },
-                    {
                         "name": "PROJECTS",
                         "deprecated": false,
                         "deprecationMessage": ""
@@ -3129,12 +3431,7 @@
                         "deprecationMessage": ""
                     },
                     {
-                        "name": "FLAW",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    },
-                    {
-                        "name": "CARD",
+                        "name": "BLOGS",
                         "deprecated": false,
                         "deprecationMessage": ""
                     }
@@ -3228,6 +3525,28 @@
                     "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
                 }
             ],
+            "src/stories/profile.stories.ts": [
+                {
+                    "name": "Profile",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/profile.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/profile.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: ProfileComponent) => ({\r\n\tcomponent: ProfileComponent,\r\n\tprops: args\r\n})"
+                }
+            ],
             "src/stories/projects.stories.ts": [
                 {
                     "name": "Projects",
@@ -3272,26 +3591,26 @@
                     "defaultValue": "(args: SignupComponent) => ({\r\n\tcomponet: SignupComponent,\r\n\tprops: args\r\n})"
                 }
             ],
-            "src/stories/wall.stories.ts": [
+            "src/stories/skills.stories.ts": [
                 {
-                    "name": "Template",
+                    "name": "Skills",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/wall.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
-                },
-                {
-                    "name": "Wall",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/wall.stories.ts",
+                    "file": "src/stories/skills.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/skills.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: SkillsComponent) => ({\r\n\tcomponent: SkillsComponent,\r\n\tprops: args\r\n})"
                 }
             ],
             "src/stories/window.stories.ts": [
@@ -3315,6 +3634,28 @@
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 }
+            ],
+            "src/stories/wall.stories.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/wall.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
+                },
+                {
+                    "name": "Wall",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/wall.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -3329,11 +3670,6 @@
                             "deprecationMessage": ""
                         },
                         {
-                            "name": "BLOGS",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        },
-                        {
                             "name": "PROJECTS",
                             "deprecated": false,
                             "deprecationMessage": ""
@@ -3344,12 +3680,7 @@
                             "deprecationMessage": ""
                         },
                         {
-                            "name": "FLAW",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        },
-                        {
-                            "name": "CARD",
+                            "name": "BLOGS",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -3380,20 +3711,12 @@
                         "component": "WallComponent"
                     },
                     {
-                        "path": "projects",
-                        "component": "ProjectsComponent"
+                        "path": "login",
+                        "component": "LoginComponent"
                     },
                     {
-                        "path": "blogs",
-                        "component": "BlogsComponent"
-                    },
-                    {
-                        "path": "skills",
-                        "component": "SkillsComponent"
-                    },
-                    {
-                        "path": "flaws",
-                        "component": "FlawsComponent"
+                        "path": "signup",
+                        "component": "SignupComponent"
                     }
                 ],
                 "kind": "module"
@@ -3424,15 +3747,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/config/app.config.ts",
-                "type": "injectable",
-                "linktype": "injectable",
-                "name": "AppConfig",
-                "coveragePercent": 0,
-                "coverageCount": "0/15",
-                "status": "low"
-            },
-            {
                 "filePath": "src/environments/environment.prod.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -3458,7 +3772,7 @@
                 "linktype": "component",
                 "name": "LoginComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -3480,12 +3794,21 @@
                 "status": "low"
             },
             {
-                "filePath": "src/lib/flaws/flaws.component.ts",
+                "filePath": "src/lib/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "FlawsComponent",
+                "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/24",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/profile/profile.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProfileComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -3503,7 +3826,7 @@
                 "linktype": "component",
                 "name": "SkillsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -3512,7 +3835,7 @@
                 "linktype": "component",
                 "name": "WallComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/65",
+                "coverageCount": "0/29",
                 "status": "low"
             },
             {
@@ -3522,6 +3845,24 @@
                 "name": "WindowComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/22",
+                "status": "low"
+            },
+            {
+                "filePath": "src/service/app.config.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "AppConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/17",
+                "status": "low"
+            },
+            {
+                "filePath": "src/service/app.user.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "MyService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -3565,6 +3906,26 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/profile.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Profile",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/profile.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/projects.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -3596,6 +3957,26 @@
             },
             {
                 "filePath": "src/stories/signup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/skills.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Skills",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/skills.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
