@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,13 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { }
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   formData = {
-    email: '',
+    username: '',
     password: '',
   };
 
@@ -27,13 +28,19 @@ export class LoginComponent implements OnInit {
         const username = response.username;
         this.cookieService.set('boonJwtToken', jwtToken);
         this.cookieService.set('boonCurrentUser', username);
-        console.log('JWT Token:', jwtToken, '\nUsername:', username);
-        // Handle the JWT token as needed
+        console.log(response);
+        if(response.isAuthenticated){
+          this.router.navigate(['/user', response.username]);
+        }
       },
       error: error => {
         console.error('API Error:', error);
         // Handle the error response
       }
     });
+  }
+
+  signUp(){
+    this.router.navigate(['/signup']);
   }
 }
