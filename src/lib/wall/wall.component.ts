@@ -1,7 +1,8 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, HostListener} from '@angular/core';
-import { Router } from '@angular/router';
-import { AppConfig} from 'src/config/app.config';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AppConfig} from 'src/service/app.config';
+import { User } from './../../service/app.user'
+import { CookieService } from 'ngx-cookie-service';
 
 enum Comp{
   PROFILE,
@@ -17,6 +18,9 @@ enum Comp{
 })
 
 export class WallComponent implements OnInit {
+  public username!: string;
+  public showCurrentUser: boolean = false;
+
   public PROFILE: any = Comp.PROFILE;
   public PROJECTS: any = Comp.PROJECTS;
   public SKILLS: any = Comp.SKILLS;
@@ -53,7 +57,7 @@ export class WallComponent implements OnInit {
   public loadBlogsComponent: boolean =  false;
   
 
-  constructor(public router: Router, public config: AppConfig) { 
+  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, public user: User, private router: Router) { 
     this.initialWidth = window.innerWidth;
 
     // Initialize all button coordinates.
@@ -85,6 +89,10 @@ export class WallComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.cookieService.get('boonCurrentUser').length > 0) this.user.setCurrentUser(this.cookieService.get('boonCurrentUser'));
+    this.route.params.subscribe(params => {
+      this.username = params['username'];
+    });
   }
 
   @HostListener('document:mousedown', ['$event'])
@@ -120,13 +128,6 @@ export class WallComponent implements OnInit {
     }
   }
 
-  closeWindow(value: any){
-    if(value == Comp.PROFILE) this.loadProfileComponent = false;
-    if(value == Comp.PROJECTS) this.loadProjectsComponent = false;
-    if(value == Comp.BLOGS) this.loadBlogsComponent = false;
-    if(value == Comp.SKILLS) this.loadSkillsComponent = false;
-  }
-
   setWindowX1(value: any, window: any){
     if(window == Comp.PROFILE) this.config.profileComponentX1 = value;
     else if(window == Comp.PROJECTS) this.config.projectsComponentX1 = value;
@@ -153,5 +154,15 @@ export class WallComponent implements OnInit {
     else if(button == Comp.PROJECTS) this.config.projectsButtonY1 = value;
     else if(button == Comp.SKILLS) this.config.skillsButtonY1 = value;
     else this.config.blogsButtonY1 = value;
+  }
+
+  showMenu(){
+    this.showCurrentUser = !this.showCurrentUser;
+  }
+
+  logOut(){
+    this.user.setCurrentUser(undefined);
+    this.cookieService.deleteAll("/");
+    this.router.navigate(['/login']);
   }
 }

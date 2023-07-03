@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
-import { AppConfig } from 'src/config/app.config';
+import { AppConfig } from 'src/service/app.config';
 import { WallComponent } from 'src/lib/wall/wall.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -16,6 +16,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { WindowComponent } from './window/window.component';
 import { ButtonComponent } from './button/button.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RouterTestingModule } from "@angular/router/testing";
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ProfileComponent } from './profile/profile.component';
     WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, LoginComponent, SignupComponent, WindowComponent, ButtonComponent, ProfileComponent
   ],
   imports: [
-    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule
+    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule, RouterTestingModule
   ],
   providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],
   exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent, WindowComponent, ButtonComponent, ProfileComponent],
