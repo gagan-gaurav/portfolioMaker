@@ -1,0 +1,24 @@
+@import './../../styles/config.scss';
+
+.btn-container{
+	cursor: pointer;
+
+	.btn{
+		height: 40px;
+		width: 48px;
+	}
+
+	p{
+		margin:0;
+		text-align: center;
+		font-family: $primary-font;
+		font-size: 12px;
+		margin-left: 4px;
+	}
+}
+
+.btn-container:hover .btn{
+		height: 42px;
+		width: 50px;
+}
+

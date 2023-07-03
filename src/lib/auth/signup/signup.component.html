@@ -1,0 +1,57 @@
+<div class="signup-page">
+		<form class="register-form" (ngSubmit)="submitForm()" #myForm="ngForm">
+			<input type="text" placeholder="username" name="username" [(ngModel)]="formData.username" class="form-controle" required minlength="4" #username="ngModel"/>
+			<div *ngIf="username.invalid && (username.dirty || username.touched)"class="error">
+				<div *ngIf="username.errors?.['required']">
+					username is required.
+				</div>
+				<div *ngIf="username.errors?.['minlength']">
+					username must be at least 4 characters long.
+				</div>
+			</div>
+			<div *ngIf="this.usernameExists" class="error">
+				username already in use. Try another.
+			</div>
+			<input type="text" placeholder="firstname" name="firstname" [(ngModel)]="formData.firstname" class="form-controle" required minlength="4" #firstname="ngModel"/>
+			<div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"class="error">
+				<div *ngIf="firstname.errors?.['required']">
+					firstname is required.
+				</div>
+			</div>
+			<input type="text" placeholder="lastname" name="lastname" [(ngModel)]="formData.lastname" class="form-controle" required minlength="4" #lastname="ngModel"/>
+			<div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"class="error">
+				<div *ngIf="lastname.errors?.['required']">
+					lastname is required.
+				</div>
+			</div>
+			<input type="email" placeholder="email" name="email" [(ngModel)]="formData.email" required email #email="ngModel"/>
+			<div *ngIf="email.invalid && (email.dirty || email.touched)"class="error">
+				<div *ngIf="email.errors?.['required']">
+					email is required.
+				</div>
+				<div *ngIf="email.errors?.['email']">
+					invalid email format.
+				</div>
+			</div>
+			<div *ngIf="this.emailExists" class="error">
+				Email already in use. Try another.
+			</div>
+			<input type="password" placeholder="password" name="password" [(ngModel)]="formData.password" required #password="ngModel"/>
+			<div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+				<div *ngIf="password.errors?.['required']">
+					password is required.
+				</div>
+			</div>
+			<input type="password" placeholder="confirm password" name="confirmPassword" [(ngModel)]="formData.confirmPassword" required #confirm="ngModel"/>
+			<div *ngIf="confirm.invalid && (confirm.dirty || confirm.touched)" class="error">
+				<div *ngIf="confirm.errors?.['required']">
+					confirm password is required.
+				</div>
+			</div>
+			<div *ngIf="password.value != confirm.value" class="error">
+				Passwords do not match.
+			</div>
+			<button type="submit" [disabled]="!myForm.form.valid || password.value != confirm.value">Sign Up</button>
+			<p class="message">Already registered? <a routerLink="/login">Sign In</a></p>
+	  	</form>
+</div>

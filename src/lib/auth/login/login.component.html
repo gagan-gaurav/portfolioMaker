@@ -1,0 +1,19 @@
+<div class="login-page">
+	  <form class="login-form" (ngSubmit)="submitForm()" #myForm="ngForm">
+		<input type="text" placeholder="username" name="username" [(ngModel)]="formData.username" class="form-controle" required minlength="4" #username="ngModel"/>
+		<div *ngIf="username.invalid && (username.dirty || username.touched)"class="error">
+			<div *ngIf="username.errors?.['required']">
+				username is required.
+			</div>
+		</div>
+		<input type="password" placeholder="password" name="password" [(ngModel)]="formData.password" required #password="ngModel"/>
+		<div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+			<div *ngIf="password.errors?.['required']">
+				password is required.
+			</div>
+		</div>
+		<button type="submit" [disabled]="!myForm.form.valid">Log In</button>
+		<!-- <button> Log In </button> -->
+		<p class="message">Not registered? <a routerLink="/signup">Create an account</a></p>
+	  </form>
+  </div>

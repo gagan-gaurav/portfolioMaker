@@ -1,0 +1,17 @@
+app-window{
+	.profile-container{
+		height: 720px;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+		
+		.profile{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			background-color: #ebb7c9;
+			border-radius: 8px;
+			
+		}
+	}
+}

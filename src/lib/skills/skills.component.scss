@@ -1,0 +1,17 @@
+app-window{
+	.skills-container{
+		height: 720px;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+		
+		.skills{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			background-color: #ffefd5;
+			border-radius: 8px;
+			
+		}
+	}
+}
