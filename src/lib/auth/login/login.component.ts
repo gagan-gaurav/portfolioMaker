@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   };
 
   submitForm() {
-    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)
+    this.http.post<any>('http://localhost:8080/api/v1/public/auth/authenticate', this.formData)
     .subscribe({
       next: response => {
         const jwtToken = response.token;

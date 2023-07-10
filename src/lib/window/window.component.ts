@@ -23,17 +23,17 @@ export class WindowComponent implements OnInit{
   }
 
   ngOnInit(): void {
-      console.log(this.X1, this.Y1);
+      // console.log(this.X1, this.Y1);
   }
 
   mouseOver(){
     this.insideMenubar = true;
-    console.log("insideMenubar", this.insideMenubar);
+    // console.log("insideMenubar", this.insideMenubar);
   }
 
   mouseOut(){
     if(!this.mouseHoldsComponent) this.insideMenubar = false;
-    console.log("insideMenubar", this.insideMenubar);
+    // console.log("insideMenubar", this.insideMenubar);
   }
 
   @HostListener('document:mousedown', ['$event'])
@@ -43,7 +43,7 @@ export class WindowComponent implements OnInit{
       this.mouseHoldsComponent = true;
       this.X2 = event.clientX;
       this.Y2 = event.clientY;
-      console.log("HoldsBlogs");
+      // console.log("HoldsBlogs");
     }
   }
 
@@ -51,13 +51,13 @@ export class WindowComponent implements OnInit{
   onMouseUp(event: MouseEvent) {
     // event.preventDefault();
     this.mouseHoldsComponent = false;
-    console.log("DonstHoldBlogs");
+    // console.log("DonstHoldBlogs");
   }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    // event.preventDefault();
     if(this.mouseHoldsComponent && this.insideMenubar){
+      event.preventDefault();
       this.X1 += event.clientX - this.X2;
       this.Xemitter.emit(this.X1);
       this.Y1 += event.clientY - this.Y2;

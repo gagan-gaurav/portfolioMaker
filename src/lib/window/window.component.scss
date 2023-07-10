@@ -2,15 +2,16 @@
 
 .window{
 	font-family: $primary-font;
-	width: 85vw;
-	background-color: #d8e4fa;
+	background-color: white;
 	border-radius: 8px;
 	border: solid black;
 	display: flex;
 	flex-direction: column;
+	width: fit-content;
 
 	.menu-bar{
-		background-color: #6495ed;
+		cursor: pointer;
+		background-color: white;
 		height: 24px;
 		display: flex;
 		justify-content: align-self;

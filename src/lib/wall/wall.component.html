@@ -1,5 +1,5 @@
 <div class="wall">
-	<div class="user" (click)="showMenu()"></div>
+	<img src="/assets/images/profile/user.png" class="user" (click)="showMenu()">
 	<div class="user-card" *ngIf="this.showCurrentUser">
 		<div class="info-container" *ngIf="this.user.isLoggedIn(); else notLoggedIn">
 			<p>{{ this.user.getCurrentUser() }}</p>
@@ -18,10 +18,10 @@
 	<app-button (click)="flipWindow(BLOGS)" [buttonConfig]="blogsButton" [ButtonX1]="this.config.blogsButtonX1" [ButtonY1]="this.config.blogsButtonY1" (Xemitter)="setButtonX1($event, BLOGS)" (Yemitter)="setButtonY1($event, BLOGS)"style = "top: {{this.config.blogsButtonY1}}px; left: {{this.config.blogsButtonX1}}px"></app-button>
 	
 
-	<app-profile [X1] = "this.config.profileComponentX1" [Y1] = "this.config.profileComponentY1" (Xemitter)="setWindowX1($event, PROFILE)" (Yemitter)="setWindowY1($event, PROFILE)" (close)="flipWindow(PROFILE)" *ngIf="loadProfileComponent"style="top : {{this.config.profileComponentY1}}px; left: {{this.config.profileComponentX1}}px"> </app-profile>
-	<app-projects [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setWindowX1($event, PROJECTS)" (Yemitter)="setWindowY1($event, PROJECTS)" (close)="flipWindow(PROJECTS)"*ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
-	<app-skills [X1] = "this.config.skillsComponentX1" [Y1] = "this.config.skillsComponentY1" (Xemitter)="setWindowX1($event, SKILLS)" (Yemitter)="setWindowY1($event, SKILLS)" (close)="flipWindow(SKILLS)" *ngIf="loadSkillsComponent"style="top : {{this.config.skillsComponentY1}}px; left: {{this.config.skillsComponentX1}}px"> </app-skills> 
-	<app-blogs [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setWindowX1($event, BLOGS)" (Yemitter)="setWindowY1($event, BLOGS)" (close)="flipWindow(BLOGS)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs>
+	<app-profile [username]="username" [X1] = "this.config.profileComponentX1" [Y1] = "this.config.profileComponentY1" (Xemitter)="setWindowX1($event, PROFILE)" (Yemitter)="setWindowY1($event, PROFILE)" (close)="flipWindow(PROFILE)" *ngIf="loadProfileComponent"style="top : {{this.config.profileComponentY1}}px; left: {{this.config.profileComponentX1}}px"> </app-profile>
+	<app-projects [username]="username" [X1] = "this.config.projectsComponentX1" [Y1] = "this.config.projectsComponentY1" (Xemitter)="setWindowX1($event, PROJECTS)" (Yemitter)="setWindowY1($event, PROJECTS)" (close)="flipWindow(PROJECTS)"*ngIf="loadProjectsComponent"style="top : {{this.config.projectsComponentY1}}px; left: {{this.config.projectsComponentX1}}px"> </app-projects>
+	<app-skills [username]="username" [X1] = "this.config.skillsComponentX1" [Y1] = "this.config.skillsComponentY1" (Xemitter)="setWindowX1($event, SKILLS)" (Yemitter)="setWindowY1($event, SKILLS)" (close)="flipWindow(SKILLS)" *ngIf="loadSkillsComponent"style="top : {{this.config.skillsComponentY1}}px; left: {{this.config.skillsComponentX1}}px"> </app-skills> 
+	<app-blogs [username]="username" [X1] = "this.config.blogsComponentX1" [Y1] = "this.config.blogsComponentY1" (Xemitter)="setWindowX1($event, BLOGS)" (Yemitter)="setWindowY1($event, BLOGS)" (close)="flipWindow(BLOGS)" *ngIf="loadBlogsComponent"style="top : {{this.config.blogsComponentY1}}px; left: {{this.config.blogsComponentX1}}px"> </app-blogs>
 	
 	
 	

@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./skills.component.scss', './../../styles/config.scss']
 })
 export class SkillsComponent implements OnInit {
+  @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();

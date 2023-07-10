@@ -47,34 +47,34 @@ export class ButtonComponent {
   // when mouse click is released.
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
-    event.preventDefault();
+    // event.preventDefault();
     this.endTime = Date.now();
     this.mouseHoldsButton = false;
   }
 
    // when mouse is moving.
    @HostListener('document:mousemove', ['$event'])
-   onMouseMove(event: MouseEvent) {
-     event.preventDefault();
+   onMouseMove(event: MouseEvent) { 
      if(this.mouseHoldsButton && this.insideButton){
-       this.ButtonX1 += event.clientX - this.ButtonX2;
-       this.Xemitter.emit(this.ButtonX1);
-       this.ButtonY1 += event.clientY - this.ButtonY2;
-       this.Yemitter.emit(this.ButtonY1);
-       this.ButtonX2 = event.clientX;
-       this.ButtonY2 = event.clientY;
+        event.preventDefault();
+        this.ButtonX1 += event.clientX - this.ButtonX2;
+        this.Xemitter.emit(this.ButtonX1);
+        this.ButtonY1 += event.clientY - this.ButtonY2;
+        this.Yemitter.emit(this.ButtonY1);
+        this.ButtonX2 = event.clientX;
+        this.ButtonY2 = event.clientY;
      }
    }
 
      // when mouse is inside the div.
   mouseOver(){
-    console.log("insideButton");
+    // console.log("insideButton");
     this.insideButton = true;
   }
 
   // when mouse is outsider the div.
   mouseOut(){
-    console.log('outsidemouse')
+    // console.log('outsidemouse')
     if(this.mouseHoldsButton == false) this.insideButton = false;
   }
 

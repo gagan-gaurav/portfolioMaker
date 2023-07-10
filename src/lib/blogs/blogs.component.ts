@@ -2,7 +2,8 @@ import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@an
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { AppConfig} from 'src/service/app.config';
+import { AppConfig } from 'src/service/app.config';
+import { User } from 'src/service/app.user'
 
 @Component({
   selector: 'app-blogs',
@@ -16,6 +17,7 @@ export class BlogsComponent implements OnInit {
     heading: "Blogs"
   }
 
+  @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();
@@ -35,19 +37,16 @@ export class BlogsComponent implements OnInit {
   public content: any;
   public date: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {
+  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig, public user: User) {
   }
 
   ngOnInit(): void {
     const jwtToken = this.cookieService.get('boonJwtToken');
-    const username = this.cookieService.get('boonCurrentUser');
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
 
-    console.log(headers);
-
-    this.http.get('http://localhost:8080/api/v1/blogs/all', {headers})
+    this.http.get('http://localhost:8080/api/v1/public/blogs/all')
     .subscribe({
       next: response => {
         console.log(response);
@@ -58,7 +57,7 @@ export class BlogsComponent implements OnInit {
       }   
     });
 
-    this.http.get(`http://localhost:8080/api/v1/blogs/${username}`, {headers})
+    this.http.get(`http://localhost:8080/api/v1/public/blogs/${this.user.getCurrentUser()}`, {headers})
     .subscribe({
       next: response => {
         console.log(response);
@@ -139,7 +138,7 @@ export class BlogsComponent implements OnInit {
 
     console.log(headers);
 
-    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })
+    this.http.post('http://localhost:8080/api/v1/secured/blogs', body, { headers })
     .subscribe({
       next: response => {
         console.log(response);

@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
 
   submitForm() {
     console.log(this.formData);
-    this.http.post<any>('http://localhost:8080/api/v1/auth/register', this.formData)
+    this.http.post<any>('http://localhost:8080/api/v1/public/auth/register', this.formData)
     .subscribe({
       next: response => {
         this.cookieService.set('boonCurrentUser', response.username);
