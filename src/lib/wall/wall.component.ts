@@ -68,11 +68,13 @@ export class WallComponent implements OnInit {
     if(config.projectsButtonX1 == undefined) config.projectsButtonX1 = window.innerWidth - 100;
     if(config.projectsButtonY1 == undefined) config.projectsButtonY1 = 140;  // 50 + 90
 
-    if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;
-    if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 230; // 140 + 90
-
     if(config.blogsButtonX1 == undefined) config.blogsButtonX1 = window.innerWidth - 100;
-    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 320; // 230 + 90
+    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 230; // 140 + 90
+
+    if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;
+    if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 310; // 230 + 90
+
+    
 
     
     // Initialize all window coordinates.
