@@ -1,61 +1,208 @@
-app-window{
-	.search{
-		height: 24px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 8px;
-		// background-color: grey;
+@import './../../styles/config.scss';
 
-		input{
-			height: 24px;
-			width: 320px;
-			padding: 0px 8px;
-			border-radius: 24px;
-			border: solid 2px black;
-		}
-		
-		.search-btn{
-			height: 24px;
-			width: 24px;
-			margin-left: 8px;
-			border-radius: 24px;
-			// border: solid 2px black;
-			background-color: palegreen;
-			box-shadow: 4px 4px;
-			cursor: pointer;
-		}
-		
-		.search-btn:hover{
-			background-color: rgb(42, 206, 42);
-		}
-		.search-btn:active{
-			box-shadow: 2px 2px;
-		}
+.projects-window{
+	height: 80vh;
+	width: 80vw;
+	padding: 8px;
+
+	.add{
+		background-color: white;
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+		box-shadow: 4px 4px;
+		position: absolute;
+		bottom: 32px; 
+		right: 32px;
 	}
 
-	.projects-container{
-		height: 720px;
-		padding: 8px;
-		display: flex;
-		align-items: center;
+	.add:hover{
+		background-color: whitesmoke;
+	}
 
-		.nav-menu{
+	.add:active{
+		box-shadow: 2px 2px;
+	}
+	
+	.projects-container{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		padding: 8px 84px 8px 150px;
+		box-sizing: border-box;
+		background-color: $primary-color-projects;
+		border-radius: 8px;
+		overflow-y: scroll;
+
+		.timeline{
+			list-style: none;
+			border-left: solid white 8px;
+
+			.block{
+				// background-color: grey;
+				width: 100%;
+				display: flex;
+				position: relative;
+				// padding-bottom: 16px;
+				// padding-right: 16px;
+				margin-bottom: 16px;
+				box-sizing: border-box;
+				
+				.date{
+					background-color: white;
+					border-radius: 8px;
+					padding: 0px 4px;
+					position: absolute;
+					top:50%;
+					left: -158px;
+				}
+
+				.circle{
+					background-color: palegreen;
+					border-radius: 50%;
+					border: 6px solid white;
+					height: 10px;
+					width: 10px;
+					position: absolute;
+					top: 50%;
+					left: -55px;
+				}
+
+				.show{
+					position: absolute;
+					top: 8px;
+					left: 20px;
+				}
+
+				.radio:checked ~ label .show{
+					opacity: 0;
+					transform: translateX(20px);
+					transition: transform 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ label .show{
+					opacity: 1;
+					transform: translateX(-20px);
+					transition: transform 0.2s linear;
+				}
+
+				.hide{
+					position: absolute;
+					top: 8px;
+					left: 20px;
+					opacity: 0;
+				}
+
+				.radio:checked ~ label .hide{
+					opacity: 1;
+					transform: translateX(20px);
+					transition: transform 0.2s linear;
+				}
+				.radio:not(:checked) ~ label .hide{
+					opacity: 0;
+					transform: translateX(-20px);
+					transition: transform 0.2s linear;
+				}
+
+				.content{
+					position: relative;
+					background-color: white;
+					border-radius: 8px;
+					padding: 16px;
+					box-sizing: border-box;
+					overflow: hidden;
+					width:100%;
+					box-shadow: black 4px 4px;
+
+					.material{
+						max-height: 0;
+						width: 100%;
+						overflow: hidden;
+					}
+				}
+
+				.radio{
+					display: none;
+				}
+
+				.radio:checked ~ .content{
+					// background-color: gainsboro;
+					transform: translateX(20px);
+					transition: transform 0.2s linear;
+					// height: max-content;
+				}
+
+				.radio:checked ~ .content .material{
+					max-height: 2000px;
+					// overflow: scroll;
+					width: auto;
+					transition: max-height 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ .content .material{
+					max-height: 0px;
+					// overflow: scroll;
+					width: auto;
+					transition: max-height 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ .content{
+					// background-color: gainsboro;
+					transform: translateX(-20px);
+					transition: transform 0.2s linear;
+					// height: max-content;
+				}
+
+				.radio:checked ~ .circle{
+					background-color: lightcoral;
+					transition: background-color 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ .circle{
+					background-color: palegreen;
+					transition: background-color 0.2s linear;
+				}
+			}
+		}
+	}
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		background: rgb(76, 170, 76); 
+	}
+
+	.edit-project{
+		height: 100%;
+		width: 100%;
+		overflow-y: scroll;
+		// background-color: red;
+
+		.return{
+			height: 48px;
+			width: 48px;
+		}
+
+		.element{
 			display: flex;
 			flex-direction: column;
-			width: 120px;
-			height: 100%;
-			align-items: center;
-		}
-		
-		.projects{
-			position: relative;
-			height: 100%;
-			width: 100%;
-			margin-left: 8px;
-			background-color: palegreen;
-			border-radius: 8px;
-			
+			justify-content: space-between;
+			align-items: baseline;
+
+			angular-editor{
+				background-color: white;
+				width: 100%;
+			}
+
+			textarea{
+				resize: none;
+				width: 100%;
+				box-sizing: border-box;
+			}
 		}
 	}
 }

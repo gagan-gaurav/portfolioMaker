@@ -1,14 +1,51 @@
 <app-window [windowConfig]="projectsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)" (close)="closeWindow()">
-	<div class="search" >
-		<input type="text" placeholder="Search">
-		<div class="search-btn"></div>
-	</div>
-	<div class="projects-container">
-		<div class="nav-menu">
-			
+	<div class="projects-window">
+		<div class="edit-project" *ngIf="editProject; else project">
+			<img src="./../../assets/images/buttons/return.png" alt="" class="return" (click)="setEditProject()">
+			<div class="element">
+				<label for="title">Title:</label>
+				<input type="text" id="title" name="title" [(ngModel)]="formData.title">
+			</div>
+			<div class="element">
+				<label for="description">Description ({{ this.descriptionLength }}/255 characters):</label>
+				<textarea rows="3" cols="60" id="description" placeholder="Enter Description ..." name="description" maxlength="255" [(ngModel)]="formData.description" (input)="limitInputLength()"></textarea>
+			</div>
+			<div class="element">
+				<label for="startDate">Start Date:</label>
+				<input type="date" id="startDate" name="startDate" [(ngModel)]="formData.startDate">
+			</div>
+			<div class="element">
+				<label for="endDate">End Date:</label>
+				<input type="date" id="endDate" name="endDate" [(ngModel)]="formData.endDate">
+			</div>
+			<div class="element content">
+				<label for="content">Content:</label>
+				<angular-editor id="content" [(ngModel)]="formData.content" class="editor" [config]="config"></angular-editor>
+			</div>
+			<button (click)="submitForm()">Submit</button>
 		</div>
-		<div class="projects">
-			
-		</div>
+		<ng-template #project>
+			<div class="projects-container">
+				<ul class="timeline">
+					<ng-container *ngFor="let project of projects; let i = index">
+						<li class="block">
+							<input type="checkbox" id="project{{i}}" class="radio" name="project">
+							<div class="date">{{project.startDate|slice:0:10}}</div>
+							<span class="circle"></span>
+							<div class="content">
+								<h2> {{project.title}} </h2>
+								<p> {{project.description}} </p>
+								<p class="material"> {{project.content}} </p>
+							</div>
+							<label for="project{{i}}">
+								<div class="show">[ + ]</div>
+								<div class="hide">[ - ]</div>
+							</label>
+						</li>
+					</ng-container>
+				</ul>
+			</div>
+			<img class="add" src="./../../assets/images/buttons/add5.png" alt="" (click)="setEditProject()">
+		</ng-template>
 	</div>	
 </app-window>
