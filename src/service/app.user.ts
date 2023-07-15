@@ -1,22 +1,27 @@
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root' // or specify a specific module where you want to provide the service
-})
 export class User {
+  private static userInstance: User | null = null;
+  private static currentUser: any;
 
-  private currentUser: any;
+  private constructor(currentUser: any) {
+    User.currentUser = currentUser;
+  }
+
+  public static setUser(currentUser: any): void{
+    if(!User.userInstance){
+      User.userInstance = new User(currentUser);
+    }
+  }
+
+  public static destroyInstance(): void {
+    User.userInstance = null;
+  }
 
   // Service methods
-  getCurrentUser() {
+  public static getCurrentUser() {
     return this.currentUser;
   }
 
-  isLoggedIn(){
+  public static isLoggedIn(){
     return (this.currentUser != undefined);
-  }
-
-  setCurrentUser(user: any) {
-    this.currentUser = user;
   }
 }
