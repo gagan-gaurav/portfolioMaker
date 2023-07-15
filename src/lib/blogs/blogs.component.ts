@@ -12,6 +12,8 @@ import { User } from 'src/service/app.user'
 })
 export class BlogsComponent implements OnInit {
 
+  public currentUser: any;
+
   public blogsConfig: Object = {
     theme: "theme-blogs",
     heading: "Blogs"
@@ -24,9 +26,8 @@ export class BlogsComponent implements OnInit {
   @Output() public Yemitter = new EventEmitter<any>();
   @Output() public close = new EventEmitter<any>();
 
-  public showTrending: boolean = true;
-  public showMyBlogs: boolean = false;
-  public showAddBlogs: boolean = false;
+  // public showTrending: boolean = true;
+  public AddBlogs: boolean = false;
   public blogs: any;
   public userblogs: any;
 
@@ -37,7 +38,8 @@ export class BlogsComponent implements OnInit {
   public content: any;
   public date: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig, public user: User) {
+  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {
+    this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
@@ -46,18 +48,18 @@ export class BlogsComponent implements OnInit {
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
 
-    this.http.get('http://localhost:8080/api/v1/public/blogs/all')
-    .subscribe({
-      next: response => {
-        console.log(response);
-        this.blogs = response;
-      },
-      error: error => {
-        console.error('API Error', error);
-      }   
-    });
+    // this.http.get('http://localhost:8080/api/v1/public/blogs/all')
+    // .subscribe({
+    //   next: response => {
+    //     console.log(response);
+    //     this.blogs = response;
+    //   },
+    //   error: error => {
+    //     console.error('API Error', error);
+    //   }   
+    // });
 
-    this.http.get(`http://localhost:8080/api/v1/public/blogs/${this.user.getCurrentUser()}`, {headers})
+    this.http.get(`http://localhost:8080/api/v1/public/blogs/${this.username}`)
     .subscribe({
       next: response => {
         console.log(response);
@@ -69,25 +71,8 @@ export class BlogsComponent implements OnInit {
     });
   }
 
-  trending(){
-    this.showTrending = true;
-    this.showAddBlogs = false;
-    this.showMyBlogs = false;
-    this.showBlog = false;
-  }
-
-  myblogs(){
-    this.showTrending = false;
-    this.showAddBlogs = false;
-    this.showMyBlogs = true;
-    this.showBlog = false;
-  }
-
-  addblogs(){
-    this.showTrending = false;
-    this.showAddBlogs = true;
-    this.showMyBlogs = false;
-    this.showBlog = false;
+  showAddBlogs(){
+    this.AddBlogs = !this.AddBlogs;
   }
 
   title = '';
