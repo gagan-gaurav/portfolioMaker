@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppConfig} from 'src/service/app.config';
-import { User } from './../../service/app.user'
+import { User } from 'src/service/app.user'
 import { CookieService } from 'ngx-cookie-service';
 
 enum Comp{
@@ -18,6 +18,8 @@ enum Comp{
 })
 
 export class WallComponent implements OnInit {
+  public currentUser: any;
+  public isLoggedIn: boolean;
   public username: any;
   public showCurrentUser: boolean = false;
 
@@ -58,7 +60,13 @@ export class WallComponent implements OnInit {
   public loadBlogsComponent: boolean =  false;
   
 
-  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, public user: User, private router: Router) { 
+  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, private router: Router) { 
+    //get user details.
+    if(this.cookieService.get('boonCurrentUser').length > 0) User.setUser(this.cookieService.get('boonCurrentUser'));
+    this.isLoggedIn = User.isLoggedIn();
+    this.currentUser = User.getCurrentUser();
+    
+    //set initil window width.
     this.initialWidth = window.innerWidth;
 
     // Initialize all button coordinates.
@@ -92,7 +100,6 @@ export class WallComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.cookieService.get('boonCurrentUser').length > 0) this.user.setCurrentUser(this.cookieService.get('boonCurrentUser'));
     this.route.params.subscribe(params => {
       this.username = params['username'];
       this.profileButton.name = this.username;
@@ -168,7 +175,8 @@ export class WallComponent implements OnInit {
   }
 
   logOut(){
-    this.user.setCurrentUser(undefined);
+    // this.user.setCurrentUser(undefined);
+    User.destroyInstance();
     this.cookieService.deleteAll('/');
     this.cookieService.deleteAll('/user');
     this.router.navigate(['/login']);
