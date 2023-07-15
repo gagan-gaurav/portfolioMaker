@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user'
@@ -9,6 +9,7 @@ import { User } from 'src/service/app.user'
   styleUrls: ['./profile.component.scss', './../../styles/config.scss']
 })
 export class ProfileComponent implements OnInit{
+  public currentUser: any;
   @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
@@ -29,17 +30,18 @@ export class ProfileComponent implements OnInit{
     username: "",
     firstname: "",
     lastname: "",
-    resume: null,
+    resume: "",
     showResume: false,
-    linkedin: null,
+    linkedin: "",
     showLinkedin: false,
-    github: null,
+    github: "",
     showGithub: false,
-    gmail: null,
+    gmail: "",
     showGmail: false
   }
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public user: User) { 
+  constructor(private http: HttpClient, private cookieService: CookieService) { 
+    this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
@@ -55,6 +57,13 @@ export class ProfileComponent implements OnInit{
         // Handle the error response
       }
     });
+  }
+
+  ngOnChanges(changes: any) {
+    if (changes.username) {
+      // Perform any necessary actions when the variable changes
+      this.ngOnInit();
+    }
   }
 
   submitForm(form: any) {

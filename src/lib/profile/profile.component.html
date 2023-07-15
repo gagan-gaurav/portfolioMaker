@@ -49,7 +49,7 @@
 					<div class="name"><h2>{{this.formData.firstname}} {{this.formData.lastname}}</h2></div>
 					<div class="username"><h5>@{{this.formData.username}}</h5></div>
 					<div class="description"><p>{{ this.formData.description }}</p></div>
-					<img *ngIf="(this.user.getCurrentUser() == this.formData.username) "class="edit" src="./../../assets/images/profile/edit.png" alt="" (click)="setEditProfile()">
+					<img *ngIf="(this.currentUser == this.username) "class="edit" src="./../../assets/images/profile/edit.png" alt="" (click)="setEditProfile()">
 				</div>
 			</div>
 		</ng-template>
