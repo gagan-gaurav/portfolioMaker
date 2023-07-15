@@ -1,0 +1,81 @@
+.feed-container{
+	height: 100vh;
+	width: 100vw;
+	
+	.nav{
+		height: 10vh;
+		// background-color: green;
+		border-bottom: solid gainsboro 2px;
+		display: flex;
+		align-items: center;
+		margin: 0 24px;
+		padding: 12px;
+
+		.logo{
+			height: 64px;
+			width: 64px;
+		}
+	}
+	.feeds{
+		height: 90vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow-y: scroll;
+		padding-bottom: 32px;
+		box-sizing: border-box;
+		// background-color: grey;
+
+		.blog{
+			min-height: 240px;
+			max-height: 240px;
+			width: 48vw;
+			margin-top: 12px;
+			padding: 12px;
+			border-bottom: solid gainsboro 2px;
+			// background-color: lightblue;
+			display: flex;
+			flex-direction: column;
+
+			.metadata{
+				display: flex;
+				font-style: italic;
+
+				.info{
+					color: lightcoral;
+				}
+			}
+
+			.content{
+				height: 92px;
+				overflow: hidden;
+			}
+			
+			.vote{
+				margin-top: auto;
+				display: flex;
+				justify-content: center;
+				padding-top: 4px;
+
+				img{
+					height: 24px;
+					width: 24px;
+					cursor: pointer;
+				}
+				p{
+					margin: 0;
+					padding: 2px 4px;
+				}
+
+				.likes{
+					display: flex;
+					margin-right: 64px;
+				}
+
+				.dislikes{
+					display: flex;
+				}
+			}
+		}
+	}
+}
