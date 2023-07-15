@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
       next: response => {
         const jwtToken = response.token;
         const username = response.username;
-        this.cookieService.set('boonJwtToken', jwtToken);
-        this.cookieService.set('boonCurrentUser', username);
+        this.cookieService.set('boonJwtToken', jwtToken, 7, '/');
+        this.cookieService.set('boonCurrentUser', username, 7, '/');
         console.log(response);
         if(response.isAuthenticated){
           this.router.navigate(['/user', response.username]);
