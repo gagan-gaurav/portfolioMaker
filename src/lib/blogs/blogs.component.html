@@ -1,59 +1,42 @@
 <app-window [windowConfig]="blogsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)" (close)="closeWindow()">
-	<div class="search">
-		<input type="text" placeholder="Search">
-		<div class="search-btn"></div>
-	</div>
-	<div class="blogs-container">
-		<div class="nav-menu">
-			<div class="btn" (click)="trending()">
-				Trending
-			</div>
-			<div class="btn" (click)="myblogs()">
-				My Blogs
-			</div>
-			<div class="btn" (click)="addblogs()">
-				Add Blog
-			</div>
+	<div class="main-container">
+		<div class="search">
+			<input type="text" placeholder="Search">
+			<div class="search-btn"></div>
 		</div>
-		<div class="blogs">
-			<div class="myblogs-container" *ngIf="showTrending">
-				<ng-container *ngFor="let b of blogs">
-					<div class="blog">
-						<div class="heading">{{b.title}}</div>
-						<div class="date"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>
-						<div class="content" [innerHTML]="b.content"></div>
-						<div class="read-more" (click)="readMore(b)">Read More</div>
-					</div>
-				</ng-container>
-			</div>
-			<div class="myblogs-container" *ngIf="showMyBlogs">
-				<ng-container *ngFor="let b of userblogs">
-					<div class="blog">
-						<div class="heading">{{b.title}}</div>
-						<div class="date"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>
-						<div class="content" [innerHTML]="b.content"></div>
-						<div class="read-more" (click)="readMore(b)">Read More</div>
-					</div>
-				</ng-container>
-			</div>
-			<div class="addblogs-container" *ngIf="showAddBlogs">
+		<div class="blogs-container">
+			<div class="addblogs-container" *ngIf="AddBlogs; else myBlogs">
+				<img class="return" src="./../../assets/images/buttons/return.png" alt="" (click)="showAddBlogs()">
 				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
 				<div class="innerclass">
 					<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
 					<div class="btn" (click)="post()">Post</div>
 				</div>
 			</div>
-			<div class="readmore-container" *ngIf="showBlog">
-				<img src="assets/images/buttons/return.png" class="back" (click)="back()">
-				<div class="blog-heading">
-					{{ this.heading }}
+			<ng-template #myBlogs>
+				<div class="myblogs-container">
+					<ng-container *ngFor="let b of userblogs">
+						<div class="blog">
+							<div class="heading">{{b.title}}</div>
+							<div class="date"> Authored by <b>{{b.firstname}} {{b.lastname}}</b> on {{b.createdAt | slice:0:10 }}</div>
+							<div class="content" [innerHTML]="b.content"></div>
+							<div class="read-more" (click)="readMore(b)">Read More</div>
+						</div>
+					</ng-container>
 				</div>
-				<div class="blog-metadata">
-					Authored by <b>{{ this.author }}</b> on {{ this.date | slice:0:10 }}
-				</div>
-				<br>
-				<div class="blog-content" [innerHTML]="this.content"></div>
-			</div>
+				<img *ngIf="(this.currentUser == this.username)" src="./../../assets/images/buttons/add.png" alt="" class="add" (click)="showAddBlogs()">
+			</ng-template>
 		</div>
-	</div>	
+		<div class="readmore-container" *ngIf="showBlog">
+			<img src="assets/images/buttons/return.png" class="back" (click)="back()">
+			<div class="blog-heading">
+				{{ this.heading }}
+			</div>
+			<div class="blog-metadata">
+				Authored by <b>{{ this.author }}</b> on {{ this.date | slice:0:10 }}
+			</div>
+			<br>
+			<div class="blog-content" [innerHTML]="this.content"></div>
+		</div>
+	</div>
 </app-window>

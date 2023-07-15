@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppConfig} from 'src/service/app.config';
-import { User } from './../../service/app.user'
+import { User } from 'src/service/app.user'
 import { CookieService } from 'ngx-cookie-service';
 
 enum Comp{
@@ -18,7 +18,9 @@ enum Comp{
 })
 
 export class WallComponent implements OnInit {
-  public username!: string;
+  public currentUser: any;
+  public isLoggedIn: boolean;
+  public username: any;
   public showCurrentUser: boolean = false;
 
   public PROFILE: any = Comp.PROFILE;
@@ -28,7 +30,8 @@ export class WallComponent implements OnInit {
 
   public profileButton = {
     name: "Profile",
-    image: "/assets/images/buttons/home/ggn111.png"
+    image: "/assets/images/buttons/cloudOpenFolder.png",
+    state: true
   }
   public projectsButton = {
     name: "Projects",
@@ -51,13 +54,19 @@ export class WallComponent implements OnInit {
   public validClick: boolean = false;
 
   // Component booleans
-  public loadProfileComponent: boolean = false;
+  public loadProfileComponent: boolean = true;
   public loadProjectsComponent: boolean = false;
   public loadSkillsComponent: boolean = false;
   public loadBlogsComponent: boolean =  false;
   
 
-  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, public user: User, private router: Router) { 
+  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, private router: Router) { 
+    //get user details.
+    if(this.cookieService.get('boonCurrentUser').length > 0) User.setUser(this.cookieService.get('boonCurrentUser'));
+    this.isLoggedIn = User.isLoggedIn();
+    this.currentUser = User.getCurrentUser();
+    
+    //set initil window width.
     this.initialWidth = window.innerWidth;
 
     // Initialize all button coordinates.
@@ -67,32 +76,34 @@ export class WallComponent implements OnInit {
     if(config.projectsButtonX1 == undefined) config.projectsButtonX1 = window.innerWidth - 100;
     if(config.projectsButtonY1 == undefined) config.projectsButtonY1 = 140;  // 50 + 90
 
-    if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;
-    if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 230; // 140 + 90
-
     if(config.blogsButtonX1 == undefined) config.blogsButtonX1 = window.innerWidth - 100;
-    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 320; // 230 + 90
+    if(config.blogsButtonY1 == undefined) config.blogsButtonY1 = 230; // 140 + 90
+
+    if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;
+    if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 310; // 230 + 90
+
+    
 
     
     // Initialize all window coordinates.
-    if(config.profileComponentX1 == undefined) config.profileComponentX1 = (window.innerWidth * 15) / 200; // for view width 85%
+    if(config.profileComponentX1 == undefined) config.profileComponentX1 = (window.innerWidth * 60) / 200; // for view width 40%
     if(config.profileComponentY1 == undefined) config.profileComponentY1 = 72;
 
-    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = ((window.innerWidth * 15) / 200) - 24; // for view width 85%
-    if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 72 + 32;
+    if(config.projectsComponentX1 == undefined) config.projectsComponentX1 = ((window.innerWidth * 20) / 200); // for view width 80%
+    if(config.projectsComponentY1 == undefined) config.projectsComponentY1 = 72;
 
-    if(config.skillsComponentX1 == undefined) config.skillsComponentX1 = ((window.innerWidth * 15) / 200) - 48; // for view width 85%
-    if(config.skillsComponentY1 == undefined) config.skillsComponentY1 = 72 + 64;
+    if(config.skillsComponentX1 == undefined) config.skillsComponentX1 = ((window.innerWidth * 15) / 200); // for view width 85%
+    if(config.skillsComponentY1 == undefined) config.skillsComponentY1 = 72;
 
-    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = ((window.innerWidth * 15) / 200) - 72; // for view width 85%
-    if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 72 + 96;
+    if(config.blogsComponentX1 == undefined) config.blogsComponentX1 = ((window.innerWidth * 20) / 200); // for view width 80%
+    if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 72;
   }
 
   ngOnInit(): void {
-    if(this.cookieService.get('boonCurrentUser').length > 0) this.user.setCurrentUser(this.cookieService.get('boonCurrentUser'));
     this.route.params.subscribe(params => {
       this.username = params['username'];
-    });
+      this.profileButton.name = this.username;
+    });    
   }
 
   @HostListener('document:mousedown', ['$event'])
@@ -102,7 +113,7 @@ export class WallComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.validClick = false;
+    // this.validClick = false;
   }
   
   flipWindow(value: any) {
@@ -123,7 +134,10 @@ export class WallComponent implements OnInit {
         if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
         else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
       }else{
-        this.loadProfileComponent = !this.loadProfileComponent; // if the click is fast then only perform the flip, its just a temperory solution.
+        this.loadProfileComponent = !this.loadProfileComponent;
+        this.profileButton.state = !this.profileButton.state;
+        if(this.profileButton.state) this.profileButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+        else this.profileButton.image = "/assets/images/buttons/cloudClosedFolder.png"
       }
     }
   }
@@ -143,17 +157,17 @@ export class WallComponent implements OnInit {
   }
 
   setButtonX1(value: any, button: any){
-    if(button == Comp.PROFILE) this.config.profileButtonX1 = value;
-    else if(button == Comp.PROJECTS) this.config.projectsButtonX1 = value;
-    else if(button == Comp.SKILLS) this.config.skillsButtonX1 = value;
-    else this.config.blogsButtonX1 = value;
+    // if(button == Comp.PROFILE) this.config.profileButtonX1 = value;
+    // else if(button == Comp.PROJECTS) this.config.projectsButtonX1 = value;
+    // else if(button == Comp.SKILLS) this.config.skillsButtonX1 = value;
+    // else this.config.blogsButtonX1 = value;
   }
 
   setButtonY1(value: any, button: any){
-    if(button == Comp.PROFILE) this.config.profileButtonY1 = value;
-    else if(button == Comp.PROJECTS) this.config.projectsButtonY1 = value;
-    else if(button == Comp.SKILLS) this.config.skillsButtonY1 = value;
-    else this.config.blogsButtonY1 = value;
+    // if(button == Comp.PROFILE) this.config.profileButtonY1 = value;
+    // else if(button == Comp.PROJECTS) this.config.projectsButtonY1 = value;
+    // else if(button == Comp.SKILLS) this.config.skillsButtonY1 = value;
+    // else this.config.blogsButtonY1 = value;
   }
 
   showMenu(){
@@ -161,8 +175,10 @@ export class WallComponent implements OnInit {
   }
 
   logOut(){
-    this.user.setCurrentUser(undefined);
-    this.cookieService.deleteAll("/");
+    // this.user.setCurrentUser(undefined);
+    User.destroyInstance();
+    this.cookieService.deleteAll('/');
+    this.cookieService.deleteAll('/user');
     this.router.navigate(['/login']);
   }
 }

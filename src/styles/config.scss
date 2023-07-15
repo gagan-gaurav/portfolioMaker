@@ -1,30 +1,39 @@
 $primary-font: cursive;
 
 //themes
+$primary-color-profile: #ebb7c9;
+$secondary-color-profile: #faedf1; 
 .theme-profile{
-	background-color: #faedf1;
+	background-color: $secondary-color-profile;
 	.menu-bar{
-		background-color: #ebb7c9;
+		background-color: $primary-color-profile;
 	}
 }
+
+$primary-color-projects: #b2fcb2;
+$secondary-color-projects: #ecfeec;
 .theme-projects{
-	background-color: #e5fee5;
+	background-color: $secondary-color-projects;
 	.menu-bar{
-		background-color: #98fb98;
+		background-color: $primary-color-projects;
 	}
 }
 
+$primary-color-skills: #ffefd5;
+$secondary-color-skills: #fffbf4;
 .theme-skills{
-	background-color: #fffbf4;
+	background-color: $secondary-color-skills;
 	.menu-bar{
-		background-color: #ffefd5;
+		background-color: $primary-color-skills;
 	}
 }
 
+$primary-color-blogs: #8baff1;
+$seconday-color-blogs: #e2ebfb;
 .theme-blogs{
-	background-color: #d8e4fa;
+	background-color: $seconday-color-blogs;
 	.menu-bar{
-		background-color: cornflowerblue;
+		background-color: $primary-color-blogs;
 	}
 }
 

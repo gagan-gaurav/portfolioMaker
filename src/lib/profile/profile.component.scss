@@ -1,17 +1,137 @@
 app-window{
 	.profile-container{
-		height: 720px;
+		min-height: 36vh;
+		width: 40vw;
+		min-width: 400px;
 		padding: 8px;
 		display: flex;
 		align-items: center;
 		
 		.profile{
-			position: relative;
 			height: 100%;
 			width: 100%;
 			background-color: #ebb7c9;
 			border-radius: 8px;
-			
+			display: flex;
+
+			.left{
+				min-height: 36vh;
+				background-color: antiquewhite;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 0px 16px;
+
+				.profile-image{
+					height: 96px;
+					width: 96px;
+					margin: 8px;
+					border-radius: 50%;
+					border: solid black;
+				}
+
+				.contacts{
+					height: 100%;
+					// background-color: aquamarine;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					.source{
+						padding: 4px;
+						display: flex;
+
+						.icon{
+							height: 24px;
+							width: 24px;
+							margin-right: 8px;
+						}
+
+						p{
+							margin: 0;
+						}
+					}
+				}
+			}
+			.right{
+				padding: 8px;
+				min-height: 36vh;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+
+				h2{
+					margin: 0;
+				}
+				h5{
+					margin: 0;
+				}
+
+				.description{
+					background-color: white;
+					height: fit-content;
+					margin-top: 16px;
+					padding: 8px 16px;
+					border-radius: 8px;
+					text-align: justify;
+				}
+
+				.edit{
+					position: absolute;
+					bottom: 8px;
+					right: 8px;
+					height: 32px;
+					width: 32px;
+					background-color: white;
+					margin-top: auto;
+					margin-left: auto;
+					box-shadow: black 4px 4px;
+					padding: 4px;
+					border-radius: 48px 48px;
+				}
+
+				.edit:hover{
+					background-color: whitesmoke;
+				}
+
+				.edit:active{
+					box-shadow: 2px 2px;
+				}
+
+				
+			}
+		}
+		.edit-profile{
+			min-height: 40vh;
+			width: 100%;
+			background-color: #ebb7c9;
+			border-radius: 8px;
+
+			.return{
+				height: 32px;
+				width: 32px;
+				padding: 4px;
+			}
+
+			.description{
+				display: flex;
+				padding: 4px;
+				margin-bottom: 8px;
+
+				textarea{
+					resize: none;
+				}
+			}
+			.element{
+				display: flex;
+				padding: 4px;
+				margin-bottom: 8px;
+			}
+
+			button{
+				margin-left: 4px;
+			}
 		}
 	}
 }

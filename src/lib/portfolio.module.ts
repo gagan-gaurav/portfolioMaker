@@ -17,17 +17,46 @@ import { WindowComponent } from './window/window.component';
 import { ButtonComponent } from './button/button.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RouterTestingModule } from "@angular/router/testing";
+import { FeedComponent } from './quilandquest/feed/feed.component';
+import { ContentComponent } from './quilandquest/content/content.component';
 
 
 @NgModule({
   declarations: [
-    WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, LoginComponent, SignupComponent, WindowComponent, ButtonComponent, ProfileComponent
+    WallComponent, 
+    ProjectsComponent, 
+    BlogsComponent, 
+    SkillsComponent, 
+    LoginComponent, 
+    SignupComponent, 
+    WindowComponent, 
+    ButtonComponent, 
+    ProfileComponent, 
+    FeedComponent, 
+    ContentComponent
   ],
   imports: [
-    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule, RouterTestingModule
+    HttpClientModule, 
+    FormsModule, 
+    CommonModule, 
+    RouterModule.forChild([]), 
+    AngularEditorModule, 
+    RouterTestingModule
   ],
   providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],
-  exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent, WindowComponent, ButtonComponent, ProfileComponent],
+  exports: [
+    ProjectsComponent, 
+    WallComponent, 
+    SkillsComponent, 
+    BlogsComponent, 
+    SignupComponent, 
+    LoginComponent, 
+    WindowComponent, 
+    ButtonComponent, 
+    ProfileComponent, 
+    FeedComponent, 
+    ContentComponent
+  ],
   bootstrap: []
 })
 export class PortfolioModule { }

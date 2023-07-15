@@ -21,13 +21,13 @@ export class LoginComponent implements OnInit {
   };
 
   submitForm() {
-    this.http.post<any>('http://localhost:8080/api/v1/auth/authenticate', this.formData)
+    this.http.post<any>('http://localhost:8080/api/v1/public/auth/authenticate', this.formData)
     .subscribe({
       next: response => {
         const jwtToken = response.token;
         const username = response.username;
-        this.cookieService.set('boonJwtToken', jwtToken);
-        this.cookieService.set('boonCurrentUser', username);
+        this.cookieService.set('boonJwtToken', jwtToken, 7, '/');
+        this.cookieService.set('boonCurrentUser', username, 7, '/');
         console.log(response);
         if(response.isAuthenticated){
           this.router.navigate(['/user', response.username]);

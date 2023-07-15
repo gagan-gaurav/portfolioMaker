@@ -1,4 +1,8 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { User } from 'src/service/app.user';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +10,8 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./projects.component.scss', './../../styles/config.scss']
 })
 export class ProjectsComponent implements OnInit {
+  public currentUser: any;
+  @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
   @Output() public Xemitter = new EventEmitter<any>();
@@ -19,11 +25,64 @@ export class ProjectsComponent implements OnInit {
     theme : "theme-projects",
     heading : "Projects",
   }
+  
+  public editProject: boolean = false;
+  public projects: any;
+  public descriptionLength: number = 0;
+  // public formData: any;
+  public formData = {
+    showProject: false,
+    title: "",
+    startDate: "",
+    endDate: "",
+    description: "",
+    content: ""
+  }
 
-  constructor() { 
+  config: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '24rem',
+    minHeight: '8rem',
+    placeholder: 'Enter text here...',
+    translate: 'no',
+    defaultParagraphSeparator: 'p',
+    defaultFontName: 'Comic Sans MS',
+    toolbarHiddenButtons: [
+      ['bold']
+      ],
+    customClasses: [
+      {
+        name: "quote",
+        class: "quote",
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: "titleText",
+        class: "titleText",
+        tag: "h1",
+      },
+    ]
+  };
+
+  constructor(private http: HttpClient, private cookieService: CookieService) { 
+    this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
+    this.http.get(`http://localhost:8080/api/v1/public/projects/${this.username}`)
+    .subscribe({
+      next: response => {
+        console.log(response);
+        this.projects = response;
+      },
+      error: error => {
+        console.error('API Error', error);
+      }   
+    });
   }
 
   emitX(value:any){
@@ -38,4 +97,31 @@ export class ProjectsComponent implements OnInit {
     this.close.emit();
   }
   
+  setEditProject(){
+    this.editProject = !this.editProject;
+  }
+
+  submitForm(){
+    console.log(this.formData);
+
+    const jwtToken = this.cookieService.get('boonJwtToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
+    });
+
+    console.log(headers);
+    this.http.post<any>('http://localhost:8080/api/v1/secured/projects', this.formData, {headers})
+    .subscribe({
+      next: response => {
+        console.log(response);
+      },
+      error: error => {
+        console.error('API Error', error);
+      }   
+    });
+  }
+
+  limitInputLength(){
+    this.descriptionLength = this.formData.description.length;
+  }
 }
