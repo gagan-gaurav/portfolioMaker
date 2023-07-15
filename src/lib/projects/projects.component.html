@@ -35,7 +35,7 @@
 							<div class="content">
 								<h2> {{project.title}} </h2>
 								<p> {{project.description}} </p>
-								<p class="material"> {{project.content}} </p>
+								<p class="material" [innerHTML]="project.content"></p>
 							</div>
 							<label for="project{{i}}">
 								<div class="show">[ + ]</div>
@@ -45,7 +45,7 @@
 					</ng-container>
 				</ul>
 			</div>
-			<img class="add" src="./../../assets/images/buttons/add5.png" alt="" (click)="setEditProject()">
+			<img *ngIf="(this.currentUser == this.username)" class="add" src="./../../assets/images/buttons/add.png" alt="" (click)="setEditProject()">
 		</ng-template>
 	</div>	
 </app-window>

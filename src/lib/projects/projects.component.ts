@@ -10,6 +10,7 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
   styleUrls: ['./projects.component.scss', './../../styles/config.scss']
 })
 export class ProjectsComponent implements OnInit {
+  public currentUser: any;
   @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
@@ -67,7 +68,8 @@ export class ProjectsComponent implements OnInit {
     ]
   };
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public user: User) { 
+  constructor(private http: HttpClient, private cookieService: CookieService) { 
+    this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
