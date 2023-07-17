@@ -8,7 +8,7 @@ import { User } from 'src/service/app.user'
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss', './../../styles/config.scss']
 })
-export class ProfileComponent implements OnInit{
+export class ProfileComponent implements OnInit, OnChanges{
   public currentUser: any;
   @Input() public username: any;
   @Input() public X1: number = 0;
@@ -48,7 +48,6 @@ export class ProfileComponent implements OnInit{
     this.http.get(`http://localhost:8080/api/v1/public/profile/${this.username}`)
     .subscribe({
       next: response => {
-        console.log("gagan", response);
         const data: any = response;
         this.formData = data;
       },

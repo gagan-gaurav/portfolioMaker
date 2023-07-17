@@ -12,10 +12,6 @@ export class User {
     }
   }
 
-  public static destroyInstance(): void {
-    User.userInstance = null;
-  }
-
   // Service methods
   public static getCurrentUser() {
     return this.currentUser;
