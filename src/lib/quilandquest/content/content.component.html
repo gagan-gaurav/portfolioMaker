@@ -1,1 +1,21 @@
-<p>content works!</p>
+<div class="content-container">
+	<app-nav [currentUser]="this.currentUser" [isLoggedIn]="this.isLoggedIn"></app-nav>
+	<div class="container">
+		<div class="blog">
+			<h3 class="heading"> {{ this.blog.title }}</h3>
+			<div class="metadata">
+				<p class="author">Written By <a class="info" [routerLink]="['/user', this.blog.username]">{{this.blog.firstname}} {{this.blog.lastname}}</a> |</p>
+				<p class="date">| Published On <span class="info">{{this.blog.createdAt | slice:0:10}}</span></p>
+			</div>
+			<div class="content" [innerHTML]="this.blog.content"></div>
+			<div class="vote">
+				<div class="likes">
+					<img src="{{(blog.liked == 1) ? './../../../assets/images/quilandquest/liked.png' : './../../../assets/images/quilandquest/like.png' }}" alt="" (click)="liked(blog.blogId, blog.liked)"> <p>{{blog.likes}}</p>
+				</div>
+				<div class="dislikes">
+					<img src="{{(blog.liked == -1) ? './../../../assets/images/quilandquest/disliked.png' : './../../../assets/images/quilandquest/dislike.png' }}" alt="" (click)="disliked(blog.blogId, blog.liked)"> <p>{{blog.dislikes}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

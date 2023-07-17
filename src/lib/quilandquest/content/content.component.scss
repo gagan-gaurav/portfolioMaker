@@ -1,0 +1,72 @@
+.content-container{
+	height: 100vh;
+	width: 100vw;
+	
+	.container{
+		height: 90vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow-y: scroll;
+		padding-bottom: 32px;
+		box-sizing: border-box;
+		// background-color: grey;
+
+		.blog{
+			min-height: 240px;
+			width: 48vw;
+			margin-top: 12px;
+			padding: 12px;
+			border-bottom: solid gainsboro 2px;
+			// background-color: lightblue;
+			display: flex;
+			flex-direction: column;
+
+			.heading{
+				text-align: center;
+			}
+
+			.metadata{
+				display: flex;
+				justify-content: center;
+				font-style: italic;
+
+				.info{
+					color: lightcoral;
+				}
+			}
+
+			.content{
+				text-align: justify;
+				hyphens: auto;
+				word-wrap: break-word;
+			}
+			
+			.vote{
+				margin-top: auto;
+				display: flex;
+				justify-content: center;
+				padding-top: 4px;
+
+				img{
+					height: 24px;
+					width: 24px;
+					cursor: pointer;
+				}
+				p{
+					margin: 0;
+					padding: 2px 4px;
+				}
+
+				.likes{
+					display: flex;
+					margin-right: 64px;
+				}
+
+				.dislikes{
+					display: flex;
+				}
+			}
+		}
+	}
+}
