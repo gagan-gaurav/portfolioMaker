@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router) { }
+  public source!: string;
+
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.source = params['source'];
+    });    
   }
 
   formData = {
@@ -30,7 +35,8 @@ export class LoginComponent implements OnInit {
         this.cookieService.set('boonCurrentUser', username, 7, '/');
         console.log(response);
         if(response.isAuthenticated){
-          this.router.navigate(['/user', response.username]);
+          if(this.source.length > 0) this.router.navigate([this.source]);
+          else this.router.navigate(['/user', response.username]);
         }
       },
       error: error => {
@@ -38,9 +44,5 @@ export class LoginComponent implements OnInit {
         // Handle the error response
       }
     });
-  }
-
-  signUp(){
-    this.router.navigate(['/signup']);
   }
 }

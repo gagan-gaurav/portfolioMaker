@@ -52,6 +52,6 @@
 				Passwords do not match.
 			</div>
 			<button type="submit" [disabled]="!myForm.form.valid || password.value != confirm.value">Sign Up</button>
-			<p class="message">Already registered? <a routerLink="/login">Sign In</a></p>
+			<p class="message">Already registered? <a routerLink="/login/{{this.source}}">Sign In</a></p>
 	  	</form>
 </div>
