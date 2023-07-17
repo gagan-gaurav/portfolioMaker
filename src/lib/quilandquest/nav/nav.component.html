@@ -1,0 +1,19 @@
+<div class="nav">
+	<a [routerLink]="['/quilandquest']">
+		<img class="logo" src="/assets/images/quilandquest/feather.png" alt="">
+		<h2> Quil And Quest </h2>
+	</a>
+	<div class="user-card" *ngIf="this.showCurrentUser">
+		<div class="info-container" *ngIf="this.isLoggedIn; else notLoggedIn">
+			<a [routerLink]="['/user', this.currentUser]">{{ this.currentUser }}</a>
+			<div class="log" (click)="logOut()"> LogOut</div>
+		</div>
+		<ng-template #notLoggedIn>
+			<div class="info-container">
+				<p>Please log in to continue.</p>
+				<a class="log" [routerLink]="['/login/quilandquest']"> LogIn </a>
+			</div>
+		</ng-template>
+	</div>
+	<img src="/assets/images/profile/user.png" class="user" (click)="showMenu()">
+</div>
