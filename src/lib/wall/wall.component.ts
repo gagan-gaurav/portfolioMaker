@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppConfig} from 'src/service/app.config';
 import { User } from 'src/service/app.user'
 import { CookieService } from 'ngx-cookie-service';
+import { Authenticator } from 'src/service/app.authenticator';
 
 enum Comp{
   PROFILE,
@@ -19,7 +20,7 @@ enum Comp{
 
 export class WallComponent implements OnInit {
   public currentUser: any;
-  public isLoggedIn: boolean;
+  public isLoggedIn: boolean = false;
   public username: any;
   public showCurrentUser: boolean = false;
 
@@ -30,8 +31,8 @@ export class WallComponent implements OnInit {
 
   public profileButton = {
     name: "Profile",
-    image: "/assets/images/buttons/cloudOpenFolder.png",
-    state: true
+    image: "/assets/images/buttons/cloudClosedFolder.png",
+    state: false
   }
   public projectsButton = {
     name: "Projects",
@@ -54,18 +55,13 @@ export class WallComponent implements OnInit {
   public validClick: boolean = false;
 
   // Component booleans
-  public loadProfileComponent: boolean = true;
+  public loadProfileComponent: boolean = false;
   public loadProjectsComponent: boolean = false;
   public loadSkillsComponent: boolean = false;
   public loadBlogsComponent: boolean =  false;
   
 
-  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, private router: Router) { 
-    //get user details.
-    if(this.cookieService.get('boonCurrentUser').length > 0) User.setUser(this.cookieService.get('boonCurrentUser'));
-    this.isLoggedIn = User.isLoggedIn();
-    this.currentUser = User.getCurrentUser();
-    
+  constructor(public config: AppConfig, private cookieService: CookieService, private route: ActivatedRoute, private router: Router, private authenticator: Authenticator) { 
     //set initil window width.
     this.initialWidth = window.innerWidth;
 
@@ -82,9 +78,7 @@ export class WallComponent implements OnInit {
     if(config.skillsButtonX1 == undefined) config.skillsButtonX1 = window.innerWidth - 100;
     if(config.skillsButtonY1 == undefined) config.skillsButtonY1 = 310; // 230 + 90
 
-    
-
-    
+  
     // Initialize all window coordinates.
     if(config.profileComponentX1 == undefined) config.profileComponentX1 = (window.innerWidth * 60) / 200; // for view width 40%
     if(config.profileComponentY1 == undefined) config.profileComponentY1 = 72;
@@ -99,46 +93,57 @@ export class WallComponent implements OnInit {
     if(config.blogsComponentY1 == undefined) config.blogsComponentY1 = 72;
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    //check if user is authenticated.
+    await this.authenticator.authenticate();
+
+    this.isLoggedIn = User.isLoggedIn();
+    this.currentUser = User.getCurrentUser();
+
     this.route.params.subscribe(params => {
       this.username = params['username'];
+      //load profile component
+      if(!this.loadProfileComponent) this.flipWindow(this.PROFILE);
+      //set profile folder name.
       this.profileButton.name = this.username;
     });    
   }
+  
 
-  @HostListener('document:mousedown', ['$event'])
-  onMouseDown(event: MouseEvent) {
-    this.validClick = true;
-  }
+  // This section is required only when validClick logic is to be implemented.
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    // this.validClick = false;
-  }
+  // @HostListener('document:mousedown', ['$event'])
+  // onMouseDown(event: MouseEvent) {
+  //   this.validClick = true;
+  // }
+
+  // @HostListener('document:mousemove', ['$event'])
+  // onMouseMove(event: MouseEvent) {
+  //   // this.validClick = false;
+  // }
   
   flipWindow(value: any) {
-    if(this.validClick){
-      if(value == Comp.PROJECTS) {
-        this.loadProjectsComponent = !this.loadProjectsComponent;
-        this.projectsButton.state = !this.projectsButton.state;
-        if(this.projectsButton.state) this.projectsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-        else this.projectsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-      }else if(value == Comp.BLOGS){
-        this.loadBlogsComponent = !this.loadBlogsComponent;
-        this.blogsButton.state = !this.blogsButton.state;
-        if(this.blogsButton.state) this.blogsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-        else this.blogsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-      }else if(value == Comp.SKILLS){
-        this.loadSkillsComponent = !this.loadSkillsComponent;
-        this.skillsButton.state = !this.skillsButton.state;
-        if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-        else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-      }else{
-        this.loadProfileComponent = !this.loadProfileComponent;
-        this.profileButton.state = !this.profileButton.state;
-        if(this.profileButton.state) this.profileButton.image = "/assets/images/buttons/cloudOpenFolder.png";
-        else this.profileButton.image = "/assets/images/buttons/cloudClosedFolder.png"
-      }
+    // implement some validClick logic if want buttons to be moved.
+    if(value == Comp.PROJECTS) {
+      this.loadProjectsComponent = !this.loadProjectsComponent;
+      this.projectsButton.state = !this.projectsButton.state;
+      if(this.projectsButton.state) this.projectsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.projectsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+    }else if(value == Comp.BLOGS){
+      this.loadBlogsComponent = !this.loadBlogsComponent;
+      this.blogsButton.state = !this.blogsButton.state;
+      if(this.blogsButton.state) this.blogsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.blogsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+    }else if(value == Comp.SKILLS){
+      this.loadSkillsComponent = !this.loadSkillsComponent;
+      this.skillsButton.state = !this.skillsButton.state;
+      if(this.skillsButton.state) this.skillsButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.skillsButton.image = "/assets/images/buttons/cloudClosedFolder.png"
+    }else{
+      this.loadProfileComponent = !this.loadProfileComponent;
+      this.profileButton.state = !this.profileButton.state;
+      if(this.profileButton.state) this.profileButton.image = "/assets/images/buttons/cloudOpenFolder.png";
+      else this.profileButton.image = "/assets/images/buttons/cloudClosedFolder.png"
     }
   }
 
@@ -175,10 +180,7 @@ export class WallComponent implements OnInit {
   }
 
   logOut(){
-    // this.user.setCurrentUser(undefined);
-    User.destroyInstance();
     this.cookieService.deleteAll('/');
-    this.cookieService.deleteAll('/user');
     this.router.navigate(['/login']);
   }
 }

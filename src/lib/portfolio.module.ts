@@ -19,6 +19,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { RouterTestingModule } from "@angular/router/testing";
 import { FeedComponent } from './quilandquest/feed/feed.component';
 import { ContentComponent } from './quilandquest/content/content.component';
+import { NavComponent } from './quilandquest/nav/nav.component';
+import { Authenticator } from 'src/service/app.authenticator';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { ContentComponent } from './quilandquest/content/content.component';
     ButtonComponent, 
     ProfileComponent, 
     FeedComponent, 
-    ContentComponent
+    ContentComponent, 
+    NavComponent
   ],
   imports: [
     HttpClientModule, 
@@ -43,7 +46,7 @@ import { ContentComponent } from './quilandquest/content/content.component';
     AngularEditorModule, 
     RouterTestingModule
   ],
-  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],
+  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator],
   exports: [
     ProjectsComponent, 
     WallComponent, 
@@ -55,7 +58,8 @@ import { ContentComponent } from './quilandquest/content/content.component';
     ButtonComponent, 
     ProfileComponent, 
     FeedComponent, 
-    ContentComponent
+    ContentComponent,
+    NavComponent
   ],
   bootstrap: []
 })

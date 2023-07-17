@@ -9,9 +9,11 @@ import { ContentComponent } from 'src/lib/quilandquest/content/content.component
 const routes: Routes = [
   { path: "user/:username", component: WallComponent},
   { path: "login", component: LoginComponent},
+  { path: "login/:source", component: LoginComponent},
   { path: "signup", component: SignupComponent},
+  { path: "signup/:source", component: SignupComponent},
   { path: "quilandquest", component: FeedComponent},
-  { path: "blog/:blog_id", component: ContentComponent}
+  { path: "content/:blog_id", component: ContentComponent}
 ];
 
 @NgModule({

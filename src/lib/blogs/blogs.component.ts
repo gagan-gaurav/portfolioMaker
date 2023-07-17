@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, OnChanges, HostListener, Input, Output, EventEmitter} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
@@ -10,7 +10,7 @@ import { User } from 'src/service/app.user'
   templateUrl: './blogs.component.html',
   styleUrls: ['./blogs.component.scss']
 })
-export class BlogsComponent implements OnInit {
+export class BlogsComponent implements OnInit, OnChanges {
 
   public currentUser: any;
 
@@ -48,17 +48,6 @@ export class BlogsComponent implements OnInit {
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
 
-    // this.http.get('http://localhost:8080/api/v1/public/blogs/all')
-    // .subscribe({
-    //   next: response => {
-    //     console.log(response);
-    //     this.blogs = response;
-    //   },
-    //   error: error => {
-    //     console.error('API Error', error);
-    //   }   
-    // });
-
     this.http.get(`http://localhost:8080/api/v1/public/blogs/${this.username}`)
     .subscribe({
       next: response => {
@@ -69,6 +58,13 @@ export class BlogsComponent implements OnInit {
         console.error('API Error', error);
       }   
     });
+  }
+
+  ngOnChanges(changes: any) {
+    if (changes.username) {
+      // Perform any necessary actions when the variable changes
+      this.ngOnInit();
+    }
   }
 
   showAddBlogs(){

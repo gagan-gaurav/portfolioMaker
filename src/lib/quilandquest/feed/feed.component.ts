@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { User } from 'src/service/app.user';
+import { Authenticator } from 'src/service/app.authenticator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -10,20 +12,27 @@ import { User } from 'src/service/app.user';
 })
 export class FeedComponent implements OnInit{
 
+  public currentUser: any;
+  public isLoggedIn: boolean = false;
   public blogs: any;
   private jwtToken: any;
   private headers: any;
+  private validClick: boolean = false;
 
-  constructor(private http: HttpClient, private cookieService: CookieService){
-    if(this.cookieService.get('boonCurrentUser').length > 0) User.setUser(this.cookieService.get('boonCurrentUser'));
+  constructor(private http: HttpClient, private cookieService: CookieService, private authenticator: Authenticator, private router: Router){
     this.jwtToken = this.cookieService.get('boonJwtToken');
     this.headers = new HttpHeaders({
       'Authorization': `Bearer ${this.jwtToken}` // Include the JWT token in the Authorization header
     });
   }
 
-  ngOnInit(): void {
-    if(this.cookieService.check('boonJwtToken')){
+  async ngOnInit(): Promise<void> {
+    //check if user is authenticated.
+    await this.authenticator.authenticate();
+    this.isLoggedIn = User.isLoggedIn();
+    this.currentUser = User.getCurrentUser();
+
+    if(this.isLoggedIn){
       console.log(this.headers);
       this.http.get('http://localhost:8080/api/v1/public/blogs/all', {headers: this.headers})
       .subscribe({
@@ -109,4 +118,18 @@ export class FeedComponent implements OnInit{
       });
   }
 
+  // logic for a valid click -> could be improved.
+  @HostListener('document:mousedown', ['$event'])
+  onMouseDown(event: MouseEvent) {
+    this.validClick = true;
+  }
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.validClick = false;
+  }
+
+  readMore(blogId: any){
+    if(this.validClick)this.router.navigate(['/content', blogId]);
+  }
 }

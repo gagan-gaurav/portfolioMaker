@@ -1,17 +1,14 @@
 <div class="feed-container">
-	<div class="nav">
-		<img class="logo" src="/assets/images/quilandquest/feather.png" alt="">
-		<h2> Quil And Quest </h2>
-	</div>
+	<app-nav [currentUser]="this.currentUser" [isLoggedIn]="this.isLoggedIn"></app-nav>
 	<div class="feeds">
 		<ng-container *ngFor="let blog of blogs">
 			<div class="blog">
-				<h3 class="heading"> {{ blog.title }}</h3>
+				<h3 class="heading" (click)="readMore(blog.blogId)"> {{ blog.title }}</h3>
 				<div class="metadata">
 					<p class="author">Written By <a class="info" [routerLink]="['/user', blog.username]">{{blog.firstname}} {{blog.lastname}}</a> |</p>
 					<p class="date">| Published On <span class="info">{{blog.createdAt | slice:0:10}}</span></p>
 				</div>
-				<div class="content" [innerHTML]="blog.content"></div>
+				<div class="content" [innerHTML]="blog.content" (click)="readMore(blog.blogId)"></div>
 				<div class="vote">
 					<div class="likes">
 						<img src="{{(blog.liked == 1) ? './../../../assets/images/quilandquest/liked.png' : './../../../assets/images/quilandquest/like.png' }}" alt="" (click)="liked(blog.blogId, blog.liked)"> <p>{{blog.likes}}</p>

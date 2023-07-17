@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router){}
+  public source: any;
+
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute){}
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.source = params['source'];
+    });   
   }
 
   formData = {
@@ -39,8 +44,8 @@ export class SignupComponent implements OnInit {
         this.emailExists = response.emailCollision;
         this.userCreated = response.userCreated;
         if(this.userCreated) {
-          // route to home page of user.
-          this.router.navigate(['/user', response.username]);
+          if(this.source.length > 0) this.router.navigate([this.source]);
+          else this.router.navigate(['/user', response.username]);
         }
         console.log(response);
         // Handle the JWT token as needed

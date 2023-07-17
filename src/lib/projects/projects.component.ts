@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter} from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
@@ -9,7 +9,7 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss', './../../styles/config.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit, OnChanges{
   public currentUser: any;
   @Input() public username: any;
   @Input() public X1: number = 0;
@@ -83,6 +83,13 @@ export class ProjectsComponent implements OnInit {
         console.error('API Error', error);
       }   
     });
+  }
+
+  ngOnChanges(changes: any) {
+    if (changes.username) {
+      // Perform any necessary actions when the variable changes
+      this.ngOnInit();
+    }
   }
 
   emitX(value:any){

@@ -2,20 +2,6 @@
 	height: 100vh;
 	width: 100vw;
 	
-	.nav{
-		height: 10vh;
-		// background-color: green;
-		border-bottom: solid gainsboro 2px;
-		display: flex;
-		align-items: center;
-		margin: 0 24px;
-		padding: 12px;
-
-		.logo{
-			height: 64px;
-			width: 64px;
-		}
-	}
 	.feeds{
 		height: 90vh;
 		display: flex;
@@ -37,6 +23,10 @@
 			display: flex;
 			flex-direction: column;
 
+			.heading{
+				cursor: pointer;
+			}
+
 			.metadata{
 				display: flex;
 				font-style: italic;
@@ -47,6 +37,7 @@
 			}
 
 			.content{
+				cursor: pointer;
 				height: 92px;
 				overflow: hidden;
 			}
