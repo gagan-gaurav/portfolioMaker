@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from './app.user';
+import { AppConfig } from './app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Authenticator {
-  constructor(private http: HttpClient, private cookieService: CookieService) {
+  constructor(private http: HttpClient, private cookieService: CookieService, private config: AppConfig) {
   }
 
   public async authenticate(): Promise<boolean>{
@@ -17,7 +18,7 @@ export class Authenticator {
 		  'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
 		});
 		try{
-			const response = await this.http.get<any>('http://localhost:8080/api/v1/secured/verify_user', {headers: headers}).toPromise();
+			const response = await this.http.get<any>(`${this.config.domain}/api/v1/secured/verify_user`, {headers: headers}).toPromise();
 			User.setUser(response.username);
 			return true;
 		} catch (error) {

@@ -21,6 +21,7 @@ import { FeedComponent } from './quilandquest/feed/feed.component';
 import { ContentComponent } from './quilandquest/content/content.component';
 import { NavComponent } from './quilandquest/nav/nav.component';
 import { Authenticator } from 'src/service/app.authenticator';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { Authenticator } from 'src/service/app.authenticator';
     ProfileComponent, 
     FeedComponent, 
     ContentComponent, 
-    NavComponent
+    NavComponent, 
+    WelcomeComponent
   ],
   imports: [
     HttpClientModule, 
@@ -59,7 +61,8 @@ import { Authenticator } from 'src/service/app.authenticator';
     ProfileComponent, 
     FeedComponent, 
     ContentComponent,
-    NavComponent
+    NavComponent,
+    WelcomeComponent
   ],
   bootstrap: []
 })

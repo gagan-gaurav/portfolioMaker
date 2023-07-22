@@ -1,15 +1,15 @@
 <app-window [windowConfig]="blogsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)" (close)="closeWindow()">
 	<div class="main-container">
-		<div class="search">
+		<!-- <div class="search">
 			<input type="text" placeholder="Search">
 			<div class="search-btn"></div>
-		</div>
+		</div> -->
 		<div class="blogs-container">
 			<div class="addblogs-container" *ngIf="AddBlogs; else myBlogs">
 				<img class="return" src="./../../assets/images/buttons/return.png" alt="" (click)="showAddBlogs()">
 				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
 				<div class="innerclass">
-					<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
+					<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="editorConfig"></angular-editor>
 					<div class="btn" (click)="post()">Post</div>
 				</div>
 			</div>

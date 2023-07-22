@@ -20,7 +20,7 @@
 			</div>
 			<div class="element content">
 				<label for="content">Content:</label>
-				<angular-editor id="content" [(ngModel)]="formData.content" class="editor" [config]="config"></angular-editor>
+				<angular-editor id="content" [(ngModel)]="formData.content" class="editor" [config]="editorConfig"></angular-editor>
 			</div>
 			<button (click)="submitForm()">Submit</button>
 		</div>
