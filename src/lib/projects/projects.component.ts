@@ -3,6 +3,7 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter} from '@angul
 import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { AppConfig } from 'src/service/app.config';
 
 @Component({
   selector: 'app-projects',
@@ -39,7 +40,7 @@ export class ProjectsComponent implements OnInit, OnChanges{
     content: ""
   }
 
-  config: AngularEditorConfig = {
+  editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
     height: '24rem',
@@ -68,12 +69,12 @@ export class ProjectsComponent implements OnInit, OnChanges{
     ]
   };
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { 
+  constructor(private http: HttpClient, private cookieService: CookieService, private config: AppConfig) { 
     this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
-    this.http.get(`http://localhost:8080/api/v1/public/projects/${this.username}`)
+    this.http.get(`${this.config.domain}/api/v1/public/projects/${this.username}`)
     .subscribe({
       next: response => {
         console.log(response);
@@ -117,7 +118,7 @@ export class ProjectsComponent implements OnInit, OnChanges{
     });
 
     console.log(headers);
-    this.http.post<any>('http://localhost:8080/api/v1/secured/projects', this.formData, {headers})
+    this.http.post<any>(`${this.config.domain}/api/v1/secured/projects`, this.formData, {headers})
     .subscribe({
       next: response => {
         console.log(response);

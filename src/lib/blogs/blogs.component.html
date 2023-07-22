@@ -9,7 +9,7 @@
 				<img class="return" src="./../../assets/images/buttons/return.png" alt="" (click)="showAddBlogs()">
 				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
 				<div class="innerclass">
-					<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
+					<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="editorConfig"></angular-editor>
 					<div class="btn" (click)="post()">Post</div>
 				</div>
 			</div>

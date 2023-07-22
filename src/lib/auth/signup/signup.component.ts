@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppConfig } from 'src/service/app.config';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ export class SignupComponent implements OnInit {
 
   public source: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute){}
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute, private config: AppConfig){}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -35,7 +36,7 @@ export class SignupComponent implements OnInit {
 
   submitForm() {
     console.log(this.formData);
-    this.http.post<any>('http://localhost:8080/api/v1/public/auth/register', this.formData)
+    this.http.post<any>(`${this.config.domain}/api/v1/public/auth/register`, this.formData)
     .subscribe({
       next: response => {
         this.cookieService.set('boonCurrentUser', response.username, 7, '/');
@@ -44,7 +45,7 @@ export class SignupComponent implements OnInit {
         this.emailExists = response.emailCollision;
         this.userCreated = response.userCreated;
         if(this.userCreated) {
-          if(this.source.length > 0) this.router.navigate([this.source]);
+          if(this.source != undefined && this.source.length > 0) this.router.navigate([this.source]);
           else this.router.navigate(['/user', response.username]);
         }
         console.log(response);

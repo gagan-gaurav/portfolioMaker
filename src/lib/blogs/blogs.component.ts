@@ -38,7 +38,7 @@ export class BlogsComponent implements OnInit, OnChanges {
   public content: any;
   public date: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public coordinateConfig: AppConfig) {
+  constructor(private http: HttpClient, private cookieService: CookieService, public config: AppConfig) {
     this.currentUser = User.getCurrentUser();
   }
 
@@ -48,7 +48,7 @@ export class BlogsComponent implements OnInit, OnChanges {
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
 
-    this.http.get(`http://localhost:8080/api/v1/public/blogs/${this.username}`)
+    this.http.get(`${this.config.domain}/api/v1/public/blogs/${this.username}`)
     .subscribe({
       next: response => {
         console.log(response);
@@ -74,7 +74,7 @@ export class BlogsComponent implements OnInit, OnChanges {
   title = '';
   htmlContent = '';
 
-  config: AngularEditorConfig = {
+  editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
     height: '24rem',
