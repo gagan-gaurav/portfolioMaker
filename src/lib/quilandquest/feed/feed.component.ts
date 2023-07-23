@@ -4,7 +4,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { User } from 'src/service/app.user';
 import { Authenticator } from 'src/service/app.authenticator';
 import { Router } from '@angular/router';
-import { AppConfig } from 'src/service/app.config';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-feed',
@@ -20,7 +20,7 @@ export class FeedComponent implements OnInit{
   private headers: any;
   private validClick: boolean = false;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private authenticator: Authenticator, private router: Router, private config: AppConfig){
+  constructor(private http: HttpClient, private cookieService: CookieService, private authenticator: Authenticator, private router: Router){
     this.jwtToken = this.cookieService.get('boonJwtToken');
     this.headers = new HttpHeaders({
       'Authorization': `Bearer ${this.jwtToken}` // Include the JWT token in the Authorization header
@@ -35,7 +35,7 @@ export class FeedComponent implements OnInit{
 
     if(this.isLoggedIn){
       console.log(this.headers);
-      this.http.get(`${this.config.domain}/api/v1/public/blogs/all`, {headers: this.headers})
+      this.http.get(`${environment.baseUrl}/api/v1/public/blogs/all`, {headers: this.headers})
       .subscribe({
         next: response => {
           console.log(response);
@@ -46,7 +46,7 @@ export class FeedComponent implements OnInit{
         }   
       });
     }else{
-      this.http.get(`${this.config.domain}/api/v1/public/blogs/all`)
+      this.http.get(`${environment.baseUrl}/api/v1/public/blogs/all`)
       .subscribe({
         next: response => {
           console.log(response);
@@ -108,7 +108,7 @@ export class FeedComponent implements OnInit{
     const body = {
       liked: liked
     }
-    this.http.post(`${this.config.domain}/api/v1/secured/event/${blogId}`, body, {headers: this.headers})
+    this.http.post(`${environment.baseUrl}/api/v1/secured/event/${blogId}`, body, {headers: this.headers})
       .subscribe({
         next: response => {
           console.log(response);

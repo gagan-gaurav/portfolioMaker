@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class AppConfig {
-
-	//Domain name
-	public domain: string = "http://localhost:8080";
 	
 	//Button coordinates.
 	public profileButtonX1: any;

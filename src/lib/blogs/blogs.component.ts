@@ -2,8 +2,8 @@ import { Component, OnInit, OnChanges, HostListener, Input, Output, EventEmitter
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { AppConfig } from 'src/service/app.config';
 import { User } from 'src/service/app.user'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-blogs',
@@ -38,7 +38,7 @@ export class BlogsComponent implements OnInit, OnChanges {
   public content: any;
   public date: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, public config: AppConfig) {
+  constructor(private http: HttpClient, private cookieService: CookieService) {
     this.currentUser = User.getCurrentUser();
   }
 
@@ -48,7 +48,7 @@ export class BlogsComponent implements OnInit, OnChanges {
       'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
     });
 
-    this.http.get(`${this.config.domain}/api/v1/public/blogs/${this.username}`)
+    this.http.get(`${environment.baseUrl}/api/v1/public/blogs/${this.username}`)
     .subscribe({
       next: response => {
         console.log(response);
@@ -119,7 +119,7 @@ export class BlogsComponent implements OnInit, OnChanges {
 
     console.log(headers);
 
-    this.http.post('http://localhost:8080/api/v1/secured/blogs', body, { headers })
+    this.http.post(`${environment.baseUrl}/api/v1/secured/blogs`, body, { headers })
     .subscribe({
       next: response => {
         console.log(response);

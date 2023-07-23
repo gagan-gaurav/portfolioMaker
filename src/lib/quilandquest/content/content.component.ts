@@ -4,7 +4,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { User } from 'src/service/app.user';
 import { Authenticator } from 'src/service/app.authenticator';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AppConfig } from 'src/service/app.config';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class ContentComponent implements OnInit {
   private jwtToken: any;
   private headers: any;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private authenticator: Authenticator, private router: Router, private route: ActivatedRoute, private config: AppConfig){
+  constructor(private http: HttpClient, private cookieService: CookieService, private authenticator: Authenticator, private router: Router, private route: ActivatedRoute){
     this.jwtToken = this.cookieService.get('boonJwtToken');
     this.headers = new HttpHeaders({
       'Authorization': `Bearer ${this.jwtToken}` // Include the JWT token in the Authorization header
@@ -40,7 +40,7 @@ export class ContentComponent implements OnInit {
 
     if(this.isLoggedIn){
       console.log(this.headers);
-      this.http.get(`${this.config.domain}/api/v1/public/blogs/blog_id/${this.blogId}`, {headers: this.headers})
+      this.http.get(`${environment.baseUrl}/api/v1/public/blogs/blog_id/${this.blogId}`, {headers: this.headers})
       .subscribe({
         next: response => {
           console.log(response);
@@ -51,7 +51,7 @@ export class ContentComponent implements OnInit {
         }   
       });
     }else{
-      this.http.get(`${this.config.domain}/api/v1/public/blogs/blog_id/${this.blogId}`)
+      this.http.get(`${environment.baseUrl}/api/v1/public/blogs/blog_id/${this.blogId}`)
       .subscribe({
         next: response => {
           console.log(response);
@@ -112,7 +112,7 @@ export class ContentComponent implements OnInit {
     const body = {
       liked: liked
     }
-    this.http.post(`${this.config.domain}/api/v1/secured/event/${blogId}`, body, {headers: this.headers})
+    this.http.post(`${environment.baseUrl}/api/v1/secured/event/${blogId}`, body, {headers: this.headers})
       .subscribe({
         next: response => {
           console.log(response);

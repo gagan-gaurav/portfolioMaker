@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges, Output, EventEmitte
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user'
-import { AppConfig } from 'src/service/app.config';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -41,12 +41,12 @@ export class ProfileComponent implements OnInit, OnChanges{
     showGmail: false
   }
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private config: AppConfig) { 
+  constructor(private http: HttpClient, private cookieService: CookieService) { 
     this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
-    this.http.get(`${this.config.domain}/api/v1/public/profile/${this.username}`)
+    this.http.get(`${environment.baseUrl}/api/v1/public/profile/${this.username}`)
     .subscribe({
       next: response => {
         const data: any = response;
@@ -74,7 +74,7 @@ export class ProfileComponent implements OnInit, OnChanges{
       });
       console.log(jwtToken);
       console.log(this.formData);
-      this.http.post(`${this.config.domain}/api/v1/secured/profile`, this.formData, {headers})
+      this.http.post(`${environment.baseUrl}/api/v1/secured/profile`, this.formData, {headers})
       .subscribe({
         next: response => {
           console.log("res", response);

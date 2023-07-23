@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppConfig } from 'src/service/app.config';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   public source!: string;
 
-  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute, private config: AppConfig) { }
+  constructor(private http: HttpClient, private cookieService: CookieService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   };
 
   submitForm() {
-    this.http.post<any>(`${this.config.domain}/api/v1/public/auth/authenticate`, this.formData)
+    this.http.post<any>(`${environment.baseUrl}/api/v1/public/auth/authenticate`, this.formData)
     .subscribe({
       next: response => {
         const jwtToken = response.token;

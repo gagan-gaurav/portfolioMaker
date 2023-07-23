@@ -21,11 +21,9 @@ export class NavComponent implements OnInit{
 
   showMenu(){
     this.showCurrentUser = !this.showCurrentUser;
-    console.log("working");
   }
 
   logOut(){
-    console.log("something");
     this.cookieService.deleteAll('/');
     this.router.navigate(['/login/quilandquest']);
   }
