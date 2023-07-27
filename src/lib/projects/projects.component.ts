@@ -4,6 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-projects',
@@ -12,6 +13,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ProjectsComponent implements OnInit, OnChanges{
   public currentUser: any;
+  private headers: any;
+  private jwtToken: any;
   @Input() public username: any;
   @Input() public X1: number = 0;
   @Input() public Y1: number = 0;
@@ -19,27 +22,18 @@ export class ProjectsComponent implements OnInit, OnChanges{
   @Output() public Yemitter = new EventEmitter<any>();
   @Output() public close = new EventEmitter<any> ();
 
-  public projectsTheme: string = "theme-projects";
-  public projectsHeading: string = "Projects";
-
   public projectsConfig: Object = {
     theme : "theme-projects",
     heading : "Projects",
   }
   
-  public editProject: boolean = false;
+  public showProjectEditor: boolean = false;
+  public showDeletePopup: boolean = false;
   public projects: any;
   public descriptionLength: number = 0;
-  // public formData: any;
-  public formData = {
-    showProject: false,
-    title: "",
-    startDate: "",
-    endDate: "",
-    description: "",
-    content: ""
-  }
-
+  public formData: any;
+  public selectedProjectId: any;
+  
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -48,32 +42,21 @@ export class ProjectsComponent implements OnInit, OnChanges{
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
-    defaultFontName: 'Comic Sans MS',
-    toolbarHiddenButtons: [
-      ['bold']
-      ],
-    customClasses: [
-      {
-        name: "quote",
-        class: "quote",
-      },
-      {
-        name: 'redText',
-        class: 'redText'
-      },
-      {
-        name: "titleText",
-        class: "titleText",
-        tag: "h1",
-      },
+    toolbarHiddenButtons:[
+      ['fontName']
     ]
   };
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { 
+  constructor(private http: HttpClient, private cookieService: CookieService, private toastr: ToastrService) { 
     this.currentUser = User.getCurrentUser();
   }
 
   ngOnInit(): void {
+    this.jwtToken = this.cookieService.get('boonJwtToken');
+    this.headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.jwtToken}` // Include the JWT token in the Authorization header
+    });
+
     this.http.get(`${environment.baseUrl}/api/v1/public/projects/${this.username}`)
     .subscribe({
       next: response => {
@@ -105,28 +88,78 @@ export class ProjectsComponent implements OnInit, OnChanges{
     this.close.emit();
   }
   
-  setEditProject(){
-    this.editProject = !this.editProject;
+  setAddProject(){
+    this.showProjectEditor = !this.showProjectEditor;
+    this.formData = {
+      showProject: false,
+      title: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      content: ""
+    }
+
   }
 
   submitForm(){
+    if(this.formData.projectId === undefined){
+      this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects`, this.formData, {"headers": this.headers})
+      .subscribe({
+        next: response => {
+          if(response.status == "success") this.toastr.success(response.message);
+          else this.toastr.error(response.message);
+          this.ngOnInit();
+          this.showProjectEditor = !this.showProjectEditor;
+        },
+        error: error => {
+          console.error('API Error', error);
+        }   
+      });
+    }else{
+      this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects/${this.formData.projectId}`, this.formData, {"headers": this.headers})
+      .subscribe({
+        next: response => {
+          if(response.status == "success") this.toastr.success(response.message);
+          else this.toastr.error(response.message);
+          this.showProjectEditor = !this.showProjectEditor;
+        },
+        error: error => {
+          console.error('API Error', error);
+        }   
+      });
+    }
+  }
+
+  updateProject(projectId: any){
+    this.showProjectEditor = !this.showProjectEditor;
+    this.formData = this.projects.find((x:any) => x.projectId === projectId);
+    this.formData.startDate = this.formData.startDate.slice(0,10);
+    this.formData.endDate = this.formData.endDate.slice(0,10);
     console.log(this.formData);
+  }
 
-    const jwtToken = this.cookieService.get('boonJwtToken');
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
-    });
+  deleteProject(projectId: any){
+    this.toggleDeletePopup();
+    this.selectedProjectId = projectId;
+  }
 
-    console.log(headers);
-    this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects`, this.formData, {headers})
-    .subscribe({
-      next: response => {
-        console.log(response);
-      },
-      error: error => {
-        console.error('API Error', error);
-      }   
-    });
+  toggleDeletePopup(){
+    this.showDeletePopup = !this.showDeletePopup;
+  }
+
+  confirmDelete(){
+    this.http.delete<any>(`${environment.baseUrl}/api/v1/secured/projects/delete/${this.selectedProjectId}`, {"headers": this.headers})
+      .subscribe({
+        next: response => {
+          if(response.status == "success") this.toastr.success(response.message);
+          else this.toastr.error(response.message);
+          this.ngOnInit();
+          this.toggleDeletePopup();
+        },
+        error: error => {
+          console.error('API Error', error);
+        }  
+      });
   }
 
   limitInputLength(){

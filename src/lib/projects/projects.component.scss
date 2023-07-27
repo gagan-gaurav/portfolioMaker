@@ -29,7 +29,7 @@
 		position: relative;
 		height: 100%;
 		width: 100%;
-		padding: 8px 84px 8px 150px;
+		padding: 8px 124px 8px 196px;
 		box-sizing: border-box;
 		background-color: $primary-color-projects;
 		border-radius: 8px;
@@ -46,7 +46,7 @@
 				position: relative;
 				// padding-bottom: 16px;
 				// padding-right: 16px;
-				margin-bottom: 16px;
+				margin-bottom: 32px;
 				box-sizing: border-box;
 				
 				.date{
@@ -70,6 +70,7 @@
 				}
 
 				.show{
+					cursor: pointer;
 					position: absolute;
 					top: 8px;
 					left: 20px;
@@ -88,6 +89,7 @@
 				}
 
 				.hide{
+					cursor: pointer;
 					position: absolute;
 					top: 8px;
 					left: 20px;
@@ -102,6 +104,41 @@
 				.radio:not(:checked) ~ label .hide{
 					opacity: 0;
 					transform: translateX(-20px);
+					transition: transform 0.2s linear;
+				}
+
+				.edit{
+					cursor: pointer;
+					position: absolute;
+					top: 8px;
+					right: 100px;
+				}
+
+				.radio:checked ~ .edit{
+					transform: translateX(40px);
+					transition: transform 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ .edit{
+					transform: translateX(0px);
+					transition: transform 0.2s linear;
+				}
+
+				.delete{
+					cursor: pointer;
+					position: absolute;
+					top: 8px;
+					right: 40px;
+					color: coral;
+				}
+
+				.radio:checked ~ .delete{
+					transform: translateX(40px);
+					transition: transform 0.2s linear;
+				}
+
+				.radio:not(:checked) ~ .delete{
+					transform: translateX(0px);
 					transition: transform 0.2s linear;
 				}
 
@@ -203,6 +240,36 @@
 				resize: none;
 				width: 100%;
 				box-sizing: border-box;
+			}
+		}
+	}
+
+	.delete-popup{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(0, 0, 0, 0.8);
+		z-index: 10;
+
+		.options{
+			background-color: whitesmoke;
+			height: 100px;
+			width: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 8px;
+
+			.btn{
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
 			}
 		}
 	}

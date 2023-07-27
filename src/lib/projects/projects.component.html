@@ -1,7 +1,7 @@
 <app-window [windowConfig]="projectsConfig" [X1]="this.X1" [Y1]="this.Y1" (Xemitter)="emitX($event)" (Yemitter)="emitY($event)" (close)="closeWindow()">
 	<div class="projects-window">
-		<div class="edit-project" *ngIf="editProject; else project">
-			<img src="./../../assets/images/buttons/return.png" alt="" class="return" (click)="setEditProject()">
+		<div class="edit-project" *ngIf="showProjectEditor; else project">
+			<img src="./../../assets/images/buttons/return.png" alt="" class="return" (click)="setAddProject()">
 			<div class="element">
 				<label for="title">Title:</label>
 				<input type="text" id="title" name="title" [(ngModel)]="formData.title">
@@ -41,11 +41,26 @@
 								<div class="show">[ + ]</div>
 								<div class="hide">[ - ]</div>
 							</label>
+							<div *ngIf="(this.currentUser == this.username)" class="edit" (click)="updateProject(project.projectId)">
+								Edit
+							</div>
+							<div *ngIf="(this.currentUser == this.username)" class="delete" (click)="deleteProject(project.projectId)">
+								Delete
+							</div>
 						</li>
 					</ng-container>
 				</ul>
 			</div>
-			<img *ngIf="(this.currentUser == this.username)" class="add" src="./../../assets/images/buttons/add.png" alt="" (click)="setEditProject()">
+			<div class="delete-popup" *ngIf="showDeletePopup">
+				<div class="options">
+					<p> Confirm delete ?</p>
+					<div class="btn"> 
+						<button (click)="confirmDelete()"> YES </button>
+						<button (click)="toggleDeletePopup()"> NO </button> 
+					</div>
+				</div>
+			</div>
+			<img *ngIf="(this.currentUser == this.username)" class="add" src="./../../assets/images/buttons/add.png" alt="" (click)="setAddProject()">
 		</ng-template>
 	</div>	
 </app-window>
