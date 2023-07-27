@@ -37,7 +37,8 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-              "src/styles/config.scss"
+              "src/styles/config.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -106,7 +107,8 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-              "src/styles/config.scss"
+              "src/styles/config.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           }

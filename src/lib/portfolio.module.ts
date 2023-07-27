@@ -22,6 +22,8 @@ import { ContentComponent } from './quilandquest/content/content.component';
 import { NavComponent } from './quilandquest/nav/nav.component';
 import { Authenticator } from 'src/service/app.authenticator';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -46,7 +48,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CommonModule, 
     RouterModule.forChild([]), 
     AngularEditorModule, 
-    RouterTestingModule
+    RouterTestingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator],
   exports: [
