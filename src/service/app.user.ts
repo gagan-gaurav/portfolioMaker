@@ -10,6 +10,7 @@ export class User {
     if(!User.userInstance){
       User.userInstance = new User(currentUser);
     }
+    User.currentUser = currentUser;
   }
 
   // Service methods

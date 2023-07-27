@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { AppConfig } from 'src/service/app.config';
 import { WallComponent } from 'src/lib/wall/wall.component';
@@ -22,8 +21,7 @@ import { ContentComponent } from './quilandquest/content/content.component';
 import { NavComponent } from './quilandquest/nav/nav.component';
 import { Authenticator } from 'src/service/app.authenticator';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 
 @NgModule({
@@ -49,11 +47,9 @@ import { ToastrModule } from 'ngx-toastr';
     RouterModule.forChild([]), 
     AngularEditorModule, 
     RouterTestingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator],
+  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator, ToastrService],
   exports: [
     ProjectsComponent, 
     WallComponent, 

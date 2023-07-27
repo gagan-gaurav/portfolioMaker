@@ -283,12 +283,12 @@
     "classes": [
         {
             "name": "User",
-            "id": "class-User-4ae59efd93b190a494422d539de4f4cb9dd56860768c193199ef942562ebae6deef60d18172c2fd422fe4d84c5842b0fd35bddb3b1786d254c3442e898f0dced",
+            "id": "class-User-546daabc6820ea175ed7d65b2df32c0cf6438e395c4d74918ca7713aeea13825726dde021f272fd3203e8a0408b79bec101fc6cfc183b86025b3387340cb3cb2",
             "file": "src/service/app.user.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "export class User {\r\n  private static userInstance: User | null = null;\r\n  private static currentUser: any;\r\n\r\n  private constructor(currentUser: any) {\r\n    User.currentUser = currentUser;\r\n  }\r\n\r\n  public static setUser(currentUser: any): void{\r\n    if(!User.userInstance){\r\n      User.userInstance = new User(currentUser);\r\n    }\r\n  }\r\n\r\n  // Service methods\r\n  public static getCurrentUser() {\r\n    return this.currentUser;\r\n  }\r\n\r\n  public static isLoggedIn(){\r\n    return (this.currentUser != undefined);\r\n  }\r\n}\r\n",
+            "sourceCode": "export class User {\r\n  private static userInstance: User | null = null;\r\n  private static currentUser: any;\r\n\r\n  private constructor(currentUser: any) {\r\n    User.currentUser = currentUser;\r\n  }\r\n\r\n  public static setUser(currentUser: any): void{\r\n    if(!User.userInstance){\r\n      User.userInstance = new User(currentUser);\r\n    }\r\n    User.currentUser = currentUser;\r\n  }\r\n\r\n  // Service methods\r\n  public static getCurrentUser() {\r\n    return this.currentUser;\r\n  }\r\n\r\n  public static isLoggedIn(){\r\n    return (this.currentUser != undefined);\r\n  }\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -354,7 +354,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 16,
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -367,7 +367,7 @@
                     "optional": false,
                     "returnType": "boolean",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -2216,7 +2216,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".login-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n    .login-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-top: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        border: 0px;\r\n        margin-top: 16px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}\r\n\r\n.error{\r\n  color: orangered;\r\n  font-size: 12px;\r\n  margin-left: 12px;\r\n}",
+                    "data": "@import \"./../../../styles/config.scss\";\r\n\r\n.login-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  font-family: $primary-font;\r\n\r\n    .login-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-top: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        border: 0px;\r\n        margin-top: 16px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}\r\n\r\n.error{\r\n  color: orangered;\r\n  font-size: 12px;\r\n  margin-left: 12px;\r\n}",
                     "styleUrl": "./login.component.scss"
                 }
             ],
@@ -2749,7 +2749,7 @@
                     "styleUrl": "./profile.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
+                    "data": "$primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;\r\n\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -2803,7 +2803,7 @@
         },
         {
             "name": "ProjectsComponent",
-            "id": "component-ProjectsComponent-43ce22a932dcb95b2da41e0837dc2b43e409e63977774fd012f6dc19f0f961fec40eb53b145bcbe907dd7c042209adf85b4d0334c5cab40e021342b06d9ac411",
+            "id": "component-ProjectsComponent-5705019a012638f35dd890e72001605901fbe20914efb02ecec16734870c5c93636f64570fc4214b723503ebd881c8f2b396420686a2dee6421c516665659066",
             "file": "src/lib/projects/projects.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2825,7 +2825,7 @@
                     "name": "username",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 18,
                     "type": "any",
                     "decorators": []
                 },
@@ -2834,7 +2834,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 19,
                     "type": "number",
                     "decorators": []
                 },
@@ -2843,7 +2843,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 20,
                     "type": "number",
                     "decorators": []
                 }
@@ -2854,7 +2854,7 @@
                     "defaultValue": "new EventEmitter<any> ()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 23,
                     "type": "EventEmitter"
                 },
                 {
@@ -2862,7 +2862,7 @@
                     "defaultValue": "new EventEmitter<any>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 21,
                     "type": "EventEmitter"
                 },
                 {
@@ -2870,7 +2870,7 @@
                     "defaultValue": "new EventEmitter<any>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 22,
                     "type": "EventEmitter"
                 }
             ],
@@ -2882,7 +2882,7 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 14,
+                    "line": 15,
                     "modifierKind": [
                         123
                     ]
@@ -2895,45 +2895,55 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 32,
+                    "line": 33,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
                     "name": "editorConfig",
-                    "defaultValue": "{\r\n    editable: true,\r\n    spellcheck: true,\r\n    height: '24rem',\r\n    minHeight: '8rem',\r\n    placeholder: 'Enter text here...',\r\n    translate: 'no',\r\n    defaultParagraphSeparator: 'p',\r\n    defaultFontName: 'Comic Sans MS',\r\n    toolbarHiddenButtons: [\r\n      ['bold']\r\n      ],\r\n    customClasses: [\r\n      {\r\n        name: \"quote\",\r\n        class: \"quote\",\r\n      },\r\n      {\r\n        name: 'redText',\r\n        class: 'redText'\r\n      },\r\n      {\r\n        name: \"titleText\",\r\n        class: \"titleText\",\r\n        tag: \"h1\",\r\n      },\r\n    ]\r\n  }",
+                    "defaultValue": "{\r\n    editable: true,\r\n    spellcheck: true,\r\n    height: '24rem',\r\n    minHeight: '8rem',\r\n    placeholder: 'Enter text here...',\r\n    translate: 'no',\r\n    defaultParagraphSeparator: 'p',\r\n    toolbarHiddenButtons:[\r\n      ['fontName']\r\n    ]\r\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "AngularEditorConfig",
                     "optional": false,
                     "description": "",
-                    "line": 43
-                },
-                {
-                    "name": "editProject",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 30,
-                    "modifierKind": [
-                        123
-                    ]
+                    "line": 37
                 },
                 {
                     "name": "formData",
-                    "defaultValue": "{\r\n    showProject: false,\r\n    title: \"\",\r\n    startDate: \"\",\r\n    endDate: \"\",\r\n    description: \"\",\r\n    content: \"\"\r\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
+                    "type": "any",
                     "optional": false,
                     "description": "",
                     "line": 34,
                     "modifierKind": [
                         123
+                    ]
+                },
+                {
+                    "name": "headers",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "jwtToken",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "modifierKind": [
+                        121
                     ]
                 },
                 {
@@ -2943,7 +2953,7 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 31,
+                    "line": 32,
                     "modifierKind": [
                         123
                     ]
@@ -2962,27 +2972,39 @@
                     ]
                 },
                 {
-                    "name": "projectsHeading",
-                    "defaultValue": "\"Projects\"",
+                    "name": "selectedProjectId",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 23,
+                    "line": 35,
                     "modifierKind": [
                         123
                     ]
                 },
                 {
-                    "name": "projectsTheme",
-                    "defaultValue": "\"theme-projects\"",
+                    "name": "showDeletePopup",
+                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 22,
+                    "line": 31,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "showProjectEditor",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
                     "modifierKind": [
                         123
                     ]
@@ -2995,9 +3017,47 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 104,
+                    "line": 87,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "confirmDelete",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 150,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "deleteProject",
+                    "args": [
+                        {
+                            "name": "projectId",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 141,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "projectId",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 },
                 {
                     "name": "emitX",
@@ -3012,7 +3072,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 96,
+                    "line": 79,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3040,7 +3100,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 100,
+                    "line": 83,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3061,7 +3121,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 132,
+                    "line": 165,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -3078,7 +3138,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 89,
+                    "line": 72,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -3099,17 +3159,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 76,
+                    "line": 54,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
                 {
-                    "name": "setEditProject",
+                    "name": "setAddProject",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 108,
+                    "line": 91,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -3119,9 +3179,47 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 112,
+                    "line": 104,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "toggleDeletePopup",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 146,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "updateProject",
+                    "args": [
+                        {
+                            "name": "projectId",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 133,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "projectId",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -3131,15 +3229,15 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { HttpClient, HttpHeaders } from '@angular/common/http';\r\nimport { Component, OnInit, OnChanges, Input, Output, EventEmitter} from '@angular/core';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { User } from 'src/service/app.user';\r\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\r\nimport { environment } from 'src/environments/environment';\r\n\r\n@Component({\r\n  selector: 'app-projects',\r\n  templateUrl: './projects.component.html',\r\n  styleUrls: ['./projects.component.scss', './../../styles/config.scss']\r\n})\r\nexport class ProjectsComponent implements OnInit, OnChanges{\r\n  public currentUser: any;\r\n  @Input() public username: any;\r\n  @Input() public X1: number = 0;\r\n  @Input() public Y1: number = 0;\r\n  @Output() public Xemitter = new EventEmitter<any>();\r\n  @Output() public Yemitter = new EventEmitter<any>();\r\n  @Output() public close = new EventEmitter<any> ();\r\n\r\n  public projectsTheme: string = \"theme-projects\";\r\n  public projectsHeading: string = \"Projects\";\r\n\r\n  public projectsConfig: Object = {\r\n    theme : \"theme-projects\",\r\n    heading : \"Projects\",\r\n  }\r\n  \r\n  public editProject: boolean = false;\r\n  public projects: any;\r\n  public descriptionLength: number = 0;\r\n  // public formData: any;\r\n  public formData = {\r\n    showProject: false,\r\n    title: \"\",\r\n    startDate: \"\",\r\n    endDate: \"\",\r\n    description: \"\",\r\n    content: \"\"\r\n  }\r\n\r\n  editorConfig: AngularEditorConfig = {\r\n    editable: true,\r\n    spellcheck: true,\r\n    height: '24rem',\r\n    minHeight: '8rem',\r\n    placeholder: 'Enter text here...',\r\n    translate: 'no',\r\n    defaultParagraphSeparator: 'p',\r\n    defaultFontName: 'Comic Sans MS',\r\n    toolbarHiddenButtons: [\r\n      ['bold']\r\n      ],\r\n    customClasses: [\r\n      {\r\n        name: \"quote\",\r\n        class: \"quote\",\r\n      },\r\n      {\r\n        name: 'redText',\r\n        class: 'redText'\r\n      },\r\n      {\r\n        name: \"titleText\",\r\n        class: \"titleText\",\r\n        tag: \"h1\",\r\n      },\r\n    ]\r\n  };\r\n\r\n  constructor(private http: HttpClient, private cookieService: CookieService) { \r\n    this.currentUser = User.getCurrentUser();\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    this.http.get(`${environment.baseUrl}/api/v1/public/projects/${this.username}`)\r\n    .subscribe({\r\n      next: response => {\r\n        console.log(response);\r\n        this.projects = response;\r\n      },\r\n      error: error => {\r\n        console.error('API Error', error);\r\n      }   \r\n    });\r\n  }\r\n\r\n  ngOnChanges(changes: any) {\r\n    if (changes.username) {\r\n      // Perform any necessary actions when the variable changes\r\n      this.ngOnInit();\r\n    }\r\n  }\r\n\r\n  emitX(value:any){\r\n    this.Xemitter.emit(value);\r\n  }\r\n  \r\n  emitY(value:any){\r\n    this.Yemitter.emit(value);\r\n  }\r\n\r\n  closeWindow(){\r\n    this.close.emit();\r\n  }\r\n  \r\n  setEditProject(){\r\n    this.editProject = !this.editProject;\r\n  }\r\n\r\n  submitForm(){\r\n    console.log(this.formData);\r\n\r\n    const jwtToken = this.cookieService.get('boonJwtToken');\r\n    const headers = new HttpHeaders({\r\n      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header\r\n    });\r\n\r\n    console.log(headers);\r\n    this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects`, this.formData, {headers})\r\n    .subscribe({\r\n      next: response => {\r\n        console.log(response);\r\n      },\r\n      error: error => {\r\n        console.error('API Error', error);\r\n      }   \r\n    });\r\n  }\r\n\r\n  limitInputLength(){\r\n    this.descriptionLength = this.formData.description.length;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { HttpClient, HttpHeaders } from '@angular/common/http';\r\nimport { Component, OnInit, OnChanges, Input, Output, EventEmitter} from '@angular/core';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { User } from 'src/service/app.user';\r\nimport { AngularEditorConfig } from '@kolkov/angular-editor';\r\nimport { environment } from 'src/environments/environment';\r\nimport { ToastrService } from 'ngx-toastr';\r\n\r\n@Component({\r\n  selector: 'app-projects',\r\n  templateUrl: './projects.component.html',\r\n  styleUrls: ['./projects.component.scss', './../../styles/config.scss']\r\n})\r\nexport class ProjectsComponent implements OnInit, OnChanges{\r\n  public currentUser: any;\r\n  private headers: any;\r\n  private jwtToken: any;\r\n  @Input() public username: any;\r\n  @Input() public X1: number = 0;\r\n  @Input() public Y1: number = 0;\r\n  @Output() public Xemitter = new EventEmitter<any>();\r\n  @Output() public Yemitter = new EventEmitter<any>();\r\n  @Output() public close = new EventEmitter<any> ();\r\n\r\n  public projectsConfig: Object = {\r\n    theme : \"theme-projects\",\r\n    heading : \"Projects\",\r\n  }\r\n  \r\n  public showProjectEditor: boolean = false;\r\n  public showDeletePopup: boolean = false;\r\n  public projects: any;\r\n  public descriptionLength: number = 0;\r\n  public formData: any;\r\n  public selectedProjectId: any;\r\n  \r\n  editorConfig: AngularEditorConfig = {\r\n    editable: true,\r\n    spellcheck: true,\r\n    height: '24rem',\r\n    minHeight: '8rem',\r\n    placeholder: 'Enter text here...',\r\n    translate: 'no',\r\n    defaultParagraphSeparator: 'p',\r\n    toolbarHiddenButtons:[\r\n      ['fontName']\r\n    ]\r\n  };\r\n\r\n  constructor(private http: HttpClient, private cookieService: CookieService, private toastr: ToastrService) { \r\n    this.currentUser = User.getCurrentUser();\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    this.jwtToken = this.cookieService.get('boonJwtToken');\r\n    this.headers = new HttpHeaders({\r\n      'Authorization': `Bearer ${this.jwtToken}` // Include the JWT token in the Authorization header\r\n    });\r\n\r\n    this.http.get(`${environment.baseUrl}/api/v1/public/projects/${this.username}`)\r\n    .subscribe({\r\n      next: response => {\r\n        console.log(response);\r\n        this.projects = response;\r\n      },\r\n      error: error => {\r\n        console.error('API Error', error);\r\n      }   \r\n    });\r\n  }\r\n\r\n  ngOnChanges(changes: any) {\r\n    if (changes.username) {\r\n      // Perform any necessary actions when the variable changes\r\n      this.ngOnInit();\r\n    }\r\n  }\r\n\r\n  emitX(value:any){\r\n    this.Xemitter.emit(value);\r\n  }\r\n  \r\n  emitY(value:any){\r\n    this.Yemitter.emit(value);\r\n  }\r\n\r\n  closeWindow(){\r\n    this.close.emit();\r\n  }\r\n  \r\n  setAddProject(){\r\n    this.showProjectEditor = !this.showProjectEditor;\r\n    this.formData = {\r\n      showProject: false,\r\n      title: \"\",\r\n      startDate: \"\",\r\n      endDate: \"\",\r\n      description: \"\",\r\n      content: \"\"\r\n    }\r\n\r\n  }\r\n\r\n  submitForm(){\r\n    if(this.formData.projectId === undefined){\r\n      this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects`, this.formData, {\"headers\": this.headers})\r\n      .subscribe({\r\n        next: response => {\r\n          if(response.status == \"success\") this.toastr.success(response.message);\r\n          else this.toastr.error(response.message);\r\n          this.ngOnInit();\r\n          this.showProjectEditor = !this.showProjectEditor;\r\n        },\r\n        error: error => {\r\n          console.error('API Error', error);\r\n        }   \r\n      });\r\n    }else{\r\n      this.http.post<any>(`${environment.baseUrl}/api/v1/secured/projects/${this.formData.projectId}`, this.formData, {\"headers\": this.headers})\r\n      .subscribe({\r\n        next: response => {\r\n          if(response.status == \"success\") this.toastr.success(response.message);\r\n          else this.toastr.error(response.message);\r\n          this.showProjectEditor = !this.showProjectEditor;\r\n        },\r\n        error: error => {\r\n          console.error('API Error', error);\r\n        }   \r\n      });\r\n    }\r\n  }\r\n\r\n  updateProject(projectId: any){\r\n    this.showProjectEditor = !this.showProjectEditor;\r\n    this.formData = this.projects.find((x:any) => x.projectId === projectId);\r\n    this.formData.startDate = this.formData.startDate.slice(0,10);\r\n    this.formData.endDate = this.formData.endDate.slice(0,10);\r\n    console.log(this.formData);\r\n  }\r\n\r\n  deleteProject(projectId: any){\r\n    this.toggleDeletePopup();\r\n    this.selectedProjectId = projectId;\r\n  }\r\n\r\n  toggleDeletePopup(){\r\n    this.showDeletePopup = !this.showDeletePopup;\r\n  }\r\n\r\n  confirmDelete(){\r\n    this.http.delete<any>(`${environment.baseUrl}/api/v1/secured/projects/delete/${this.selectedProjectId}`, {\"headers\": this.headers})\r\n      .subscribe({\r\n        next: response => {\r\n          if(response.status == \"success\") this.toastr.success(response.message);\r\n          else this.toastr.error(response.message);\r\n          this.ngOnInit();\r\n          this.toggleDeletePopup();\r\n        },\r\n        error: error => {\r\n          console.error('API Error', error);\r\n        }  \r\n      });\r\n  }\r\n\r\n  limitInputLength(){\r\n    this.descriptionLength = this.formData.description.length;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import './../../styles/config.scss';\r\n\r\n.projects-window{\r\n\theight: 80vh;\r\n\twidth: 80vw;\r\n\tpadding: 8px;\r\n\tposition: relative;\r\n\r\n\t.add{\r\n\t\tbackground-color: white;\r\n\t\theight: 48px;\r\n\t\twidth: 48px;\r\n\t\tborder-radius: 50%;\r\n\t\tbox-shadow: 4px 4px;\r\n\t\tposition: absolute;\r\n\t\tbottom: 32px; \r\n\t\tright: 32px;\r\n\t}\r\n\r\n\t.add:hover{\r\n\t\tbackground-color: whitesmoke;\r\n\t}\r\n\r\n\t.add:active{\r\n\t\tbox-shadow: 2px 2px;\r\n\t}\r\n\t\r\n\t.projects-container{\r\n\t\tposition: relative;\r\n\t\theight: 100%;\r\n\t\twidth: 100%;\r\n\t\tpadding: 8px 84px 8px 150px;\r\n\t\tbox-sizing: border-box;\r\n\t\tbackground-color: $primary-color-projects;\r\n\t\tborder-radius: 8px;\r\n\t\toverflow-y: scroll;\r\n\r\n\t\t.timeline{\r\n\t\t\tlist-style: none;\r\n\t\t\tborder-left: solid white 8px;\r\n\r\n\t\t\t.block{\r\n\t\t\t\t// background-color: grey;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tposition: relative;\r\n\t\t\t\t// padding-bottom: 16px;\r\n\t\t\t\t// padding-right: 16px;\r\n\t\t\t\tmargin-bottom: 16px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\r\n\t\t\t\t.date{\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 0px 4px;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop:50%;\r\n\t\t\t\t\tleft: -158px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.circle{\r\n\t\t\t\t\tbackground-color: palegreen;\r\n\t\t\t\t\tborder-radius: 50%;\r\n\t\t\t\t\tborder: 6px solid white;\r\n\t\t\t\t\theight: 10px;\r\n\t\t\t\t\twidth: 10px;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 50%;\r\n\t\t\t\t\tleft: -55px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.show{\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tleft: 20px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ label .show{\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ label .show{\r\n\t\t\t\t\topacity: 1;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.hide{\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tleft: 20px;\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ label .hide{\r\n\t\t\t\t\topacity: 1;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\t\t\t\t.radio:not(:checked) ~ label .hide{\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.content{\r\n\t\t\t\t\tposition: relative;\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 16px;\r\n\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\twidth:100%;\r\n\t\t\t\t\tbox-shadow: black 4px 4px;\r\n\r\n\t\t\t\t\t.material{\r\n\t\t\t\t\t\tmax-height: 0;\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio{\r\n\t\t\t\t\tdisplay: none;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .content{\r\n\t\t\t\t\t// background-color: gainsboro;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t\t// height: max-content;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .content .material{\r\n\t\t\t\t\tmax-height: 2000px;\r\n\t\t\t\t\t// overflow: scroll;\r\n\t\t\t\t\twidth: auto;\r\n\t\t\t\t\ttransition: max-height 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .content .material{\r\n\t\t\t\t\tmax-height: 0px;\r\n\t\t\t\t\t// overflow: scroll;\r\n\t\t\t\t\twidth: auto;\r\n\t\t\t\t\ttransition: max-height 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .content{\r\n\t\t\t\t\t// background-color: gainsboro;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t\t// height: max-content;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .circle{\r\n\t\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\t\ttransition: background-color 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .circle{\r\n\t\t\t\t\tbackground-color: palegreen;\r\n\t\t\t\t\ttransition: background-color 0.2s linear;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\t::-webkit-scrollbar {\r\n\t\twidth: 12px;\r\n\t}\r\n\t\r\n\t/* Handle */\r\n\t::-webkit-scrollbar-thumb {\r\n\t\t-webkit-border-radius: 8px;\r\n\t\tborder-radius: 8px;\r\n\t\tbackground: rgb(76, 170, 76); \r\n\t}\r\n\r\n\t.edit-project{\r\n\t\theight: 100%;\r\n\t\twidth: 100%;\r\n\t\toverflow-y: scroll;\r\n\t\t// background-color: red;\r\n\r\n\t\t.return{\r\n\t\t\theight: 48px;\r\n\t\t\twidth: 48px;\r\n\t\t}\r\n\r\n\t\t.element{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-between;\r\n\t\t\talign-items: baseline;\r\n\r\n\t\t\tangular-editor{\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t}\r\n\r\n\t\t\ttextarea{\r\n\t\t\t\tresize: none;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
+                    "data": "@import './../../styles/config.scss';\r\n\r\n.projects-window{\r\n\theight: 80vh;\r\n\twidth: 80vw;\r\n\tpadding: 8px;\r\n\tposition: relative;\r\n\r\n\t.add{\r\n\t\tbackground-color: white;\r\n\t\theight: 48px;\r\n\t\twidth: 48px;\r\n\t\tborder-radius: 50%;\r\n\t\tbox-shadow: 4px 4px;\r\n\t\tposition: absolute;\r\n\t\tbottom: 32px; \r\n\t\tright: 32px;\r\n\t}\r\n\r\n\t.add:hover{\r\n\t\tbackground-color: whitesmoke;\r\n\t}\r\n\r\n\t.add:active{\r\n\t\tbox-shadow: 2px 2px;\r\n\t}\r\n\t\r\n\t.projects-container{\r\n\t\tposition: relative;\r\n\t\theight: 100%;\r\n\t\twidth: 100%;\r\n\t\tpadding: 8px 124px 8px 196px;\r\n\t\tbox-sizing: border-box;\r\n\t\tbackground-color: $primary-color-projects;\r\n\t\tborder-radius: 8px;\r\n\t\toverflow-y: scroll;\r\n\r\n\t\t.timeline{\r\n\t\t\tlist-style: none;\r\n\t\t\tborder-left: solid white 8px;\r\n\r\n\t\t\t.block{\r\n\t\t\t\t// background-color: grey;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tposition: relative;\r\n\t\t\t\t// padding-bottom: 16px;\r\n\t\t\t\t// padding-right: 16px;\r\n\t\t\t\tmargin-bottom: 32px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\r\n\t\t\t\t.date{\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 0px 4px;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop:50%;\r\n\t\t\t\t\tleft: -158px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.circle{\r\n\t\t\t\t\tbackground-color: palegreen;\r\n\t\t\t\t\tborder-radius: 50%;\r\n\t\t\t\t\tborder: 6px solid white;\r\n\t\t\t\t\theight: 10px;\r\n\t\t\t\t\twidth: 10px;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 50%;\r\n\t\t\t\t\tleft: -55px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.show{\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tleft: 20px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ label .show{\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ label .show{\r\n\t\t\t\t\topacity: 1;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.hide{\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tleft: 20px;\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ label .hide{\r\n\t\t\t\t\topacity: 1;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\t\t\t\t.radio:not(:checked) ~ label .hide{\r\n\t\t\t\t\topacity: 0;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.edit{\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tright: 100px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .edit{\r\n\t\t\t\t\ttransform: translateX(40px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .edit{\r\n\t\t\t\t\ttransform: translateX(0px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.delete{\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tposition: absolute;\r\n\t\t\t\t\ttop: 8px;\r\n\t\t\t\t\tright: 40px;\r\n\t\t\t\t\tcolor: coral;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .delete{\r\n\t\t\t\t\ttransform: translateX(40px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .delete{\r\n\t\t\t\t\ttransform: translateX(0px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.content{\r\n\t\t\t\t\tposition: relative;\r\n\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tpadding: 16px;\r\n\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\twidth:100%;\r\n\t\t\t\t\tbox-shadow: black 4px 4px;\r\n\r\n\t\t\t\t\t.material{\r\n\t\t\t\t\t\tmax-height: 0;\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio{\r\n\t\t\t\t\tdisplay: none;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .content{\r\n\t\t\t\t\t// background-color: gainsboro;\r\n\t\t\t\t\ttransform: translateX(20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t\t// height: max-content;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .content .material{\r\n\t\t\t\t\tmax-height: 2000px;\r\n\t\t\t\t\t// overflow: scroll;\r\n\t\t\t\t\twidth: auto;\r\n\t\t\t\t\ttransition: max-height 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .content .material{\r\n\t\t\t\t\tmax-height: 0px;\r\n\t\t\t\t\t// overflow: scroll;\r\n\t\t\t\t\twidth: auto;\r\n\t\t\t\t\ttransition: max-height 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .content{\r\n\t\t\t\t\t// background-color: gainsboro;\r\n\t\t\t\t\ttransform: translateX(-20px);\r\n\t\t\t\t\ttransition: transform 0.2s linear;\r\n\t\t\t\t\t// height: max-content;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:checked ~ .circle{\r\n\t\t\t\t\tbackground-color: lightcoral;\r\n\t\t\t\t\ttransition: background-color 0.2s linear;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.radio:not(:checked) ~ .circle{\r\n\t\t\t\t\tbackground-color: palegreen;\r\n\t\t\t\t\ttransition: background-color 0.2s linear;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\t::-webkit-scrollbar {\r\n\t\twidth: 12px;\r\n\t}\r\n\t\r\n\t/* Handle */\r\n\t::-webkit-scrollbar-thumb {\r\n\t\t-webkit-border-radius: 8px;\r\n\t\tborder-radius: 8px;\r\n\t\tbackground: rgb(76, 170, 76); \r\n\t}\r\n\r\n\t.edit-project{\r\n\t\theight: 100%;\r\n\t\twidth: 100%;\r\n\t\toverflow-y: scroll;\r\n\t\t// background-color: red;\r\n\r\n\t\t.return{\r\n\t\t\theight: 48px;\r\n\t\t\twidth: 48px;\r\n\t\t}\r\n\r\n\t\t.element{\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: space-between;\r\n\t\t\talign-items: baseline;\r\n\r\n\t\t\tangular-editor{\r\n\t\t\t\tbackground-color: white;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t}\r\n\r\n\t\t\ttextarea{\r\n\t\t\t\tresize: none;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n\t.delete-popup{\r\n\t\tposition: absolute;\r\n\t\ttop: 0px;\r\n\t\tleft: 0px;\r\n\t\tdisplay: flex;\r\n\t\talign-items: center;\r\n\t\tjustify-content: center;\r\n\t\theight: 100%;\r\n\t\twidth: 100%;\r\n\t\tbackground-color: rgb(0, 0, 0, 0.8);\r\n\t\tz-index: 10;\r\n\r\n\t\t.options{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t\theight: 100px;\r\n\t\t\twidth: 200px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\tjustify-content: center;\r\n\t\t\talign-items: center;\r\n\t\t\tborder-radius: 8px;\r\n\r\n\t\t\t.btn{\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tjustify-content: space-evenly;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
                     "styleUrl": "./projects.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
+                    "data": "$primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;\r\n\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -3161,9 +3259,15 @@
                         "type": "CookieService",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "toastr",
+                        "type": "ToastrService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 70,
+                "line": 48,
                 "jsdoctags": [
                     {
                         "name": "http",
@@ -3182,6 +3286,15 @@
                         "tagName": {
                             "text": "param"
                         }
+                    },
+                    {
+                        "name": "toastr",
+                        "type": "ToastrService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
                     }
                 ]
             },
@@ -3189,7 +3302,7 @@
                 "OnInit",
                 "OnChanges"
             ],
-            "templateData": "<app-window [windowConfig]=\"projectsConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\r\n\t<div class=\"projects-window\">\r\n\t\t<div class=\"edit-project\" *ngIf=\"editProject; else project\">\r\n\t\t\t<img src=\"./../../assets/images/buttons/return.png\" alt=\"\" class=\"return\" (click)=\"setEditProject()\">\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"title\">Title:</label>\r\n\t\t\t\t<input type=\"text\" id=\"title\" name=\"title\" [(ngModel)]=\"formData.title\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"description\">Description ({{ this.descriptionLength }}/255 characters):</label>\r\n\t\t\t\t<textarea rows=\"3\" cols=\"60\" id=\"description\" placeholder=\"Enter Description ...\" name=\"description\" maxlength=\"255\" [(ngModel)]=\"formData.description\" (input)=\"limitInputLength()\"></textarea>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"startDate\">Start Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"startDate\" name=\"startDate\" [(ngModel)]=\"formData.startDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"endDate\">End Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"endDate\" name=\"endDate\" [(ngModel)]=\"formData.endDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element content\">\r\n\t\t\t\t<label for=\"content\">Content:</label>\r\n\t\t\t\t<angular-editor id=\"content\" [(ngModel)]=\"formData.content\" class=\"editor\" [config]=\"editorConfig\"></angular-editor>\r\n\t\t\t</div>\r\n\t\t\t<button (click)=\"submitForm()\">Submit</button>\r\n\t\t</div>\r\n\t\t<ng-template #project>\r\n\t\t\t<div class=\"projects-container\">\r\n\t\t\t\t<ul class=\"timeline\">\r\n\t\t\t\t\t<ng-container *ngFor=\"let project of projects; let i = index\">\r\n\t\t\t\t\t\t<li class=\"block\">\r\n\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"project{{i}}\" class=\"radio\" name=\"project\">\r\n\t\t\t\t\t\t\t<div class=\"date\">{{project.startDate|slice:0:10}}</div>\r\n\t\t\t\t\t\t\t<span class=\"circle\"></span>\r\n\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t\t<h2> {{project.title}} </h2>\r\n\t\t\t\t\t\t\t\t<p> {{project.description}} </p>\r\n\t\t\t\t\t\t\t\t<p class=\"material\" [innerHTML]=\"project.content\"></p>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<label for=\"project{{i}}\">\r\n\t\t\t\t\t\t\t\t<div class=\"show\">[ + ]</div>\r\n\t\t\t\t\t\t\t\t<div class=\"hide\">[ - ]</div>\r\n\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ng-container>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<img *ngIf=\"(this.currentUser == this.username)\" class=\"add\" src=\"./../../assets/images/buttons/add.png\" alt=\"\" (click)=\"setEditProject()\">\r\n\t\t</ng-template>\r\n\t</div>\t\r\n</app-window>"
+            "templateData": "<app-window [windowConfig]=\"projectsConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\r\n\t<div class=\"projects-window\">\r\n\t\t<div class=\"edit-project\" *ngIf=\"showProjectEditor; else project\">\r\n\t\t\t<img src=\"./../../assets/images/buttons/return.png\" alt=\"\" class=\"return\" (click)=\"setAddProject()\">\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"title\">Title:</label>\r\n\t\t\t\t<input type=\"text\" id=\"title\" name=\"title\" [(ngModel)]=\"formData.title\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"description\">Description ({{ this.descriptionLength }}/255 characters):</label>\r\n\t\t\t\t<textarea rows=\"3\" cols=\"60\" id=\"description\" placeholder=\"Enter Description ...\" name=\"description\" maxlength=\"255\" [(ngModel)]=\"formData.description\" (input)=\"limitInputLength()\"></textarea>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"startDate\">Start Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"startDate\" name=\"startDate\" [(ngModel)]=\"formData.startDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"endDate\">End Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"endDate\" name=\"endDate\" [(ngModel)]=\"formData.endDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element content\">\r\n\t\t\t\t<label for=\"content\">Content:</label>\r\n\t\t\t\t<angular-editor id=\"content\" [(ngModel)]=\"formData.content\" class=\"editor\" [config]=\"editorConfig\"></angular-editor>\r\n\t\t\t</div>\r\n\t\t\t<button (click)=\"submitForm()\">Submit</button>\r\n\t\t</div>\r\n\t\t<ng-template #project>\r\n\t\t\t<div class=\"projects-container\">\r\n\t\t\t\t<ul class=\"timeline\">\r\n\t\t\t\t\t<ng-container *ngFor=\"let project of projects; let i = index\">\r\n\t\t\t\t\t\t<li class=\"block\">\r\n\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"project{{i}}\" class=\"radio\" name=\"project\">\r\n\t\t\t\t\t\t\t<div class=\"date\">{{project.startDate|slice:0:10}}</div>\r\n\t\t\t\t\t\t\t<span class=\"circle\"></span>\r\n\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t\t<h2> {{project.title}} </h2>\r\n\t\t\t\t\t\t\t\t<p> {{project.description}} </p>\r\n\t\t\t\t\t\t\t\t<p class=\"material\" [innerHTML]=\"project.content\"></p>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<label for=\"project{{i}}\">\r\n\t\t\t\t\t\t\t\t<div class=\"show\">[ + ]</div>\r\n\t\t\t\t\t\t\t\t<div class=\"hide\">[ - ]</div>\r\n\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t<div *ngIf=\"(this.currentUser == this.username)\" class=\"edit\" (click)=\"updateProject(project.projectId)\">\r\n\t\t\t\t\t\t\t\tEdit\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div *ngIf=\"(this.currentUser == this.username)\" class=\"delete\" (click)=\"deleteProject(project.projectId)\">\r\n\t\t\t\t\t\t\t\tDelete\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ng-container>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"delete-popup\" *ngIf=\"showDeletePopup\">\r\n\t\t\t\t<div class=\"options\">\r\n\t\t\t\t\t<p> Confirm delete ?</p>\r\n\t\t\t\t\t<div class=\"btn\"> \r\n\t\t\t\t\t\t<button (click)=\"confirmDelete()\"> YES </button>\r\n\t\t\t\t\t\t<button (click)=\"toggleDeletePopup()\"> NO </button> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<img *ngIf=\"(this.currentUser == this.username)\" class=\"add\" src=\"./../../assets/images/buttons/add.png\" alt=\"\" (click)=\"setAddProject()\">\r\n\t\t</ng-template>\r\n\t</div>\t\r\n</app-window>"
         },
         {
             "name": "SignupComponent",
@@ -3307,7 +3420,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".signup-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n    .register-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-top: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        margin-top: 16px;\r\n        border: 0px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}\r\n\r\n.error{\r\n  color: orangered;\r\n  font-size: 12px;\r\n  margin-left: 12px;\r\n}",
+                    "data": "@import \"./../../../styles/config.scss\";\r\n\r\n.signup-page{\r\n  // background-color: red;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  display: flex;\r\n  // flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  font-family: $primary-font;\r\n\r\n    .register-form{\r\n      background-color: whitesmoke;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      // align-items: center;\r\n      padding: 48px;\r\n      border-radius: 8px;\r\n      // border: solid black 2px;\r\n      box-shadow: 4px 4px;\r\n\r\n      input{\r\n        height: 24px;\r\n        width: 256px;\r\n        padding: 4px 8px;\r\n        border: solid black 1px;\r\n        border-radius: 24px;\r\n        margin-top: 16px;\r\n      }\r\n\r\n      button{\r\n        height: 32px;\r\n        margin-top: 16px;\r\n        border: 0px;\r\n        background-color: palegreen;\r\n        box-shadow: black 4px 4px;\r\n        border-radius: 24px;\r\n        font-weight: bold;\r\n      }\r\n\r\n      p{\r\n        font-size: 14px;\r\n        text-align: center;\r\n      }\r\n\r\n      button:hover{\r\n        background-color: rgb(89, 211, 89);\r\n      }\r\n\r\n      button:active{\r\n        box-shadow: 2px 2px;\r\n      }\r\n    }\r\n}\r\n\r\n.error{\r\n  color: orangered;\r\n  font-size: 12px;\r\n  margin-left: 12px;\r\n}",
                     "styleUrl": "./signup.component.scss"
                 }
             ],
@@ -3569,7 +3682,7 @@
                     "styleUrl": "./skills.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
+                    "data": "$primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;\r\n\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -4197,7 +4310,7 @@
         },
         {
             "name": "WelcomeComponent",
-            "id": "component-WelcomeComponent-76b25527a7915ad15a23e6c9c499b2c129932be7208f50aa5c31e372ab491594c0a1179dffab187c3e55f33b29b8e20cd3b3852ef97f9ace46e5f8b10acabce8",
+            "id": "component-WelcomeComponent-4e157324bbb1347dd132ee9643c3ec40901f1d039d353317e4580c5741bac5db7600cb8aadad3ca1e16613b22b3238329204cf0c6f03a0e12f20efb105effd25",
             "file": "src/lib/welcome/welcome.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4216,7 +4329,38 @@
             "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "login",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "quilandquest",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "signup",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -4224,16 +4368,42 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-welcome',\r\n  templateUrl: './welcome.component.html',\r\n  styleUrls: ['./welcome.component.scss']\r\n})\r\nexport class WelcomeComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-welcome',\r\n  templateUrl: './welcome.component.html',\r\n  styleUrls: ['./welcome.component.scss']\r\n})\r\nexport class WelcomeComponent {\r\n\r\n  constructor(private router: Router){}\r\n\r\n  login(){\r\n    this.router.navigate(['login']);\r\n  }\r\n\r\n  signup(){\r\n    this.router.navigate(['signup']);\r\n  }\r\n\r\n  quilandquest(){\r\n    this.router.navigate(['quilandquest']);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@import \"./../../styles/config.scss\";\r\n\r\n.main-container{\r\n\theight: 100vh;\r\n\twidth: 100vw;\r\n\tdisplay: flex;\r\n\tfont-family: $primary-font;\r\n\r\n\t.banner{\r\n\t\tbackground-color: lightgreen;\r\n\t\twidth: 100%;\r\n\t\theight: 100%;\r\n\t\tborder-right: solid black 4px;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\t\tjustify-content: center;\r\n\t}\r\n\r\n\t.links{\r\n\t\t// background-color: green;\r\n\t\theight: 100%;\r\n\t\tmin-width: 520px;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\talign-items: center;\r\n\t\tjustify-content: center;\r\n\r\n\t\t.btn{\r\n\t\t\t// background-color: white;\r\n\t\t\tcursor: pointer;\r\n\t\t\twidth: 320px;\r\n\t\t\theight: 32px;\r\n\t\t\tmargin-bottom: 32px;\r\n\t\t\tborder-radius: 16px;\r\n\t\t\tborder: solid black 1px;\r\n\t\t\tbox-shadow: 4px 4px;\r\n\t\t\tdisplay: flex;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t}\r\n\r\n\t\t.btn:active{\r\n\t\t\tbox-shadow: 2px 2px;\r\n\t\t}\r\n\r\n\t\t.login:hover{\r\n\t\t\tbackground-color: whitesmoke;\r\n\t\t}\r\n\r\n\t\t.signup{\r\n\t\t\tbackground-color: #90ee90;\r\n\t\t}\r\n\r\n\t\t.signup:hover{\r\n\t\t\tbackground-color: #6acf6a;\r\n\t\t}\r\n\r\n\t\t.quilandquest{\r\n\t\t\t// background-color: red;\r\n\t\t\tdisplay: flex;\r\n\t\t\talign-items: center;\r\n\r\n\t\t\t.arrow{\r\n\t\t\t\tcursor: pointer;\r\n\t\t\t\tmargin-left: 4px;\r\n\t\t\t\theight: 48px;\r\n\t\t\t\twidth: 48px;\r\n\t\t\t\tborder: solid black 1px;\r\n\t\t\t\tborder-radius: 50%;\r\n\t\t\t\tbox-shadow: 4px 4px;\r\n\t\t\t}\r\n\r\n\t\t\t.arrow:hover{\r\n\t\t\t\tbackground-color: whitesmoke;\r\n\t\t\t}\r\n\r\n\t\t\t.arrow:active{\r\n\t\t\t\tbox-shadow: 2px 2px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./welcome.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>welcome to the porfolio maker.</p>\r\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"main-container\">\r\n\t<div class=\"banner\">\r\n\t\t<h1> Welcome to the Portfolio Maker. </h1>\r\n\t\t<p>Showcase your projects, experiences and write blogs. </p>\r\n\t</div>\r\n\t<div class=\"links\">\r\n\t\t<div class=\"login btn\" (click)=\"login()\">\r\n\t\t\tLog In\r\n\t\t</div>\r\n\t\t<div class=\"signup btn\" (click)=\"signup()\">\r\n\t\t\tSign Up\r\n\t\t</div>\r\n\t\t<div class=\"quilandquest\">\r\n\t\t\t<p> Continue to Quil and Quest without logging.</p>\r\n\t\t\t<img src=\"./../../assets/images/welcome/next.png\" alt=\"\" class=\"arrow\" (click)=\"quilandquest()\">\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
         },
         {
             "name": "WindowComponent",
@@ -4573,7 +4743,7 @@
                     "styleUrl": "./window.component.scss"
                 },
                 {
-                    "data": "$primary-font: cursive;\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
+                    "data": "$primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;\r\n\r\n\r\n//themes\r\n$primary-color-profile: #ebb7c9;\r\n$secondary-color-profile: #faedf1; \r\n.theme-profile{\r\n\tbackground-color: $secondary-color-profile;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-profile;\r\n\t}\r\n}\r\n\r\n$primary-color-projects: #b2fcb2;\r\n$secondary-color-projects: #ecfeec;\r\n.theme-projects{\r\n\tbackground-color: $secondary-color-projects;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-projects;\r\n\t}\r\n}\r\n\r\n$primary-color-skills: #ffefd5;\r\n$secondary-color-skills: #fffbf4;\r\n.theme-skills{\r\n\tbackground-color: $secondary-color-skills;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-skills;\r\n\t}\r\n}\r\n\r\n$primary-color-blogs: #8baff1;\r\n$seconday-color-blogs: #e2ebfb;\r\n.theme-blogs{\r\n\tbackground-color: $seconday-color-blogs;\r\n\t.menu-bar{\r\n\t\tbackground-color: $primary-color-blogs;\r\n\t}\r\n}\r\n\r\n",
                     "styleUrl": "./../../styles/config.scss"
                 }
             ],
@@ -4595,13 +4765,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-24c6fd8140638f27dd9449e1e57c083ef2570615786c4d5d80b69d36906e60b093f78a98c439c5ec917e15d85171297e2538f134b35f69b54a19691b9068b424",
+            "id": "module-AppModule-5d737b86fcfd0dbd4c50d9b0e10d0cf06e1cb17c9dd3940b9ffe80b3cb814926cf5edb43797a2672ef4be5ee41e30118547310cf4ee5fd1a1ece59e4a32e1c28",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { PortfolioModule } from 'src/lib/portfolio.module';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    PortfolioModule,\r\n    BrowserModule,\r\n    CommonModule,\r\n    AppRoutingModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { PortfolioModule } from 'src/lib/portfolio.module';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    PortfolioModule,\r\n    BrowserModule,\r\n    CommonModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -4682,13 +4852,13 @@
         },
         {
             "name": "PortfolioModule",
-            "id": "module-PortfolioModule-075d75fd41afef612a3c0094bd49d1f1541ef36fe7df051a6531aed92216ca8502e249b2b7c391fd563eec72d5085b790af7feb1aeaccc30c36f26799b95a829",
+            "id": "module-PortfolioModule-3237d0cea8468b089a2d113a1470e4af1234196a2b1037c072b47e51b82da4e5715c0e62bb2ce38c19b12cd97047d085b42a4e94a32b335f1eb02a215530154a",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/lib/portfolio.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/service/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { RouterTestingModule } from \"@angular/router/testing\";\r\nimport { FeedComponent } from './quilandquest/feed/feed.component';\r\nimport { ContentComponent } from './quilandquest/content/content.component';\r\nimport { NavComponent } from './quilandquest/nav/nav.component';\r\nimport { Authenticator } from 'src/service/app.authenticator';\r\nimport { WelcomeComponent } from './welcome/welcome.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, \r\n    ProjectsComponent, \r\n    BlogsComponent, \r\n    SkillsComponent, \r\n    LoginComponent, \r\n    SignupComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent, \r\n    NavComponent, \r\n    WelcomeComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, \r\n    FormsModule, \r\n    CommonModule, \r\n    RouterModule.forChild([]), \r\n    AngularEditorModule, \r\n    RouterTestingModule\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator],\r\n  exports: [\r\n    ProjectsComponent, \r\n    WallComponent, \r\n    SkillsComponent, \r\n    BlogsComponent, \r\n    SignupComponent, \r\n    LoginComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent,\r\n    NavComponent,\r\n    WelcomeComponent\r\n  ],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/service/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { RouterTestingModule } from \"@angular/router/testing\";\r\nimport { FeedComponent } from './quilandquest/feed/feed.component';\r\nimport { ContentComponent } from './quilandquest/content/content.component';\r\nimport { NavComponent } from './quilandquest/nav/nav.component';\r\nimport { Authenticator } from 'src/service/app.authenticator';\r\nimport { WelcomeComponent } from './welcome/welcome.component';\r\nimport { ToastrModule } from 'ngx-toastr';\r\nimport { provideToastr } from 'ngx-toastr';\r\nimport { provideAnimations } from '@angular/platform-browser/animations';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, \r\n    ProjectsComponent, \r\n    BlogsComponent, \r\n    SkillsComponent, \r\n    LoginComponent, \r\n    SignupComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent, \r\n    NavComponent, \r\n    WelcomeComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, \r\n    FormsModule, \r\n    CommonModule, \r\n    RouterModule.forChild([]), \r\n    AngularEditorModule, \r\n    RouterTestingModule,\r\n    ToastrModule.forRoot()\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator, provideToastr(), provideAnimations()],\r\n  exports: [\r\n    ProjectsComponent, \r\n    WallComponent, \r\n    SkillsComponent, \r\n    BlogsComponent, \r\n    SignupComponent, \r\n    LoginComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent,\r\n    NavComponent,\r\n    WelcomeComponent\r\n  ],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -4830,21 +5000,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true,\r\n  baseUrl: \"http://15.207.113.187:8080\"\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  production: false,\r\n  baseUrl: \"http://localhost:8080\",\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  baseUrl: \"http://15.207.113.187:8080\"\r\n}"
             },
             {
                 "name": "Feed",
@@ -4960,16 +5130,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/nav.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: NavComponent) => ({\r\n\tcomponent: NavComponent,\r\n\tprops: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/feed.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4980,21 +5140,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/projects.stories.ts",
+                "file": "src/stories/nav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(args: ProjectsComponent) => ({\r\n\tcomponent: ProjectsComponent,\r\n\tprops: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/signup.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: SignupComponent) => ({\r\n\tcomponet: SignupComponent,\r\n\tprops: args\r\n})"
+                "defaultValue": "(args: NavComponent) => ({\r\n\tcomponent: NavComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -5010,11 +5160,41 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/projects.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: ProjectsComponent) => ({\r\n\tcomponent: ProjectsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/skills.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: SkillsComponent) => ({\r\n\tcomponent: SkillsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/signup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: SignupComponent) => ({\r\n\tcomponet: SignupComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/wall.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -5035,16 +5215,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: WindowComponent) => ({\r\n\tcomponet: WindowComponent,\r\n\tprops: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/wall.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Wall",
@@ -5157,18 +5327,6 @@
                     "defaultValue": "(args: ContentComponent) => ({\r\n\tcomponent: ContentComponent,\r\n\tprops: args\r\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true,\r\n  baseUrl: \"http://15.207.113.187:8080\"\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -5179,6 +5337,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false,\r\n  baseUrl: \"http://localhost:8080\",\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  baseUrl: \"http://15.207.113.187:8080\"\r\n}"
                 }
             ],
             "src/stories/feed.stories.ts": [
@@ -5347,6 +5517,28 @@
                     "defaultValue": "(args: SkillsComponent) => ({\r\n\tcomponent: SkillsComponent,\r\n\tprops: args\r\n})"
                 }
             ],
+            "src/stories/wall.stories.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/wall.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
+                },
+                {
+                    "name": "Wall",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/wall.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ],
             "src/stories/welcome.stories.ts": [
                 {
                     "name": "Template",
@@ -5385,28 +5577,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/window.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                }
-            ],
-            "src/stories/wall.stories.ts": [
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/wall.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(args: WallComponent) => ({\r\n\tcomponent: WallComponent,\r\n\tprops: args\r\n})"
-                },
-                {
-                    "name": "Wall",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/wall.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5593,7 +5763,7 @@
                 "linktype": "component",
                 "name": "ProjectsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/25",
+                "coverageCount": "0/31",
                 "status": "low"
             },
             {
@@ -5647,7 +5817,7 @@
                 "linktype": "component",
                 "name": "WelcomeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
