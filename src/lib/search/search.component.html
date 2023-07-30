@@ -1,0 +1,22 @@
+<div class="search-container">
+	<form class="search" #MyForm="ngForm" (ngSubmit)="processSearch()">
+		<input class="query" type="text" name="search" placeholder="search" autocomplete="off" [(ngModel)]="this.query" (input)="processSearch()">
+		<button type="submit" [disabled]="this.query.length == 0"> </button>
+	</form>
+	<div class="query-results" [class.show]="resultsVisible">
+		<img src="../../assets/images/search/close.png" alt="" class="close" (click)="close()">
+		<h4> People </h4>
+		<p *ngIf="this.results[0].length == 0; else users;">No Users Found.</p>
+		<ng-template #users>
+			<a [routerLink]="['/user', result.username]" *ngFor="let result of results[0]"> {{ result.firstname }} {{result.lastname}} </a>
+		</ng-template>
+		<h4> Blogs </h4>
+		<p *ngIf="this.results[1].length == 0; else blogs;">No Blogs Found.</p>
+		<ng-template #blogs>
+			<a [routerLink]="['/blog', result.id]" *ngFor="let result of results[1]"> {{ result.title }}</a>
+		</ng-template>
+	</div>
+</div>
+
+
+

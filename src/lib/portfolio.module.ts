@@ -22,6 +22,7 @@ import { NavComponent } from './quilandquest/nav/nav.component';
 import { Authenticator } from 'src/service/app.authenticator';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     FeedComponent, 
     ContentComponent, 
     NavComponent, 
-    WelcomeComponent
+    WelcomeComponent, 
+    SearchComponent
   ],
   imports: [
     HttpClientModule, 
@@ -63,7 +65,8 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     FeedComponent, 
     ContentComponent,
     NavComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SearchComponent
   ],
   bootstrap: []
 })
