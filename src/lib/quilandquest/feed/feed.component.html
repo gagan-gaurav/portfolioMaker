@@ -1,6 +1,7 @@
 <div class="feed-container">
 	<app-nav [currentUser]="this.currentUser" [isLoggedIn]="this.isLoggedIn"></app-nav>
 	<div class="feeds">
+		<app-search></app-search>
 		<ng-container *ngFor="let blog of blogs">
 			<div class="blog">
 				<h3 class="heading" (click)="readMore(blog.blogId)"> {{ blog.title }}</h3>

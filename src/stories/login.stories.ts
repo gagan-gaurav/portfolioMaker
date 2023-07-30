@@ -5,7 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 
 export default {
-	title: 'MyComponents/Login',
+	title: 'MyComponents/Auth',
 	component: LoginComponent,
 	decorators: [
 		moduleMetadata({

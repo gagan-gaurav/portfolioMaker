@@ -131,6 +131,6 @@ export class FeedComponent implements OnInit{
   }
 
   readMore(blogId: any){
-    if(this.validClick)this.router.navigate(['/content', blogId]);
+    if(this.validClick)this.router.navigate(['/blog', blogId]);
   }
 }

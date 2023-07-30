@@ -3305,6 +3305,123 @@
             "templateData": "<app-window [windowConfig]=\"projectsConfig\" [X1]=\"this.X1\" [Y1]=\"this.Y1\" (Xemitter)=\"emitX($event)\" (Yemitter)=\"emitY($event)\" (close)=\"closeWindow()\">\r\n\t<div class=\"projects-window\">\r\n\t\t<div class=\"edit-project\" *ngIf=\"showProjectEditor; else project\">\r\n\t\t\t<img src=\"./../../assets/images/buttons/return.png\" alt=\"\" class=\"return\" (click)=\"setAddProject()\">\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"title\">Title:</label>\r\n\t\t\t\t<input type=\"text\" id=\"title\" name=\"title\" [(ngModel)]=\"formData.title\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"description\">Description ({{ this.descriptionLength }}/255 characters):</label>\r\n\t\t\t\t<textarea rows=\"3\" cols=\"60\" id=\"description\" placeholder=\"Enter Description ...\" name=\"description\" maxlength=\"255\" [(ngModel)]=\"formData.description\" (input)=\"limitInputLength()\"></textarea>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"startDate\">Start Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"startDate\" name=\"startDate\" [(ngModel)]=\"formData.startDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element\">\r\n\t\t\t\t<label for=\"endDate\">End Date:</label>\r\n\t\t\t\t<input type=\"date\" id=\"endDate\" name=\"endDate\" [(ngModel)]=\"formData.endDate\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"element content\">\r\n\t\t\t\t<label for=\"content\">Content:</label>\r\n\t\t\t\t<angular-editor id=\"content\" [(ngModel)]=\"formData.content\" class=\"editor\" [config]=\"editorConfig\"></angular-editor>\r\n\t\t\t</div>\r\n\t\t\t<button (click)=\"submitForm()\">Submit</button>\r\n\t\t</div>\r\n\t\t<ng-template #project>\r\n\t\t\t<div class=\"projects-container\">\r\n\t\t\t\t<ul class=\"timeline\">\r\n\t\t\t\t\t<ng-container *ngFor=\"let project of projects; let i = index\">\r\n\t\t\t\t\t\t<li class=\"block\">\r\n\t\t\t\t\t\t\t<input type=\"checkbox\" id=\"project{{i}}\" class=\"radio\" name=\"project\">\r\n\t\t\t\t\t\t\t<div class=\"date\">{{project.startDate|slice:0:10}}</div>\r\n\t\t\t\t\t\t\t<span class=\"circle\"></span>\r\n\t\t\t\t\t\t\t<div class=\"content\">\r\n\t\t\t\t\t\t\t\t<h2> {{project.title}} </h2>\r\n\t\t\t\t\t\t\t\t<p> {{project.description}} </p>\r\n\t\t\t\t\t\t\t\t<p class=\"material\" [innerHTML]=\"project.content\"></p>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<label for=\"project{{i}}\">\r\n\t\t\t\t\t\t\t\t<div class=\"show\">[ + ]</div>\r\n\t\t\t\t\t\t\t\t<div class=\"hide\">[ - ]</div>\r\n\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t<div *ngIf=\"(this.currentUser == this.username)\" class=\"edit\" (click)=\"updateProject(project.projectId)\">\r\n\t\t\t\t\t\t\t\tEdit\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div *ngIf=\"(this.currentUser == this.username)\" class=\"delete\" (click)=\"deleteProject(project.projectId)\">\r\n\t\t\t\t\t\t\t\tDelete\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ng-container>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"delete-popup\" *ngIf=\"showDeletePopup\">\r\n\t\t\t\t<div class=\"options\">\r\n\t\t\t\t\t<p> Confirm delete ?</p>\r\n\t\t\t\t\t<div class=\"btn\"> \r\n\t\t\t\t\t\t<button (click)=\"confirmDelete()\"> YES </button>\r\n\t\t\t\t\t\t<button (click)=\"toggleDeletePopup()\"> NO </button> \r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<img *ngIf=\"(this.currentUser == this.username)\" class=\"add\" src=\"./../../assets/images/buttons/add.png\" alt=\"\" (click)=\"setAddProject()\">\r\n\t\t</ng-template>\r\n\t</div>\t\r\n</app-window>"
         },
         {
+            "name": "SearchComponent",
+            "id": "component-SearchComponent-12162bd5756f8c652776c23d2538ab832e7eaf22849925e0656fac4d1ceae7c664e062db8271e2a29a55165cac03653a4c2cab3536e25150ca8454abfa715811",
+            "file": "src/lib/search/search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-search",
+            "styleUrls": [
+                "./search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./search.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "query",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "results",
+                    "defaultValue": "[[],[]]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "resultsVisible",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "processSearch",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { environment } from 'src/environments/environment';\n\n@Component({\n  selector: 'app-search',\n  templateUrl: './search.component.html',\n  styleUrls: ['./search.component.scss']\n})\nexport class SearchComponent {\n\n  constructor(private http: HttpClient) {};\n\n  public query: string = \"\";\n\n  public results = [[],[]];\n\n  public resultsVisible = false;\n  \n\n  processSearch(){\n    if(this.query.length > 0) this.resultsVisible = true;\n    else this.resultsVisible = false;\n\n    console.log(this.query)\n    this.http.get<any>(`${environment.baseUrl}/api/v1/public/search/${this.query}`)\n    .subscribe({\n      next: response => {\n        console.log(\"res\", response);\n        this.results = response;\n      },\n      error: error => {\n        console.error('API Error:', error);\n        // Handle the error response\n      }\n    })\n  } \n\n  \n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".search-container{\r\n\t// background-color: red;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\r\n\t.search{\r\n\t\twidth: 480px;\r\n\t\t// background-color: aqua;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: center;\r\n\t\tmargin: 8px;\r\n\r\n\t\tinput{\r\n\t\t\twidth: 360px;\r\n\t\t\theight: 24px;\r\n\t\t\tpadding: 4px 8px;\r\n\t\t\tborder-radius: 32px;\r\n\t\t\tborder: solid black 1px;\r\n\t\t}\r\n\r\n\t\tbutton{\r\n\t\t\theight: 32px;\r\n\t\t\twidth: 32px;\r\n\t\t\tborder-radius: 50%;\r\n\t\t\tmargin-left: 8px;\r\n\t\t}\r\n\t}\r\n\r\n\t.query-results{\r\n\t\tmargin: 8px;\r\n\t\tborder-radius: 8px;\r\n\t\t// background-color: beige;\r\n\t\twidth: 480px;\r\n\t\tpadding: 8px;\r\n\t\tborder: solid black 2px;\t\r\n\t\tdisplay: none;\r\n\r\n\t\tp{\r\n\t\t\tborder-bottom: solid gainsboro 1px;\r\n\t\t\tmargin: 0px;\r\n\t\t\tpadding: 8px;\r\n\t\t}\r\n\t}\r\n\r\n\t.show{\r\n\t\tdisplay: block;\r\n\t}\r\n}",
+                    "styleUrl": "./search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"search-container\">\n\t<form class=\"search\" #MyForm=\"ngForm\" (ngSubmit)=\"processSearch()\">\n\t\t<input class=\"query\" type=\"text\" name=\"search\" placeholder=\"search query\" [(ngModel)]=\"this.query\" (input)=\"processSearch()\">\n\t\t<button type=\"submit\" [disabled]=\"this.query.length == 0\"> </button>\n\t</form>\n\t<div class=\"query-results\" [class.show]=\"resultsVisible\">\n\t\t<h4> People </h4>\n\t\t<p *ngIf=\"this.results[0].length == 0; else users;\">No Users Found.</p>\n\t\t<ng-template #users>\n\t\t\t<p *ngFor=\"let result of results[0]\"> {{ result }}</p>\n\t\t</ng-template>\n\t\t<h4> Blogs </h4>\n\t\t<p *ngIf=\"this.results[1].length == 0; else blogs;\">No Blogs Found.</p>\n\t\t<ng-template #blogs>\n\t\t\t<p *ngFor=\"let result of results[1]\"> {{ result }}</p>\n\t\t</ng-template>\n\t</div>\n</div>\n\n\n\n"
+        },
+        {
             "name": "SignupComponent",
             "id": "component-SignupComponent-498c89fc83fe1a69f62dd5a030bfde1c6f8a1220ab5ebd783ffa1efa5462adf97b6ec2766f977f304252eb8326ebec1a23e26e99980be463aa624e93e23e6a99",
             "file": "src/lib/auth/signup/signup.component.ts",
@@ -4852,13 +4969,13 @@
         },
         {
             "name": "PortfolioModule",
-            "id": "module-PortfolioModule-3237d0cea8468b089a2d113a1470e4af1234196a2b1037c072b47e51b82da4e5715c0e62bb2ce38c19b12cd97047d085b42a4e94a32b335f1eb02a215530154a",
+            "id": "module-PortfolioModule-259354a39877caab6beb3f7535014f4a25918dc9b695a9f41aa6a241326ff88e349936b49e12ff7b17f6e5523b41bc9eea14b7994edcd6bcd8d410153d6c1697",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/lib/portfolio.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/service/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { RouterTestingModule } from \"@angular/router/testing\";\r\nimport { FeedComponent } from './quilandquest/feed/feed.component';\r\nimport { ContentComponent } from './quilandquest/content/content.component';\r\nimport { NavComponent } from './quilandquest/nav/nav.component';\r\nimport { Authenticator } from 'src/service/app.authenticator';\r\nimport { WelcomeComponent } from './welcome/welcome.component';\r\nimport { ToastrModule } from 'ngx-toastr';\r\nimport { provideToastr } from 'ngx-toastr';\r\nimport { provideAnimations } from '@angular/platform-browser/animations';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, \r\n    ProjectsComponent, \r\n    BlogsComponent, \r\n    SkillsComponent, \r\n    LoginComponent, \r\n    SignupComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent, \r\n    NavComponent, \r\n    WelcomeComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, \r\n    FormsModule, \r\n    CommonModule, \r\n    RouterModule.forChild([]), \r\n    AngularEditorModule, \r\n    RouterTestingModule,\r\n    ToastrModule.forRoot()\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator, provideToastr(), provideAnimations()],\r\n  exports: [\r\n    ProjectsComponent, \r\n    WallComponent, \r\n    SkillsComponent, \r\n    BlogsComponent, \r\n    SignupComponent, \r\n    LoginComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent,\r\n    NavComponent,\r\n    WelcomeComponent\r\n  ],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { APP_BASE_HREF, CommonModule } from '@angular/common';\r\nimport { AppConfig } from 'src/service/app.config';\r\nimport { WallComponent } from 'src/lib/wall/wall.component';\r\nimport { BlogsComponent } from './blogs/blogs.component';\r\nimport { ProjectsComponent } from './projects/projects.component';\r\nimport { SkillsComponent } from './skills/skills.component';\r\nimport { LoginComponent } from './auth/login/login.component';\r\nimport { SignupComponent } from './auth/signup/signup.component';\r\nimport { RouterModule } from '@angular/router';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { CookieService } from 'ngx-cookie-service';\r\nimport { AngularEditorModule } from '@kolkov/angular-editor';\r\nimport { WindowComponent } from './window/window.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { RouterTestingModule } from \"@angular/router/testing\";\r\nimport { FeedComponent } from './quilandquest/feed/feed.component';\r\nimport { ContentComponent } from './quilandquest/content/content.component';\r\nimport { NavComponent } from './quilandquest/nav/nav.component';\r\nimport { Authenticator } from 'src/service/app.authenticator';\r\nimport { WelcomeComponent } from './welcome/welcome.component';\r\nimport { ToastrModule, ToastrService } from 'ngx-toastr';\r\nimport { SearchComponent } from './search/search.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    WallComponent, \r\n    ProjectsComponent, \r\n    BlogsComponent, \r\n    SkillsComponent, \r\n    LoginComponent, \r\n    SignupComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent, \r\n    NavComponent, \r\n    WelcomeComponent, SearchComponent\r\n  ],\r\n  imports: [\r\n    HttpClientModule, \r\n    FormsModule, \r\n    CommonModule, \r\n    RouterModule.forChild([]), \r\n    AngularEditorModule, \r\n    RouterTestingModule,\r\n    ToastrModule.forRoot()\r\n  ],\r\n  providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService, Authenticator, ToastrService],\r\n  exports: [\r\n    ProjectsComponent, \r\n    WallComponent, \r\n    SkillsComponent, \r\n    BlogsComponent, \r\n    SignupComponent, \r\n    LoginComponent, \r\n    WindowComponent, \r\n    ButtonComponent, \r\n    ProfileComponent, \r\n    FeedComponent, \r\n    ContentComponent,\r\n    NavComponent,\r\n    WelcomeComponent,\r\n    SearchComponent\r\n  ],\r\n  bootstrap: []\r\n})\r\nexport class PortfolioModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -4897,6 +5014,9 @@
                         },
                         {
                             "name": "ProjectsComponent"
+                        },
+                        {
+                            "name": "SearchComponent"
                         },
                         {
                             "name": "SignupComponent"
@@ -4945,6 +5065,9 @@
                         },
                         {
                             "name": "ProjectsComponent"
+                        },
+                        {
+                            "name": "SearchComponent"
                         },
                         {
                             "name": "SignupComponent"
@@ -5077,6 +5200,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Search",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/search.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Signup",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -5120,11 +5253,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/login.stories.ts",
+                "file": "src/stories/nav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(args: LoginComponent) => ({\r\n\tcomponet: LoginComponent,\r\n\tprops: args\r\n})"
+                "defaultValue": "(args: NavComponent) => ({\r\n\tcomponent: NavComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -5140,11 +5273,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/nav.stories.ts",
+                "file": "src/stories/login.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(args: NavComponent) => ({\r\n\tcomponent: NavComponent,\r\n\tprops: args\r\n})"
+                "defaultValue": "(args: LoginComponent) => ({\r\n\tcomponet: LoginComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -5175,6 +5308,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(args: SkillsComponent) => ({\r\n\tcomponent: SkillsComponent,\r\n\tprops: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/search.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: SearchComponent) => ({\r\n\tcomponet: SearchComponent,\r\n\tprops: args\r\n})"
             },
             {
                 "name": "Template",
@@ -5471,6 +5614,28 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(args: ProjectsComponent) => ({\r\n\tcomponent: ProjectsComponent,\r\n\tprops: args\r\n})"
+                }
+            ],
+            "src/stories/search.stories.ts": [
+                {
+                    "name": "Search",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/search.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/search.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: SearchComponent) => ({\r\n\tcomponet: SearchComponent,\r\n\tprops: args\r\n})"
                 }
             ],
             "src/stories/signup.stories.ts": [
@@ -5794,6 +5959,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/lib/search/search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SearchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
                 "filePath": "src/lib/skills/skills.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -5988,6 +6162,26 @@
             },
             {
                 "filePath": "src/stories/projects.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/search.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Search",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/search.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

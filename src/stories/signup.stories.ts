@@ -3,7 +3,7 @@ import { SignupComponent } from 'src/lib/auth/signup/signup.component';
 import { PortfolioModule } from 'src/lib/portfolio.module';
 
 export default {
-	title: 'MyComponents/Signup',
+	title: 'MyComponents/Auth',
 	component: SignupComponent,
 	decorators: [
 		moduleMetadata({

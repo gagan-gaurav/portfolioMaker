@@ -13,6 +13,11 @@
 		</ng-template>
 	</div>
 	<a class="quilandquest" [routerLink]="['/quilandquest']"> <img src="/assets/images/quilandquest/feather.png" alt="" > </a>
+	
+
+	<app-search style="position:absolute; top:8px; left:37.5%"></app-search>
+
+	
 	<app-button (click)="flipWindow(PROFILE)" [buttonConfig]="profileButton" [ButtonX1]="this.config.profileButtonX1" [ButtonY1]="this.config.profileButtonY1" (Xemitter)="setButtonX1($event, PROFILE)" (Yemitter)="setButtonY1($event, PROFILE)"style = "top: {{this.config.profileButtonY1}}px; left: {{this.config.profileButtonX1}}px"></app-button>
 	<app-button (click)="flipWindow(PROJECTS)" [buttonConfig]="projectsButton" [ButtonX1]="this.config.projectsButtonX1" [ButtonY1]="this.config.projectsButtonY1" (Xemitter)="setButtonX1($event, PROJECTS)" (Yemitter)="setButtonY1($event, PROJECTS)"style = "top: {{this.config.projectsButtonY1}}px; left: {{this.config.projectsButtonX1}}px"></app-button>
 	<!-- <app-button (click)="flipWindow(SKILLS)" [buttonConfig]="skillsButton" [ButtonX1]="this.config.skillsButtonX1" [ButtonY1]="this.config.skillsButtonY1" (Xemitter)="setButtonX1($event, SKILLS)" (Yemitter)="setButtonY1($event, SKILLS)"style = "top: {{this.config.skillsButtonY1}}px; left: {{this.config.skillsButtonX1}}px"></app-button>	 -->

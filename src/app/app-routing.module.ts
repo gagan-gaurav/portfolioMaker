@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: "signup", component: SignupComponent},
   { path: "signup/:source", component: SignupComponent},
   { path: "quilandquest", component: FeedComponent},
-  { path: "content/:blog_id", component: ContentComponent}
+  { path: "blog/:blog_id", component: ContentComponent}
 ];
 
 @NgModule({
