@@ -117,7 +117,7 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "portfolio:build",
+            "browserTarget": "portfolio:build:development",
             "compodoc": true,
             "compodocArgs": [
               "-e",
