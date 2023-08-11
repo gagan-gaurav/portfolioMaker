@@ -16,6 +16,7 @@ export class ContentComponent implements OnInit {
 
   public currentUser: any;
   public isLoggedIn: boolean = false;
+  public profileImageUrl: any | null = null;
   public blog: any;
   public blogId: any;
   private jwtToken: any;
@@ -32,6 +33,7 @@ export class ContentComponent implements OnInit {
     await this.authenticator.authenticate();
     this.isLoggedIn = User.isLoggedIn();
     this.currentUser = User.getCurrentUser();
+    this.profileImageUrl = User.getProfileImageUrl();
 
     //get the blog id from router
     this.route.params.subscribe(params => {

@@ -15,6 +15,7 @@ export class FeedComponent implements OnInit{
 
   public currentUser: any;
   public isLoggedIn: boolean = false;
+  public profileImageUrl: any | null = null;
   public blogs: any;
   private jwtToken: any;
   private headers: any;
@@ -32,6 +33,7 @@ export class FeedComponent implements OnInit{
     await this.authenticator.authenticate();
     this.isLoggedIn = User.isLoggedIn();
     this.currentUser = User.getCurrentUser();
+    this.profileImageUrl = User.getProfileImageUrl();
 
     if(this.isLoggedIn){
       console.log(this.headers);

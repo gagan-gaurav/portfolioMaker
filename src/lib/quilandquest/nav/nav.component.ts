@@ -11,6 +11,7 @@ export class NavComponent implements OnInit{
 
   @Input() public currentUser: any;
   @Input() public isLoggedIn: boolean = false;
+  @Input() public profileImageUrl: any | null = null;
   public showCurrentUser: boolean = false;
 
   constructor(private router: Router, private cookieService: CookieService) {}

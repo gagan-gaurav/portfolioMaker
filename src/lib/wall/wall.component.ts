@@ -22,6 +22,7 @@ export class WallComponent implements OnInit {
   public currentUser: any;
   public isLoggedIn: boolean = false;
   public username: any;
+  public profileImageUrl: any | null = null;
   public showCurrentUser: boolean = false;
 
   public PROFILE: any = Comp.PROFILE;
@@ -99,6 +100,7 @@ export class WallComponent implements OnInit {
 
     this.isLoggedIn = User.isLoggedIn();
     this.currentUser = User.getCurrentUser();
+    this.profileImageUrl = User.getProfileImageUrl();
 
     this.route.params.subscribe(params => {
       this.username = params['username'];

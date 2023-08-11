@@ -19,7 +19,7 @@ export class Authenticator {
 		});
 		try{
 			const response = await this.http.get<any>(`${environment.baseUrl}/api/v1/secured/verify_user`, {headers: headers}).toPromise();
-			User.setUser(response.username);
+			User.setUser(response.username, response.profileImageUrl);
 			return true;
 		} catch (error) {
 			console.log("JWT authentication error :", error);	

@@ -15,5 +15,8 @@
 			</div>
 		</ng-template>
 	</div>
-	<img src="/assets/images/profile/user.png" class="user" (click)="showMenu()">
+	<img src="{{this.profileImageUrl}}" class="user" (click)="showMenu()" *ngIf="this.profileImageUrl != null; else profileImage">
+	<ng-template #profileImage>
+		<img src="/assets/images/profile/user.png" class="user" (click)="showMenu()">
+	</ng-template>
 </div>
