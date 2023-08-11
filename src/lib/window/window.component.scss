@@ -1,7 +1,7 @@
 .window{
 	background-color: white;
 	border-radius: 8px;
-	border: solid black;
+	border: solid black 2px;
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
@@ -9,11 +9,12 @@
 	.menu-bar{
 		cursor: pointer;
 		background-color: white;
+		border-radius: 8px 8px 0px 0px;
 		height: 24px;
 		display: flex;
 		justify-content: align-self;
 		align-items: center;
-		border-bottom: solid black;
+		border-bottom: solid black 2px;
 
 		.heading{
 			margin-left: auto;
@@ -22,7 +23,7 @@
 			background-color: coral;
 			height: 12px;
 			width: 12px;
-			border: solid black;
+			border: solid black 2px;
 			border-radius: 12px;
 			margin-left: auto;
 			margin-right: 4px;
