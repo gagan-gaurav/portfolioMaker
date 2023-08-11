@@ -8,12 +8,16 @@
 		<h4> People </h4>
 		<p *ngIf="this.results[0].length == 0; else users;">No Users Found.</p>
 		<ng-template #users>
-			<a [routerLink]="['/user', result.username]" *ngFor="let result of results[0]"> {{ result.firstname }} {{result.lastname}} </a>
+			<div class="results">
+				<a [routerLink]="['/user', result.username]" *ngFor="let result of results[0]"> {{ result.firstname }} {{result.lastname}} </a>
+			</div>
 		</ng-template>
 		<h4> Blogs </h4>
 		<p *ngIf="this.results[1].length == 0; else blogs;">No Blogs Found.</p>
 		<ng-template #blogs>
-			<a [routerLink]="['/blog', result.id]" *ngFor="let result of results[1]"> {{ result.title }}</a>
+			<div class="results">
+				<a [routerLink]="['/blog', result.id]" *ngFor="let result of results[1]"> {{ result.title }}</a>
+			</div>
 		</ng-template>
 	</div>
 </div>
