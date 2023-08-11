@@ -6,6 +6,7 @@ app-window{
 		padding: 8px;
 		display: flex;
 		align-items: center;
+		position: relative;
 
 		a{	
 			text-decoration: none;
@@ -22,32 +23,38 @@ app-window{
 		.profile{
 			height: 100%;
 			width: 100%;
-			background-color: #ebb7c9;
+			// background-color: #ebb7c9;
 			border-radius: 8px;
 			display: flex;
 
 			.left{
 				min-height: 36vh;
-				background-color: antiquewhite;
+				// background-color: antiquewhite;
+				margin: 10px 0px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				padding: 0px 16px;
+				// border-right: solid gainsboro 2px;
 
 				.profile-image{
-					height: 96px;
-					width: 96px;
+					height: 156px;
+					width: 156px;
 					margin: 8px;
 					border-radius: 50%;
-					border: solid black;
+					// border: solid black;
 				}
 
 				.contacts{
-					height: 100%;
+					// height: 100%;
+					margin-top: 16px;
+					width: 100%;
+					font-size: 16px;
 					// background-color: aquamarine;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
+					align-items: center;
 
 					.source{
 						padding: 4px;
@@ -63,9 +70,18 @@ app-window{
 							margin: 0;
 						}
 					}
+					.source:hover{
+						font-size: 18px;
+						.icon{
+							height: 26px;
+							width: 26px;
+						}
+					}
 				}
 			}
 			.right{
+				background-color: #f3d4df;
+				border-radius: 8px;
 				padding: 8px;
 				min-height: 36vh;
 				width: 100%;
@@ -117,7 +133,7 @@ app-window{
 		.edit-profile{
 			min-height: 40vh;
 			width: 100%;
-			background-color: #ebb7c9;
+			background-color: #f3d4df;
 			border-radius: 8px;
 
 			.return{
@@ -136,13 +152,51 @@ app-window{
 				}
 			}
 			.element{
-				display: flex;
 				padding: 4px;
 				margin-bottom: 8px;
+
+				label{
+					margin-right: 8px;
+				}
+				input{
+					margin-right: 8px;
+				}
 			}
 
 			button{
 				margin-left: 4px;
+			}
+		}
+		.upload-image{
+			padding: 4px;
+		}
+		.delete-popup{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			background-color: rgb(0, 0, 0, 0.8);
+			z-index: 10;
+	
+			.options{
+				background-color: whitesmoke;
+				height: 100px;
+				width: 200px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: 8px;
+	
+				.btn{
+					width: 100%;
+					display: flex;
+					justify-content: space-evenly;
+				}
 			}
 		}
 	}

@@ -2,33 +2,48 @@
 	<div class="profile-container">
 		<div class="edit-profile" *ngIf="editProfile; else profile">
 			<img src="./../../assets/images/buttons/return.png" alt="" class="return" (click)="setEditProfile()">
+			<div class="upload-image">
+				<label for="file"> Edit Profile Image: </label>
+				<input id="file" type="file" (change)="onFileSelected($event)" accept="image/*">
+				<button [disabled]="this.selectedFile == null" (click)="UploadImage(1)">Upload</button>
+				<button (click)="removeProfilePic()"> Remove </button>
+			</div>
+			<div class="delete-popup" *ngIf="showDeletePopup">
+				<div class="options">
+					<p> Confirm Remove?</p>
+					<div class="btn"> 
+						<button (click)="UploadImage(0)"> YES </button>
+						<button (click)="toggleDeletePopup()"> NO </button> 
+					</div>
+				</div>
+			</div>
 			<form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
 				<div class="description">
 				  <label for="description">Description ({{ this.descriptionLength }}/255 characters):</label>
 				  <textarea rows="5" cols="60" id="description" placeholder="Enter Description ..." name="description" maxlength="255" [(ngModel)]="formData.description" (input)="limitInputLength()"></textarea>
 				</div>
 				<div class="element">
-				  <label for="resume">Resume:</label>
+				  <label for="resume">Resume: </label>
 				  <input type="url" id="resume" name="resume" [(ngModel)]="formData.resume">
-				  <label for="show-resume">Show resume on profile:</label>
+				  <label for="show-resume">Show Resume on profile:</label>
 				  <input type="checkbox" id="show-resume" name="showResume" [(ngModel)]="formData.showResume">
 				</div>
 				<div class="element">
-				  <label for="linkedin">LinkedIn:</label>
+				  <label for="linkedin">LinkedIn: </label>
 				  <input type="url" id="linkedin" name="linkedin" [(ngModel)]="formData.linkedin">
-				  <label for="show-linkedin">Show resume on profile:</label>
+				  <label for="show-linkedin">Show LinkedIn on profile:</label>
 				  <input type="checkbox" id="show-linkedin" name="showLinkedin" [(ngModel)]="formData.showLinkedin">
 				</div>
 				<div class="element">
-				  <label for="github">GitHub:</label>
+				  <label for="github">GitHub: </label>
 				  <input type="url" id="github" name="github" [(ngModel)]="formData.github">
-				  <label for="show-github">Show resume on profile:</label>
+				  <label for="show-github">Show GitHub on profile:</label>
 				  <input type="checkbox" id="show-github" name="showGithub" [(ngModel)]="formData.showGithub">
 				</div>
 				<div class="element">
-				  <label for="gmail">Gmail:</label>
+				  <label for="gmail">Gmail: </label>
 				  <input type="email" id="gmail" name="gmail" [(ngModel)]="formData.gmail">
-				  <label for="show-gmail">Show resume on profile:</label>
+				  <label for="show-gmail">Show Gmail on profile:</label>
 				  <input type="checkbox" id="show-gmail" name="showGmail" [(ngModel)]="formData.showGmail">
 				</div>
 				<button type="submit">Submit</button>
@@ -37,7 +52,10 @@
 		<ng-template #profile>
 			<div class="profile">
 				<div class="left">
-					<img src="./../../assets/images/profile/user.png" alt="" class="profile-image">
+					<img src="{{this.formData.profileUrl}}" alt="" class="profile-image" *ngIf="this.formData.profilePic == true; else profileImage">
+					<ng-template #profileImage>
+						<img src="./../../assets/images/profile/user.png" alt="" class="profile-image">
+					</ng-template>
 					<div class="contacts">
 						<a href="{{this.formData.resume}}" target="_blank" rel="noopener noreferrer" class="source" *ngIf="this.formData.showResume"> <img src="./../../assets/images/profile/doc.png" alt="" class="icon"> <p> Resume </p></a>
 						<a href="{{this.formData.linkedin}}" target="_blank" rel="noopener noreferrer" class="source" *ngIf="this.formData.showLinkedin"> <img src="./../../assets/images/profile/linkedin.png" alt="" class="icon"> <p> Linkedin </p> </a>

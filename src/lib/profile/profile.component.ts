@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from 'src/service/app.user'
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-profile',
@@ -38,10 +39,12 @@ export class ProfileComponent implements OnInit, OnChanges{
     github: "",
     showGithub: false,
     gmail: "",
-    showGmail: false
+    showGmail: false,
+    profileUrl: "",
+    profilePic: false
   }
 
-  constructor(private http: HttpClient, private cookieService: CookieService) { 
+  constructor(private http: HttpClient, private cookieService: CookieService, private toastr: ToastrService) { 
     this.currentUser = User.getCurrentUser();
   }
 
@@ -109,5 +112,48 @@ export class ProfileComponent implements OnInit, OnChanges{
 
   setEditProfile(){
     this.editProfile = !this.editProfile;
+  }
+
+
+  // this section is for uploading profile pic logic.
+
+  selectedFile: File | null = null;
+  showDeletePopup: boolean = false;
+
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+
+  UploadImage(value: any) {
+    if(value == 0) {
+      this.selectedFile = null; // remove selected file if any.
+      this.toggleDeletePopup();
+    }
+    console.log('Uploading file:', this.selectedFile);
+    const jwtToken = this.cookieService.get('boonJwtToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
+    });
+    this.http.post<any>(`${environment.baseUrl}/api/v1/secured/profile_image`, this.selectedFile, {headers})
+    .subscribe({
+      next: response => {
+        console.log("res", response);
+        if(response.status == "success")this.toastr.success(response.message);
+        else this.toastr.error(response.message);
+      },
+      error: error => {
+        console.error('API Error:', error);
+        this.toastr.error(error);
+        // Handle the error response
+      }
+    });
+  }
+
+  removeProfilePic(){
+    this.toggleDeletePopup();
+  }
+
+  toggleDeletePopup(){
+    this.showDeletePopup = !this.showDeletePopup;
   }
 }
